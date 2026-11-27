@@ -1,0 +1,18 @@
+{
+  "s001": {
+    "explicacao": "Você e a Renata curtem a mesma coisa: transformar jogo em número. Você quis conhecer a carreira de analista de dados esportivos e pediu essa conversa. E o que mais pesou foi seu esforço: estatística subiu de nível com as missões e você manteve a frequência no semestre.",
+    "perguntasSugeridas": [
+      "Que número você olha primeiro depois de um jogo?",
+      "Como média, moda e mediana aparecem no seu relatório pro técnico?",
+      "O que eu posso fazer no interclasse pra começar a treinar análise de dados?"
+    ]
+  },
+  "default": {
+    "explicacao": "Vocês combinam no que você mais curte: {eixos}. {carreiraFrase} E o que mais pesou foi seu esforço no semestre: {missoes} missões e {evolucoes} habilidades que subiram de nível.",
+    "perguntasSugeridas": [
+      "Como é um dia normal no seu trabalho?",
+      "Onde {habilidade} aparece na sua rotina?",
+      "Por onde eu começo, ainda no Ensino Médio?"
+    ]
+  }
+}

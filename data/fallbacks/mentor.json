@@ -1,0 +1,22 @@
+{
+  "abertura": {
+    "analista-dados-esportivos": "Oi! Sou uma simulação por IA de uma analista de dados esportivos. Pode perguntar o que quiser: rotina, escola, como começar.",
+    "default": "Oi! Sou uma simulação por IA de alguém que trabalha como {careerNome}. Pode perguntar o que quiser: rotina, escola, como começar."
+  },
+  "analista-dados-esportivos:1": { "fala": "Meu dia começa puxando os números do jogo de ontem: passes, finalizações, quanto cada um correu. À tarde monto um relatório curto pro técnico. O legal é quando o dado mostra algo que ninguém viu no olho." },
+  "analista-dados-esportivos:2": {
+    "fala": "Precisa saber usar, não decorar. Bora testar? O camisa 9 fez 2, 0, 1, 3 e 0 gols nos últimos 5 jogos. A média dele é 1,2. Isso conta a história toda?",
+    "miniDesafio": { "skillCode": "EM13MAT316", "enunciado": "O camisa 9 fez 2, 0, 1, 3 e 0 gols. A média é 1,2. Isso conta a história toda?" }
+  },
+  "analista-dados-esportivos:3:certo": { "fala": "Mandou bem! A média esconde que ele zerou em 2 dos 5 jogos e que os números variam muito. Por isso eu olho também a mediana (1) e o quanto os valores se espalham. É exatamente o que você vê em EM13MAT316.", "desafioResolvido": true },
+  "analista-dados-esportivos:3:pista": { "fala": "Quase! Pensa assim: em quantos jogos ele não marcou nada? Se você colocar os gols em ordem (0, 0, 1, 2, 3), qual número fica bem no meio?", "desafioResolvido": false },
+  "analista-dados-esportivos:4": { "fala": "Se curtiu, um bom começo é montar a estatística do interclasse: gols, assistências, quem joga mais minutos. Isso já é portfólio. E no Match Day dá pra conversar com alguém de verdade da área." },
+  "default:1": { "fala": "Um dia típico meu: {raioX}. Tem rotina, mas sempre aparece um problema novo pra resolver." },
+  "default:2": {
+    "fala": "Bora um mini-desafio? Me explica com suas palavras como \"{descricaoJovem}\" pode aparecer no meu trabalho. Vale +20 pts.",
+    "miniDesafio": { "skillCode": "{skillCode}", "enunciado": "Explica com suas palavras como \"{descricaoJovem}\" aparece no dia a dia dessa profissão." }
+  },
+  "default:3:certo": { "fala": "Boa! Foi bem isso: a escola aparece no trabalho mais do que parece. Quer saber como eu comecei?", "desafioResolvido": true },
+  "default:3:pista": { "fala": "Tenta dar um exemplo concreto: uma situação do meu dia em que isso ajudaria a decidir alguma coisa.", "desafioResolvido": false },
+  "default:4": { "fala": "Pra começar: {comoChegar} E no Match Day você conversa com alguém de verdade da área." }
+}

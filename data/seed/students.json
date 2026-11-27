@@ -1,0 +1,1281 @@
+[
+  {
+    "id": "s001",
+    "matricula": "2026001",
+    "nome": "Kauã Oliveira",
+    "inicial": "K",
+    "classId": "2A",
+    "serie": 2,
+    "hero": "kaua",
+    "frequencia": [
+      92,
+      88,
+      95,
+      90,
+      85,
+      93,
+      90,
+      91
+    ],
+    "frequenciaProjetada": [
+      90,
+      88,
+      92,
+      90,
+      70,
+      72,
+      90,
+      88
+    ],
+    "ultimoAcessoDiasAtras": 1,
+    "pontosSeed": 1240,
+    "missoesSeed": 3,
+    "evolucoesSeed": 1,
+    "galeraParcialSeed": {
+      "g01": "A",
+      "g02": "A",
+      "g03": "D",
+      "g04": "A",
+      "g05": "A",
+      "g06": "A"
+    }
+  },
+  {
+    "id": "s002",
+    "matricula": "2026002",
+    "nome": "Bruno Santos",
+    "inicial": "B",
+    "classId": "2A",
+    "serie": 2,
+    "hero": "bruno",
+    "frequencia": [
+      85,
+      80,
+      78,
+      80,
+      55,
+      50,
+      70,
+      78
+    ],
+    "frequenciaProjetada": [
+      82,
+      85,
+      84,
+      86,
+      88,
+      85,
+      87,
+      90
+    ],
+    "ultimoAcessoDiasAtras": 2,
+    "pontosSeed": 1580,
+    "missoesSeed": 14,
+    "evolucoesSeed": 5,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 35,
+        "tech": 30,
+        "criar": 25,
+        "cuidar": 60,
+        "negocios": 70,
+        "esportes": 85
+      },
+      "queroConhecer": [
+        "educador-fisico"
+      ],
+      "salvas": [
+        "gestor-esports"
+      ]
+    }
+  },
+  {
+    "id": "s003",
+    "matricula": "2026003",
+    "nome": "Carla Ribeiro",
+    "inicial": "C",
+    "classId": "3A",
+    "serie": 3,
+    "hero": "carla",
+    "frequencia": [
+      96,
+      95,
+      97,
+      94,
+      96,
+      95,
+      93,
+      96
+    ],
+    "frequenciaProjetada": [
+      95,
+      96,
+      94,
+      95,
+      96,
+      95,
+      94,
+      96
+    ],
+    "ultimoAcessoDiasAtras": 20,
+    "pontosSeed": 180,
+    "missoesSeed": 0,
+    "evolucoesSeed": 0
+  },
+  {
+    "id": "s004",
+    "matricula": "2026004",
+    "nome": "Sofia Gomes",
+    "inicial": "S",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      88,
+      84,
+      84,
+      92,
+      89,
+      85,
+      86,
+      88
+    ],
+    "frequenciaProjetada": [
+      89,
+      96,
+      91,
+      84,
+      86,
+      87,
+      94,
+      97
+    ],
+    "ultimoAcessoDiasAtras": 6,
+    "pontosSeed": 1100,
+    "missoesSeed": 3,
+    "evolucoesSeed": 1,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 64,
+        "tech": 32,
+        "criar": 33,
+        "cuidar": 27,
+        "negocios": 24,
+        "esportes": 81
+      },
+      "queroConhecer": [
+        "jornalista-esportivo"
+      ],
+      "salvas": [
+        "analista-dados-esportivos"
+      ]
+    }
+  },
+  {
+    "id": "s005",
+    "matricula": "2026005",
+    "nome": "Bianca Oliveira",
+    "inicial": "B",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      90,
+      86,
+      97,
+      92,
+      96,
+      94,
+      92,
+      90
+    ],
+    "frequenciaProjetada": [
+      91,
+      95,
+      94,
+      92,
+      93,
+      97,
+      89,
+      84
+    ],
+    "ultimoAcessoDiasAtras": 1,
+    "pontosSeed": 200,
+    "missoesSeed": 10,
+    "evolucoesSeed": 4,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 67,
+        "tech": 33,
+        "criar": 22,
+        "cuidar": 33,
+        "negocios": 25,
+        "esportes": 92
+      },
+      "queroConhecer": [
+        "analista-dados-esportivos"
+      ],
+      "salvas": [
+        "jornalista-esportivo"
+      ]
+    }
+  },
+  {
+    "id": "s006",
+    "matricula": "2026006",
+    "nome": "Ryan Ferreira",
+    "inicial": "R",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      90,
+      90,
+      84,
+      87,
+      95,
+      96,
+      91,
+      86
+    ],
+    "frequenciaProjetada": [
+      85,
+      90,
+      97,
+      95,
+      87,
+      88,
+      93,
+      95
+    ],
+    "ultimoAcessoDiasAtras": 1,
+    "pontosSeed": 880,
+    "missoesSeed": 10,
+    "evolucoesSeed": 0,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 32,
+        "tech": 92,
+        "criar": 66,
+        "cuidar": 22,
+        "negocios": 40,
+        "esportes": 12
+      },
+      "queroConhecer": [
+        "dev-games"
+      ],
+      "salvas": [
+        "gestor-esports"
+      ]
+    }
+  },
+  {
+    "id": "s007",
+    "matricula": "2026007",
+    "nome": "Heitor Silva",
+    "inicial": "H",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      85,
+      97,
+      85,
+      95,
+      97,
+      85,
+      86,
+      86
+    ],
+    "frequenciaProjetada": [
+      88,
+      96,
+      85,
+      87,
+      84,
+      92,
+      92,
+      97
+    ],
+    "ultimoAcessoDiasAtras": 2,
+    "pontosSeed": 770,
+    "missoesSeed": 6,
+    "evolucoesSeed": 3,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 45,
+        "tech": 87,
+        "criar": 64,
+        "cuidar": 13,
+        "negocios": 31,
+        "esportes": 20
+      },
+      "queroConhecer": [
+        "gestor-esports"
+      ],
+      "salvas": []
+    }
+  },
+  {
+    "id": "s008",
+    "matricula": "2026008",
+    "nome": "Júlia Santos",
+    "inicial": "J",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      87,
+      96,
+      97,
+      96,
+      93,
+      86,
+      88,
+      89
+    ],
+    "frequenciaProjetada": [
+      97,
+      91,
+      88,
+      97,
+      90,
+      90,
+      91,
+      95
+    ],
+    "ultimoAcessoDiasAtras": 5,
+    "pontosSeed": 350,
+    "missoesSeed": 10,
+    "evolucoesSeed": 0,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 49,
+        "tech": 30,
+        "criar": 40,
+        "cuidar": 21,
+        "negocios": 88,
+        "esportes": 18
+      },
+      "queroConhecer": [
+        "empreendedor-local"
+      ],
+      "salvas": [
+        "tecnico-adm-marketing"
+      ]
+    }
+  },
+  {
+    "id": "s009",
+    "matricula": "2026009",
+    "nome": "Lucas Lima",
+    "inicial": "L",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      85,
+      94,
+      95,
+      95,
+      92,
+      88,
+      94,
+      94
+    ],
+    "frequenciaProjetada": [
+      85,
+      93,
+      93,
+      91,
+      85,
+      97,
+      91,
+      91
+    ],
+    "ultimoAcessoDiasAtras": 3,
+    "pontosSeed": 870,
+    "missoesSeed": 7,
+    "evolucoesSeed": 4,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 64,
+        "tech": 32,
+        "criar": 30,
+        "cuidar": 26,
+        "negocios": 31,
+        "esportes": 91
+      },
+      "queroConhecer": [],
+      "salvas": [
+        "jornalista-esportivo"
+      ]
+    }
+  },
+  {
+    "id": "s010",
+    "matricula": "2026010",
+    "nome": "Samuel Lima",
+    "inicial": "S",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      95,
+      88,
+      86,
+      93,
+      96,
+      94,
+      87,
+      91
+    ],
+    "frequenciaProjetada": [
+      84,
+      91,
+      85,
+      95,
+      91,
+      92,
+      91,
+      97
+    ],
+    "ultimoAcessoDiasAtras": 16,
+    "pontosSeed": 560,
+    "missoesSeed": 4,
+    "evolucoesSeed": 4,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 47,
+        "tech": 81,
+        "criar": 58,
+        "cuidar": 18,
+        "negocios": 29,
+        "esportes": 18
+      },
+      "queroConhecer": [],
+      "salvas": [
+        "dev-games"
+      ]
+    }
+  },
+  {
+    "id": "s011",
+    "matricula": "2026011",
+    "nome": "Gabriel Pereira",
+    "inicial": "G",
+    "classId": "2A",
+    "serie": 2,
+    "frequencia": [
+      91,
+      96,
+      95,
+      89,
+      89,
+      96,
+      87,
+      89
+    ],
+    "frequenciaProjetada": [
+      89,
+      90,
+      86,
+      92,
+      89,
+      84,
+      85,
+      91
+    ],
+    "ultimoAcessoDiasAtras": 3,
+    "pontosSeed": 470,
+    "missoesSeed": 2,
+    "evolucoesSeed": 4,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 24,
+        "tech": 20,
+        "criar": 41,
+        "cuidar": 83,
+        "negocios": 21,
+        "esportes": 30
+      },
+      "queroConhecer": [
+        "enfermeiro"
+      ],
+      "salvas": []
+    }
+  },
+  {
+    "id": "s012",
+    "matricula": "2026012",
+    "nome": "Vitória Gomes",
+    "inicial": "V",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      94,
+      95,
+      94,
+      86,
+      86,
+      87,
+      86,
+      93
+    ],
+    "frequenciaProjetada": [
+      96,
+      87,
+      92,
+      91,
+      90,
+      84,
+      96,
+      89
+    ],
+    "ultimoAcessoDiasAtras": 2,
+    "pontosSeed": 660,
+    "missoesSeed": 4,
+    "evolucoesSeed": 1
+  },
+  {
+    "id": "s013",
+    "matricula": "2026013",
+    "nome": "Felipe Pereira",
+    "inicial": "F",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      90,
+      95,
+      94,
+      93,
+      88,
+      84,
+      89,
+      89
+    ],
+    "frequenciaProjetada": [
+      88,
+      91,
+      94,
+      85,
+      90,
+      87,
+      95,
+      87
+    ],
+    "ultimoAcessoDiasAtras": 2,
+    "pontosSeed": 150,
+    "missoesSeed": 0,
+    "evolucoesSeed": 1,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 64,
+        "tech": 38,
+        "criar": 34,
+        "cuidar": 29,
+        "negocios": 27,
+        "esportes": 93
+      },
+      "queroConhecer": [
+        "designer-ux"
+      ],
+      "salvas": [
+        "dev-software"
+      ]
+    }
+  },
+  {
+    "id": "s014",
+    "matricula": "2026014",
+    "nome": "Wesley Lima",
+    "inicial": "W",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      96,
+      92,
+      89,
+      85,
+      92,
+      96,
+      89,
+      91
+    ],
+    "frequenciaProjetada": [
+      96,
+      89,
+      85,
+      95,
+      89,
+      85,
+      84,
+      89
+    ],
+    "ultimoAcessoDiasAtras": 0,
+    "pontosSeed": 1030,
+    "missoesSeed": 2,
+    "evolucoesSeed": 4,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 52,
+        "tech": 12,
+        "criar": 19,
+        "cuidar": 54,
+        "negocios": 22,
+        "esportes": 81
+      },
+      "queroConhecer": [
+        "tecnico-adm-marketing"
+      ],
+      "salvas": [
+        "jornalista-esportivo"
+      ]
+    }
+  },
+  {
+    "id": "s015",
+    "matricula": "2026015",
+    "nome": "Maria Eduarda Lima",
+    "inicial": "M",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      88,
+      89,
+      89,
+      87,
+      95,
+      91,
+      89,
+      89
+    ],
+    "frequenciaProjetada": [
+      86,
+      92,
+      94,
+      92,
+      97,
+      96,
+      91,
+      86
+    ],
+    "ultimoAcessoDiasAtras": 3,
+    "pontosSeed": 380,
+    "missoesSeed": 0,
+    "evolucoesSeed": 4,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 62,
+        "tech": 17,
+        "criar": 17,
+        "cuidar": 43,
+        "negocios": 22,
+        "esportes": 85
+      },
+      "queroConhecer": [
+        "dev-software"
+      ],
+      "salvas": [
+        "tecnico-logistica"
+      ]
+    }
+  },
+  {
+    "id": "s016",
+    "matricula": "2026016",
+    "nome": "Marcela Costa",
+    "inicial": "M",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      91,
+      93,
+      90,
+      92,
+      89,
+      94,
+      97,
+      94
+    ],
+    "frequenciaProjetada": [
+      90,
+      94,
+      93,
+      93,
+      84,
+      92,
+      86,
+      93
+    ],
+    "ultimoAcessoDiasAtras": 6,
+    "pontosSeed": 590,
+    "missoesSeed": 7,
+    "evolucoesSeed": 0
+  },
+  {
+    "id": "s017",
+    "matricula": "2026017",
+    "nome": "Luana Silva",
+    "inicial": "L",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      87,
+      90,
+      93,
+      95,
+      96,
+      97,
+      94,
+      86
+    ],
+    "frequenciaProjetada": [
+      97,
+      90,
+      97,
+      87,
+      88,
+      87,
+      96,
+      91
+    ],
+    "ultimoAcessoDiasAtras": 6,
+    "pontosSeed": 750,
+    "missoesSeed": 4,
+    "evolucoesSeed": 0
+  },
+  {
+    "id": "s018",
+    "matricula": "2026018",
+    "nome": "Thiago Almeida",
+    "inicial": "T",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      97,
+      86,
+      87,
+      97,
+      92,
+      86,
+      89,
+      89
+    ],
+    "frequenciaProjetada": [
+      87,
+      92,
+      94,
+      88,
+      88,
+      92,
+      85,
+      97
+    ],
+    "ultimoAcessoDiasAtras": 5,
+    "pontosSeed": 450,
+    "missoesSeed": 2,
+    "evolucoesSeed": 1,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 47,
+        "tech": 34,
+        "criar": 39,
+        "cuidar": 20,
+        "negocios": 82,
+        "esportes": 19
+      },
+      "queroConhecer": [
+        "tecnico-adm-marketing"
+      ],
+      "salvas": [
+        "tecnico-meio-ambiente"
+      ]
+    }
+  },
+  {
+    "id": "s019",
+    "matricula": "2026019",
+    "nome": "Stefany Costa",
+    "inicial": "S",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      92,
+      93,
+      91,
+      88,
+      95,
+      91,
+      96,
+      92
+    ],
+    "frequenciaProjetada": [
+      90,
+      92,
+      97,
+      84,
+      85,
+      90,
+      96,
+      87
+    ],
+    "ultimoAcessoDiasAtras": 4,
+    "pontosSeed": 1160,
+    "missoesSeed": 10,
+    "evolucoesSeed": 1,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 27,
+        "tech": 58,
+        "criar": 83,
+        "cuidar": 32,
+        "negocios": 31,
+        "esportes": 13
+      },
+      "queroConhecer": [
+        "psicologo"
+      ],
+      "salvas": [
+        "professor"
+      ]
+    }
+  },
+  {
+    "id": "s020",
+    "matricula": "2026020",
+    "nome": "Otávio Pereira",
+    "inicial": "O",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      84,
+      89,
+      88,
+      89,
+      85,
+      89,
+      92,
+      86
+    ],
+    "frequenciaProjetada": [
+      93,
+      95,
+      86,
+      94,
+      84,
+      86,
+      97,
+      85
+    ],
+    "ultimoAcessoDiasAtras": 2,
+    "pontosSeed": 1080,
+    "missoesSeed": 3,
+    "evolucoesSeed": 2,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 48,
+        "tech": 18,
+        "criar": 25,
+        "cuidar": 45,
+        "negocios": 19,
+        "esportes": 75
+      },
+      "queroConhecer": [
+        "analista-dados-esportivos"
+      ],
+      "salvas": [
+        "tecnico-logistica"
+      ]
+    }
+  },
+  {
+    "id": "s021",
+    "matricula": "2026021",
+    "nome": "Lívia Silva",
+    "inicial": "L",
+    "classId": "1A",
+    "serie": 1,
+    "frequencia": [
+      90,
+      87,
+      93,
+      88,
+      92,
+      91,
+      91,
+      96
+    ],
+    "frequenciaProjetada": [
+      91,
+      88,
+      94,
+      96,
+      84,
+      85,
+      86,
+      86
+    ],
+    "ultimoAcessoDiasAtras": 2,
+    "pontosSeed": 1040,
+    "missoesSeed": 10,
+    "evolucoesSeed": 2,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 50,
+        "tech": 40,
+        "criar": 52,
+        "cuidar": 32,
+        "negocios": 90,
+        "esportes": 7
+      },
+      "queroConhecer": [
+        "educador-fisico"
+      ],
+      "salvas": [
+        "jornalista-esportivo"
+      ]
+    }
+  },
+  {
+    "id": "s022",
+    "matricula": "2026022",
+    "nome": "Miguel Gomes",
+    "inicial": "M",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      93,
+      92,
+      94,
+      85,
+      87,
+      94,
+      97,
+      91
+    ],
+    "frequenciaProjetada": [
+      87,
+      95,
+      96,
+      87,
+      90,
+      87,
+      86,
+      89
+    ],
+    "ultimoAcessoDiasAtras": 6,
+    "pontosSeed": 740,
+    "missoesSeed": 3,
+    "evolucoesSeed": 2
+  },
+  {
+    "id": "s023",
+    "matricula": "2026023",
+    "nome": "Rayssa Pereira",
+    "inicial": "R",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      85,
+      93,
+      91,
+      96,
+      84,
+      87,
+      95,
+      89
+    ],
+    "frequenciaProjetada": [
+      84,
+      92,
+      89,
+      92,
+      84,
+      91,
+      86,
+      91
+    ],
+    "ultimoAcessoDiasAtras": 0,
+    "pontosSeed": 680,
+    "missoesSeed": 6,
+    "evolucoesSeed": 2
+  },
+  {
+    "id": "s024",
+    "matricula": "2026024",
+    "nome": "Eduarda Silva",
+    "inicial": "E",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      92,
+      92,
+      92,
+      94,
+      90,
+      92,
+      89,
+      96
+    ],
+    "frequenciaProjetada": [
+      86,
+      86,
+      93,
+      91,
+      86,
+      91,
+      90,
+      90
+    ],
+    "ultimoAcessoDiasAtras": 6,
+    "pontosSeed": 150,
+    "missoesSeed": 8,
+    "evolucoesSeed": 1,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 36,
+        "tech": 82,
+        "criar": 67,
+        "cuidar": 17,
+        "negocios": 39,
+        "esportes": 18
+      },
+      "queroConhecer": [],
+      "salvas": [
+        "tecnico-meio-ambiente"
+      ]
+    }
+  },
+  {
+    "id": "s025",
+    "matricula": "2026025",
+    "nome": "Nicole Ferreira",
+    "inicial": "N",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      85,
+      88,
+      91,
+      85,
+      85,
+      95,
+      85,
+      92
+    ],
+    "frequenciaProjetada": [
+      86,
+      97,
+      93,
+      87,
+      85,
+      89,
+      94,
+      86
+    ],
+    "ultimoAcessoDiasAtras": 6,
+    "pontosSeed": 1190,
+    "missoesSeed": 8,
+    "evolucoesSeed": 4
+  },
+  {
+    "id": "s026",
+    "matricula": "2026026",
+    "nome": "Davi Costa",
+    "inicial": "D",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      84,
+      92,
+      89,
+      97,
+      91,
+      96,
+      87,
+      84
+    ],
+    "frequenciaProjetada": [
+      85,
+      91,
+      91,
+      85,
+      85,
+      85,
+      97,
+      90
+    ],
+    "ultimoAcessoDiasAtras": 1,
+    "pontosSeed": 1320,
+    "missoesSeed": 7,
+    "evolucoesSeed": 1
+  },
+  {
+    "id": "s027",
+    "matricula": "2026027",
+    "nome": "Giovanna Silva",
+    "inicial": "G",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      84,
+      85,
+      97,
+      95,
+      94,
+      90,
+      88,
+      92
+    ],
+    "frequenciaProjetada": [
+      91,
+      88,
+      93,
+      92,
+      97,
+      93,
+      87,
+      89
+    ],
+    "ultimoAcessoDiasAtras": 1,
+    "pontosSeed": 130,
+    "missoesSeed": 5,
+    "evolucoesSeed": 3,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 52,
+        "tech": 30,
+        "criar": 52,
+        "cuidar": 30,
+        "negocios": 84,
+        "esportes": 10
+      },
+      "queroConhecer": [
+        "criador-conteudo"
+      ],
+      "salvas": [
+        "tecnico-adm-marketing"
+      ]
+    }
+  },
+  {
+    "id": "s028",
+    "matricula": "2026028",
+    "nome": "Gustavo Pereira",
+    "inicial": "G",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      96,
+      95,
+      92,
+      87,
+      85,
+      86,
+      84,
+      84
+    ],
+    "frequenciaProjetada": [
+      93,
+      95,
+      88,
+      95,
+      96,
+      85,
+      88,
+      87
+    ],
+    "ultimoAcessoDiasAtras": 5,
+    "pontosSeed": 360,
+    "missoesSeed": 9,
+    "evolucoesSeed": 4,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 69,
+        "tech": 33,
+        "criar": 26,
+        "cuidar": 29,
+        "negocios": 33,
+        "esportes": 82
+      },
+      "queroConhecer": [],
+      "salvas": [
+        "enfermeiro"
+      ]
+    }
+  },
+  {
+    "id": "s029",
+    "matricula": "2026029",
+    "nome": "Pedro Henrique Lima",
+    "inicial": "P",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      84,
+      93,
+      86,
+      91,
+      88,
+      86,
+      86,
+      96
+    ],
+    "frequenciaProjetada": [
+      94,
+      96,
+      90,
+      95,
+      88,
+      85,
+      94,
+      94
+    ],
+    "ultimoAcessoDiasAtras": 1,
+    "pontosSeed": 1280,
+    "missoesSeed": 2,
+    "evolucoesSeed": 0,
+    "galeraSeed": {
+      "perfil": {
+        "analisar": 71,
+        "tech": 38,
+        "criar": 34,
+        "cuidar": 23,
+        "negocios": 27,
+        "esportes": 84
+      },
+      "queroConhecer": [
+        "jornalista-esportivo"
+      ],
+      "salvas": [
+        "dev-games"
+      ]
+    }
+  },
+  {
+    "id": "s030",
+    "matricula": "2026030",
+    "nome": "Larissa Ferreira",
+    "inicial": "L",
+    "classId": "3A",
+    "serie": 3,
+    "frequencia": [
+      85,
+      85,
+      92,
+      89,
+      91,
+      90,
+      97,
+      96
+    ],
+    "frequenciaProjetada": [
+      97,
+      84,
+      89,
+      97,
+      94,
+      89,
+      96,
+      96
+    ],
+    "ultimoAcessoDiasAtras": 1,
+    "pontosSeed": 330,
+    "missoesSeed": 10,
+    "evolucoesSeed": 1
+  }
+]
