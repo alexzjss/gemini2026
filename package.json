@@ -1,17 +1,45 @@
 {
   "name": "gemini2026",
-  "private": true,
   "version": "0.1.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "test": "vitest run",
+    "dev": "next dev",
+    "build": "vitest run --passWithNoTests && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
     "seed": "tsx scripts/gerar-seed.ts",
-    "typecheck": "tsc --noEmit"
+    "corpus": "tsx scripts/montar-corpus.ts",
+    "embed": "tsx scripts/embed-corpus.ts",
+    "fallbacks": "tsx scripts/gerar-fallbacks.ts"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@google/genai": "^1.52.0",
+    "@mui/icons-material": "^7.3.11",
+    "@mui/material": "^7.3.11",
+    "@mui/material-nextjs": "^7.3.10",
+    "@mui/x-charts": "^8.29.3",
+    "canvas-confetti": "^1.9.4",
+    "framer-motion": "^12.43.0",
+    "next": "^15.5.29",
+    "react": "^19.1.10",
+    "react-dom": "^19.1.10",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@types/node": "^22.10.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "@eslint/eslintrc": "^3.3.7",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^22.20.7",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.5.29",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
   }
 }

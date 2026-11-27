@@ -1,4 +1,5 @@
-// Contrato 1 (dono: Agente 1). Cópia literal de docs/05. Provisório até a feat/fundacao.
+/* Contrato 1 — tipos compartilhados (cópia de docs/05-modelo-de-dados.md).
+ * Dono: Agente 1. Mudanças só em PR próprio e pequeno. */
 export type Serie = 1 | 2 | 3;
 export type Area = "MAT" | "LGG" | "CNT" | "CHS";
 export type SkillLevel = "defasagem" | "em_desenvolvimento" | "dominada";
@@ -215,3 +216,24 @@ export interface LocalState {
   alertas: Record<string, { conversouEm: string; nota: string }>; // por studentId
   semestreSimulado: boolean;
 }
+
+/* ---------- Extras de contrato (rotas e corpus) ---------- */
+export type AiSource = "ai" | "fallback";
+export interface ApiResponse<T> { data: T; source: AiSource; }
+
+export interface CorpusChunk {
+  id: string;
+  source: "bncc" | "referencial";
+  ref: string;                  // "EM13MAT316" | "Referencial §3.2"
+  titulo: string;
+  fonte: string;                // "BNCC – Ensino Médio, p. 545"
+  texto: string;                // texto oficial literal
+}
+
+export interface FraseTitulo { eixos: [AffinityAxis, AffinityAxis]; frase: string; }
+
+export interface DiagnosticoAI { resumo: string; destaques: string[]; proximosPassos: string[]; }
+export interface GaleraAI { porQueCombina: Record<string, string>; destravarTexto: string; }
+export interface MatchTextAI { explicacao: string; perguntasSugeridas: string[]; }
+
+export type StudentLocalPatch = Partial<StudentLocal>;
