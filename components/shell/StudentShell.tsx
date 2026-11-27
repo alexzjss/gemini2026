@@ -38,6 +38,7 @@ export default function StudentShell({ children }: { children: React.ReactNode }
     <Box sx={{ display: "flex", minHeight: "calc(100dvh - var(--demobar-h, 0px))", bgcolor: tokens.paper }}>
       <Sidebar
         items={NAV_ALUNO_DESKTOP}
+        homeHref="/aluno"
         footer={
           <SidebarUser
             avatar={<Avatar inicial={view.student.inicial} />}
@@ -52,7 +53,7 @@ export default function StudentShell({ children }: { children: React.ReactNode }
           position: "sticky", top: "var(--demobar-h, 0px)", zIndex: 1050, px: 2.5, py: 1.5,
           bgcolor: alpha(tokens.paper, 0.9), backdropFilter: "saturate(1.4) blur(10px)",
         }}>
-          <Logo />
+          <Logo size={18} collapseBelow={380} href="/aluno" />
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <PointsPill pontos={view.pontos} />
             <Box component={NextLink} href="/aluno/perfil" aria-label="Abrir meu perfil" sx={{ borderRadius: "50%", display: "flex" }}>

@@ -13,8 +13,8 @@ export const SIDEBAR_WIDTH = layout.sidebar;
 /** Sidebar desktop (branca, borda direita 2px; item ativo lime + borda, raio 14).
  *  O destaque do item ativo desliza entre itens (layoutId). */
 export default function Sidebar({
-  items, footer, label = "Navegação principal", id = "sidebar",
-}: { items: NavItem[]; footer?: React.ReactNode; label?: string; id?: string }) {
+  items, footer, label = "Navegação principal", id = "sidebar", homeHref,
+}: { items: NavItem[]; footer?: React.ReactNode; label?: string; id?: string; homeHref?: string }) {
   const pathname = usePathname() ?? "";
   const reduce = useReducedMotion();
   return (
@@ -23,7 +23,7 @@ export default function Sidebar({
       px: 2, pt: 3.5, pb: 2.5, bgcolor: tokens.surface, borderRight: border, position: "sticky", top: "var(--demobar-h, 0px)",
       height: "calc(100dvh - var(--demobar-h, 0px))", overflowY: "auto", boxSizing: "border-box",
     }}>
-      <Box sx={{ px: 1 }}><Logo size={16} /></Box>
+      <Box sx={{ px: 1 }}><Logo size={20} href={homeHref} /></Box>
       <Box component="nav" aria-label={label}>
         <Box component="ul" sx={{ listStyle: "none", m: 0, p: 0, display: "flex", flexDirection: "column", gap: 0.5 }}>
           {items.map((it) => {

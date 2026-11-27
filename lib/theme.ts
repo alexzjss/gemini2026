@@ -25,9 +25,20 @@ export const tokens = {
   onBlueFuture: "rgba(255,255,255,.25)",
 } as const;
 
+/** Cores da marca Próxio (prancha "Identidade e Design System").
+ * Usadas só no símbolo/logotipo, manifest e ícones; a UI segue `tokens`. */
+export const brand = {
+  navy: "#0A1630",
+  azul: "#4169FF",
+  lima: "#C8F45D",
+  neve: "#F8FBFF",
+} as const;
+
 export const fonts = {
   display: "var(--font-display), 'Bricolage Grotesque', system-ui, sans-serif",
   body: "var(--font-body), Inter, system-ui, sans-serif",
+  /** Sora: só no logotipo "Próxio". */
+  brand: "var(--font-brand), Sora, system-ui, sans-serif",
 } as const;
 
 export const border = `2px solid ${tokens.ink}`;

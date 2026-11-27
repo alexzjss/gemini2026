@@ -38,7 +38,7 @@ export default function Landing() {
         gridTemplateColumns: { xs: "1fr", md: "minmax(0, 1.15fr) minmax(360px, 440px)" }, alignItems: "center",
       }}>
         <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 3.5, md: 4 } }}>
-          <Box><Logo onBlue size={16} /></Box>
+          <Box><Logo onBlue size={26} /></Box>
           <Typography variant="h1" sx={{ color: tokens.white, fontSize: { md: 64, lg: 72 }, maxWidth: 620 }}>Bora descobrir pra onde a escola te leva.</Typography>
           <Typography sx={{ display: { xs: "none", md: "block" }, color: tokens.blueTint, fontSize: 18, maxWidth: 520 }}>
             Sua ficha BNCC, carreiras que combinam com você, missões curtas e um Match Day com mentores de verdade. Nota não bloqueia nada.

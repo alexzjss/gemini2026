@@ -48,6 +48,7 @@ export default function ProfessorShell({ children }: { children: ReactNode }) {
     <Box sx={{ minHeight: "calc(100dvh - var(--demobar-h, 0px))", bgcolor: tokens.paper, color: tokens.ink, display: { xs: "block", md: "flex" } }}>
       <Sidebar
         id="sidebar-prof"
+        homeHref={`/professor/turma/${classId}`}
         label="Navegação do professor"
         items={itens}
         footer={<SidebarUser avatar={<Avatar inicial={inicial} />} nome={professor.nome} sub={professor.disciplina} />}
@@ -62,7 +63,7 @@ export default function ProfessorShell({ children }: { children: ReactNode }) {
           borderBottom: border, position: "sticky", top: "var(--demobar-h, 0px)", zIndex: 1050,
         }}
       >
-        <Logo />
+        <Logo size={18} collapseBelow={380} href={`/professor/turma/${classId}`} />
         <Box component="nav" aria-label="Navegação do professor">
           <Box component="ul" sx={{ listStyle: "none", m: 0, p: 0, display: "flex", gap: 0.5 }}>
             {itens.map((i) => {
