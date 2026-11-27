@@ -1,0 +1,18 @@
+[
+  { "skillCode": "EM13MAT316", "titulo": "Quem é o artilheiro de verdade? Média, moda e mediana no interclasse", "minutos": 8 },
+  { "skillCode": "EM13MAT310", "titulo": "Quantos uniformes dá pra montar?", "minutos": 8 },
+  { "skillCode": "EM13MAT101", "titulo": "Esse gráfico tá te enganando?", "minutos": 7 },
+  { "skillCode": "EM13MAT302", "titulo": "Quanto custa a vaquinha da formatura?", "minutos": 8 },
+  { "skillCode": "EM13LGG101", "titulo": "O que esse anúncio quer que você sinta?", "minutos": 6 },
+  { "skillCode": "EM13LGG303", "titulo": "Convence a sala em 3 argumentos", "minutos": 7 },
+  { "skillCode": "EM13LGG701", "titulo": "Um post que explica sem enrolar", "minutos": 7 },
+  { "skillCode": "EM13LP01", "titulo": "Quem escreveu isso e por quê?", "minutos": 6 },
+  { "skillCode": "EM13CNT101", "titulo": "Pra onde vai a energia do seu lanche?", "minutos": 8 },
+  { "skillCode": "EM13CNT204", "titulo": "Vai chover no interclasse?", "minutos": 8 },
+  { "skillCode": "EM13CNT301", "titulo": "Testa a hipótese: o time cansa no 2º tempo?", "minutos": 8 },
+  { "skillCode": "EM13CNT303", "titulo": "Essa notícia de ciência é confiável?", "minutos": 6 },
+  { "skillCode": "EM13CHS101", "titulo": "Duas notícias, um fato: quem tá contando o quê?", "minutos": 7 },
+  { "skillCode": "EM13CHS401", "titulo": "Como era o trabalho dos seus avós?", "minutos": 7 },
+  { "skillCode": "EM13CHS403", "titulo": "De onde vem a renda do seu bairro?", "minutos": 8 },
+  { "skillCode": "EM13CHS501", "titulo": "Treta no grupo da sala: o que é justo?", "minutos": 6 }
+]
