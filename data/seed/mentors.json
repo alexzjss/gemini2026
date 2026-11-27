@@ -1,62 +1,341 @@
 [
-  { "id": "m01", "nome": "Renata Alves", "inicial": "R", "cargo": "Analista de desempenho", "organizacao": "Clube da região", "categoria": "regiao", "nivelMinimo": 1,
-    "careerIds": ["analista-dados-esportivos", "educador-fisico"],
-    "affinity": { "analisar": 90, "tech": 50, "criar": 25, "cuidar": 25, "negocios": 35, "esportes": 90 },
-    "bio": "Perfil ilustrativo. Começou anotando os jogos do time do bairro num caderno; hoje monta os relatórios de desempenho do clube.",
-    "disponibilidade": ["Ter 14h", "Qui 10h", "Sáb 9h"], "vagasSemestre": 4 },
-  { "id": "m02", "nome": "Sueli Matos", "inicial": "S", "cargo": "Dona de loja que vende pelo Instagram", "organizacao": "Comércio do bairro", "categoria": "regiao", "nivelMinimo": 1,
-    "careerIds": ["empreendedor-local", "tecnico-adm-marketing", "criador-conteudo"],
-    "affinity": { "analisar": 45, "tech": 45, "criar": 60, "cuidar": 30, "negocios": 95, "esportes": 5 },
-    "bio": "Perfil ilustrativo. Abriu a loja com uma arara na garagem e aprendeu sozinha a vender pela internet.",
-    "disponibilidade": ["Seg 16h", "Qua 15h", "Sáb 11h"], "vagasSemestre": 3 },
-  { "id": "m03", "nome": "Marcos Lima", "inicial": "M", "cargo": "Enfermeiro", "organizacao": "UBS da região", "categoria": "regiao", "nivelMinimo": 1,
-    "careerIds": ["enfermeiro", "psicologo"],
-    "affinity": { "analisar": 40, "tech": 10, "criar": 15, "cuidar": 95, "negocios": 10, "esportes": 40 },
-    "bio": "Perfil ilustrativo. Fez técnico em enfermagem depois do Ensino Médio e hoje coordena o acolhimento da UBS.",
-    "disponibilidade": ["Ter 10h", "Qui 15h", "Sex 9h"], "vagasSemestre": 3 },
-  { "id": "m04", "nome": "Diego Souza", "inicial": "D", "cargo": "Técnico de logística", "organizacao": "Centro de distribuição da região", "categoria": "regiao", "nivelMinimo": 1,
-    "careerIds": ["tecnico-logistica"],
-    "affinity": { "analisar": 90, "tech": 40, "criar": 10, "cuidar": 20, "negocios": 60, "esportes": 20 },
-    "bio": "Perfil ilustrativo. Começou como ajudante de estoque e fez o técnico em logística à noite.",
-    "disponibilidade": ["Seg 14h", "Qua 10h", "Sex 16h"], "vagasSemestre": 3 },
-  { "id": "m05", "nome": "Patrícia Rocha", "inicial": "P", "cargo": "Professora de educação física", "organizacao": "Escola estadual da região", "categoria": "regiao", "nivelMinimo": 1,
-    "careerIds": ["educador-fisico", "professor"],
-    "affinity": { "analisar": 30, "tech": 10, "criar": 25, "cuidar": 80, "negocios": 20, "esportes": 95 },
-    "bio": "Perfil ilustrativo. Jogou vôlei na escola pública e voltou pra lá como professora.",
-    "disponibilidade": ["Ter 16h", "Qui 14h", "Sáb 10h"], "vagasSemestre": 3 },
-  { "id": "m06", "nome": "Larissa Nunes", "inicial": "L", "cargo": "Estudante de ciência de dados", "organizacao": "Universidade pública", "categoria": "universitario_tecnico", "nivelMinimo": 2,
-    "careerIds": ["analista-dados-esportivos", "dev-software"],
-    "affinity": { "analisar": 95, "tech": 80, "criar": 25, "cuidar": 20, "negocios": 25, "esportes": 40 },
-    "bio": "Perfil ilustrativo. Primeira da família na universidade; faz estágio analisando dados de transporte público.",
-    "disponibilidade": ["Seg 18h", "Qua 18h", "Sáb 14h"], "vagasSemestre": 3 },
-  { "id": "m07", "nome": "Thiago Ferreira", "inicial": "T", "cargo": "Técnico em informática que desenvolve jogos indie", "organizacao": "Estúdio independente", "categoria": "universitario_tecnico", "nivelMinimo": 2,
-    "careerIds": ["dev-games", "gestor-esports", "dev-software"],
-    "affinity": { "analisar": 45, "tech": 95, "criar": 75, "cuidar": 10, "negocios": 30, "esportes": 20 },
-    "bio": "Perfil ilustrativo. Aprendeu a programar no técnico integrado e já lançou dois jogos com amigos.",
-    "disponibilidade": ["Ter 19h", "Qui 19h", "Dom 15h"], "vagasSemestre": 3 },
-  { "id": "m08", "nome": "Júlia Castro", "inicial": "J", "cargo": "Estudante de jornalismo", "organizacao": "Universidade pública", "categoria": "universitario_tecnico", "nivelMinimo": 2,
-    "careerIds": ["jornalista-esportivo", "criador-conteudo"],
-    "affinity": { "analisar": 35, "tech": 40, "criar": 90, "cuidar": 25, "negocios": 25, "esportes": 70 },
-    "bio": "Perfil ilustrativo. Faz um podcast sobre o futebol de várzea da cidade.",
-    "disponibilidade": ["Seg 15h", "Qua 16h", "Sex 14h"], "vagasSemestre": 3 },
-  { "id": "m09", "nome": "Ana Paula Reis", "inicial": "A", "cargo": "Técnica em meio ambiente", "organizacao": "Cooperativa ambiental", "categoria": "universitario_tecnico", "nivelMinimo": 2,
-    "careerIds": ["tecnico-meio-ambiente"],
-    "affinity": { "analisar": 65, "tech": 25, "criar": 15, "cuidar": 55, "negocios": 15, "esportes": 75 },
-    "bio": "Perfil ilustrativo. Fez o técnico num instituto federal e hoje monitora a qualidade da água da região.",
-    "disponibilidade": ["Ter 9h", "Qui 9h", "Sáb 8h"], "vagasSemestre": 2 },
-  { "id": "m10", "nome": "Rafael Mendes", "inicial": "R", "cargo": "Cientista de dados", "organizacao": "Big Tech", "categoria": "alta_demanda", "nivelMinimo": 4,
-    "careerIds": ["analista-dados-esportivos", "dev-software"],
-    "affinity": { "analisar": 95, "tech": 95, "criar": 30, "cuidar": 10, "negocios": 35, "esportes": 20 },
-    "bio": "Perfil ilustrativo. Estudou em escola pública, fez estatística e hoje trabalha com modelos de recomendação.",
-    "disponibilidade": ["Qua 19h", "Sex 18h", "Sáb 10h"], "vagasSemestre": 2 },
-  { "id": "m11", "nome": "Beatriz Campos", "inicial": "B", "cargo": "Médica especialista em medicina esportiva", "organizacao": "Hospital de referência", "categoria": "alta_demanda", "nivelMinimo": 4,
-    "careerIds": ["educador-fisico", "enfermeiro"],
-    "affinity": { "analisar": 60, "tech": 20, "criar": 10, "cuidar": 90, "negocios": 15, "esportes": 85 },
-    "bio": "Perfil ilustrativo. Atende atletas profissionais e de base; entrou na medicina pelo sistema de cotas.",
-    "disponibilidade": ["Ter 20h", "Qui 20h", "Sáb 16h"], "vagasSemestre": 1 },
-  { "id": "m12", "nome": "Carolina Prado", "inicial": "C", "cargo": "Executiva de marketing", "organizacao": "Empresa de games", "categoria": "alta_demanda", "nivelMinimo": 4,
-    "careerIds": ["gestor-esports", "tecnico-adm-marketing", "dev-games"],
-    "affinity": { "analisar": 60, "tech": 75, "criar": 60, "cuidar": 15, "negocios": 95, "esportes": 30 },
-    "bio": "Perfil ilustrativo. Começou organizando campeonatos de game na escola e hoje lidera campanhas de lançamento.",
-    "disponibilidade": ["Seg 19h", "Qua 20h", "Sex 19h"], "vagasSemestre": 2 }
+  {
+    "id": "m01-analista-clube",
+    "nome": "Renata Alves",
+    "inicial": "R",
+    "cargo": "Analista de desempenho",
+    "organizacao": "Clube da região",
+    "categoria": "regiao",
+    "nivelMinimo": 1,
+    "careerIds": [
+      "analista-dados-esportivos",
+      "educador-fisico"
+    ],
+    "affinity": {
+      "analisar": 90,
+      "tech": 50,
+      "criar": 20,
+      "cuidar": 25,
+      "negocios": 25,
+      "esportes": 95
+    },
+    "bio": "Começou anotando estatísticas do time do bairro num caderno. Hoje monta os relatórios de desempenho do time sub-20 e mostra pro técnico quem rende mais em cada posição.",
+    "disponibilidade": [
+      "Ter 14h",
+      "Qui 10h",
+      "Sáb 9h"
+    ],
+    "vagasSemestre": 3
+  },
+  {
+    "id": "m02-loja-online",
+    "nome": "Juliana Costa",
+    "inicial": "J",
+    "cargo": "Dona de loja que vende pela internet",
+    "organizacao": "Loja de roupas do bairro",
+    "categoria": "regiao",
+    "nivelMinimo": 1,
+    "careerIds": [
+      "empreendedor-local",
+      "tecnico-marketing-digital",
+      "criador-conteudo",
+      "designer-ux"
+    ],
+    "affinity": {
+      "analisar": 55,
+      "tech": 55,
+      "criar": 80,
+      "cuidar": 35,
+      "negocios": 95,
+      "esportes": 10
+    },
+    "bio": "Abriu a loja com R$ 500 e um celular. Faz as fotos, os posts e as contas, e aprendeu na marra a calcular preço, frete e margem.",
+    "disponibilidade": [
+      "Seg 15h",
+      "Qua 16h",
+      "Sex 14h"
+    ],
+    "vagasSemestre": 3
+  },
+  {
+    "id": "m03-enfermeiro-ubs",
+    "nome": "Marcos Oliveira",
+    "inicial": "M",
+    "cargo": "Enfermeiro",
+    "organizacao": "Unidade Básica de Saúde da região",
+    "categoria": "regiao",
+    "nivelMinimo": 1,
+    "careerIds": [
+      "enfermeiro",
+      "psicologo"
+    ],
+    "affinity": {
+      "analisar": 50,
+      "tech": 15,
+      "criar": 20,
+      "cuidar": 95,
+      "negocios": 15,
+      "esportes": 35
+    },
+    "bio": "Fez o curso técnico em enfermagem numa escola pública e depois a graduação. Cuida de vacinação, curativos e orientação às famílias do bairro, inclusive em saúde mental.",
+    "disponibilidade": [
+      "Ter 16h",
+      "Qua 10h",
+      "Sex 9h"
+    ],
+    "vagasSemestre": 2
+  },
+  {
+    "id": "m04-logistica-cd",
+    "nome": "Paulo Santos",
+    "inicial": "P",
+    "cargo": "Técnico de logística",
+    "organizacao": "Centro de distribuição da região",
+    "categoria": "regiao",
+    "nivelMinimo": 1,
+    "careerIds": [
+      "tecnico-logistica"
+    ],
+    "affinity": {
+      "analisar": 90,
+      "tech": 45,
+      "criar": 15,
+      "cuidar": 20,
+      "negocios": 60,
+      "esportes": 20
+    },
+    "bio": "Entrou como auxiliar de estoque e fez o curso técnico à noite. Hoje planeja as rotas de entrega e resolve os imprevistos do dia.",
+    "disponibilidade": [
+      "Seg 18h",
+      "Qua 18h",
+      "Sáb 10h"
+    ],
+    "vagasSemestre": 3
+  },
+  {
+    "id": "m05-professora-ef",
+    "nome": "Carolina Ferreira",
+    "inicial": "C",
+    "cargo": "Professora de educação física",
+    "organizacao": "Escola estadual da região",
+    "categoria": "regiao",
+    "nivelMinimo": 1,
+    "careerIds": [
+      "educador-fisico",
+      "professor"
+    ],
+    "affinity": {
+      "analisar": 40,
+      "tech": 15,
+      "criar": 30,
+      "cuidar": 85,
+      "negocios": 15,
+      "esportes": 95
+    },
+    "bio": "Dá aula pra cinco turmas e treina o time de vôlei da escola. Acredita que esporte ensina a lidar com erro e com o time.",
+    "disponibilidade": [
+      "Ter 13h",
+      "Qui 13h",
+      "Sex 16h"
+    ],
+    "vagasSemestre": 4
+  },
+  {
+    "id": "m06-estudante-dados",
+    "nome": "Lucas Pereira",
+    "inicial": "L",
+    "cargo": "Estudante de Ciência de Dados",
+    "organizacao": "Universidade pública",
+    "categoria": "universitario_tecnico",
+    "nivelMinimo": 2,
+    "careerIds": [
+      "analista-dados-esportivos",
+      "desenvolvedor-software"
+    ],
+    "affinity": {
+      "analisar": 95,
+      "tech": 85,
+      "criar": 25,
+      "cuidar": 20,
+      "negocios": 30,
+      "esportes": 20
+    },
+    "bio": "Primeiro da família na universidade, entrou pelo Sisu. Faz estágio analisando dados de transporte público e programa em Python.",
+    "disponibilidade": [
+      "Qua 17h",
+      "Qui 17h",
+      "Sáb 11h"
+    ],
+    "vagasSemestre": 3
+  },
+  {
+    "id": "m07-dev-jogos-indie",
+    "nome": "Thiago Ribeiro",
+    "inicial": "T",
+    "cargo": "Técnico em informática e desenvolvedor de jogos independentes",
+    "organizacao": "Estúdio independente",
+    "categoria": "universitario_tecnico",
+    "nivelMinimo": 2,
+    "careerIds": [
+      "desenvolvedor-games",
+      "desenvolvedor-software",
+      "gestor-esports"
+    ],
+    "affinity": {
+      "analisar": 60,
+      "tech": 95,
+      "criar": 85,
+      "cuidar": 15,
+      "negocios": 40,
+      "esportes": 25
+    },
+    "bio": "Fez o técnico integrado em informática num Instituto Federal. Lançou dois jogos pequenos com amigos e hoje vive de projetos.",
+    "disponibilidade": [
+      "Seg 19h",
+      "Qua 19h",
+      "Sáb 15h"
+    ],
+    "vagasSemestre": 3
+  },
+  {
+    "id": "m08-estudante-jornalismo",
+    "nome": "Beatriz Lima",
+    "inicial": "B",
+    "cargo": "Estudante de Jornalismo",
+    "organizacao": "Universidade pública",
+    "categoria": "universitario_tecnico",
+    "nivelMinimo": 2,
+    "careerIds": [
+      "jornalista-esportivo",
+      "criador-conteudo"
+    ],
+    "affinity": {
+      "analisar": 55,
+      "tech": 40,
+      "criar": 95,
+      "cuidar": 30,
+      "negocios": 25,
+      "esportes": 70
+    },
+    "bio": "Tem um podcast sobre o futebol feminino da cidade e cobre os jogos do campeonato estadual pra um site local.",
+    "disponibilidade": [
+      "Ter 18h",
+      "Qui 18h",
+      "Dom 10h"
+    ],
+    "vagasSemestre": 3
+  },
+  {
+    "id": "m09-tecnica-meio-ambiente",
+    "nome": "Ana Rodrigues",
+    "inicial": "A",
+    "cargo": "Técnica em meio ambiente",
+    "organizacao": "Cooperativa de reciclagem da região",
+    "categoria": "universitario_tecnico",
+    "nivelMinimo": 2,
+    "careerIds": [
+      "tecnico-meio-ambiente"
+    ],
+    "affinity": {
+      "analisar": 70,
+      "tech": 25,
+      "criar": 30,
+      "cuidar": 65,
+      "negocios": 30,
+      "esportes": 75
+    },
+    "bio": "Fez o técnico em meio ambiente integrado ao Ensino Médio. Organiza a coleta seletiva e mede quanto a cooperativa deixa de mandar pro aterro.",
+    "disponibilidade": [
+      "Seg 14h",
+      "Qua 14h",
+      "Sex 10h"
+    ],
+    "vagasSemestre": 2
+  },
+  {
+    "id": "m10-cientista-dados-bigtech",
+    "nome": "Fernanda Souza",
+    "inicial": "F",
+    "cargo": "Cientista de dados",
+    "organizacao": "Big Tech",
+    "categoria": "alta_demanda",
+    "nivelMinimo": 4,
+    "careerIds": [
+      "analista-dados-esportivos",
+      "desenvolvedor-software"
+    ],
+    "affinity": {
+      "analisar": 95,
+      "tech": 95,
+      "criar": 35,
+      "cuidar": 15,
+      "negocios": 45,
+      "esportes": 10
+    },
+    "bio": "Estudou em escola pública e entrou em Estatística pelo Sisu. Hoje trabalha com modelos que recomendam conteúdo pra milhões de pessoas.",
+    "disponibilidade": [
+      "Qua 20h",
+      "Sáb 10h",
+      "Sáb 14h"
+    ],
+    "vagasSemestre": 2
+  },
+  {
+    "id": "m11-medica-esportiva",
+    "nome": "Patrícia Gomes",
+    "inicial": "P",
+    "cargo": "Médica especialista em medicina esportiva",
+    "organizacao": "Hospital universitário",
+    "categoria": "alta_demanda",
+    "nivelMinimo": 4,
+    "careerIds": [
+      "educador-fisico",
+      "enfermeiro"
+    ],
+    "affinity": {
+      "analisar": 75,
+      "tech": 30,
+      "criar": 15,
+      "cuidar": 90,
+      "negocios": 20,
+      "esportes": 90
+    },
+    "bio": "Atende atletas amadores e profissionais e pesquisa prevenção de lesões no futebol de base.",
+    "disponibilidade": [
+      "Ter 19h",
+      "Qui 19h",
+      "Sáb 8h"
+    ],
+    "vagasSemestre": 2
+  },
+  {
+    "id": "m12-executiva-games",
+    "nome": "Camila Martins",
+    "inicial": "C",
+    "cargo": "Executiva de marketing",
+    "organizacao": "Empresa de games",
+    "categoria": "alta_demanda",
+    "nivelMinimo": 4,
+    "careerIds": [
+      "gestor-esports",
+      "tecnico-marketing-digital",
+      "desenvolvedor-games",
+      "designer-ux"
+    ],
+    "affinity": {
+      "analisar": 70,
+      "tech": 80,
+      "criar": 75,
+      "cuidar": 20,
+      "negocios": 95,
+      "esportes": 40
+    },
+    "bio": "Começou como estagiária de redes sociais e hoje lidera o lançamento de jogos na América Latina.",
+    "disponibilidade": [
+      "Seg 20h",
+      "Qui 20h",
+      "Sáb 11h"
+    ],
+    "vagasSemestre": 2
+  }
 ]

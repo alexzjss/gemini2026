@@ -1,80 +1,501 @@
 [
-  { "id": "g01", "grupo": "galera", "quando": "Segunda, 7h", "enunciado": "Chegou o horário novo das aulas e tá todo mundo perdido. Você…", "opcoes": [
-    { "key": "A", "label": "Monto uma tabela no celular e mando no grupo da sala", "pesos": { "analisar": 3, "tech": 1 } },
-    { "key": "B", "label": "Faço um card caprichado com o horário pro grupo", "pesos": { "criar": 3 } },
-    { "key": "C", "label": "Mostro pra quem chegou agora onde fica cada sala", "pesos": { "cuidar": 3 } },
-    { "key": "D", "label": "Proponho um líder por fileira pra avisar as mudanças", "pesos": { "negocios": 3 } }
-  ] },
-  { "id": "g02", "grupo": "galera", "quando": "Quarta, 15h", "enunciado": "O professor de educação física deixou a turma escolher a atividade do bimestre. Você…", "opcoes": [
-    { "key": "A", "label": "Sugiro um campeonato com tabela de pontos e estatística de cada um", "pesos": { "esportes": 2, "analisar": 2 } },
-    { "key": "B", "label": "Quero montar uma coreografia e gravar um vídeo", "pesos": { "criar": 2, "esportes": 1 } },
-    { "key": "C", "label": "Topo qualquer coisa, desde que todo mundo jogue junto", "pesos": { "cuidar": 2, "esportes": 1 } },
-    { "key": "D", "label": "Organizo os times e cuido do material", "pesos": { "negocios": 2, "analisar": 1 } }
-  ] },
-  { "id": "g03", "grupo": "galera", "quando": "Sábado, 10h", "enunciado": "Seu primo pediu ajuda pra escolher um celular novo. Você…", "opcoes": [
-    { "key": "A", "label": "Comparo preço, bateria e câmera numa planilha", "pesos": { "analisar": 3, "tech": 1 } },
-    { "key": "B", "label": "Vejo review no YouTube e explico as diferenças", "pesos": { "tech": 3 } },
-    { "key": "C", "label": "Pergunto pra que ele mais usa e ajudo a decidir", "pesos": { "cuidar": 2 } },
-    { "key": "D", "label": "Garimpo promoção e negocio desconto na loja", "pesos": { "negocios": 3 } }
-  ] },
-  { "id": "g04", "grupo": "galera", "quando": "Domingo, 16h", "enunciado": "Rolou um jogão no fim de semana e o grupo da sala só fala disso. Você…", "opcoes": [
-    { "key": "A", "label": "Mando os números: posse de bola, finalizações, quem correu mais", "pesos": { "analisar": 2, "esportes": 2 } },
-    { "key": "B", "label": "Faço um meme que viraliza na sala", "pesos": { "criar": 3 } },
-    { "key": "C", "label": "Chamo a galera pra uma pelada depois da aula", "pesos": { "esportes": 3 } },
-    { "key": "D", "label": "Organizo um bolão valendo lanche", "pesos": { "negocios": 2, "esportes": 1 } }
-  ] },
-  { "id": "g05", "grupo": "galera", "quando": "Terça, 20h", "enunciado": "A internet do bairro caiu e a turma tem trabalho pra entregar amanhã. Você…", "opcoes": [
-    { "key": "A", "label": "Vejo o que dá pra fazer offline e divido as tarefas", "pesos": { "analisar": 2, "negocios": 1 } },
-    { "key": "B", "label": "Faço o celular virar roteador pra todo mundo usar", "pesos": { "tech": 3 } },
-    { "key": "C", "label": "Ligo pra quem tá mais enrolado e ajudo por telefone", "pesos": { "cuidar": 3 } },
-    { "key": "D", "label": "Escrevo minha parte à mão e digito depois", "pesos": { "criar": 2 } }
-  ] },
-  { "id": "g06", "grupo": "galera", "quando": "Quinta, 12h", "enunciado": "A fila da cantina tá enorme todo dia no intervalo. Você…", "opcoes": [
-    { "key": "A", "label": "Cronometro a fila e mostro onde o tempo se perde", "pesos": { "analisar": 3 } },
-    { "key": "B", "label": "Sugiro um formulário pra pedir antes do intervalo", "pesos": { "tech": 3, "negocios": 1 } },
-    { "key": "C", "label": "Dou uma força pra tia da cantina servir", "pesos": { "cuidar": 2 } },
-    { "key": "D", "label": "Proponho uma barraquinha da turma pra dividir a fila", "pesos": { "negocios": 3 } }
-  ] },
-  { "id": "g07", "grupo": "galera", "quando": "Sexta, 19h", "enunciado": "O grêmio quer fazer o interclasse e ninguém se mexeu. Você…", "opcoes": [
-    { "key": "A", "label": "Monto a tabela de jogos e o chaveamento", "pesos": { "analisar": 3, "esportes": 1 } },
-    { "key": "B", "label": "Faço a arte e os posts pro Insta do grêmio", "pesos": { "criar": 3, "tech": 1 } },
-    { "key": "C", "label": "Vou atrás de patrocínio na lanchonete do bairro", "pesos": { "negocios": 3 } },
-    { "key": "D", "label": "Fico de juiz e resolvo as tretas", "pesos": { "cuidar": 2, "esportes": 2 } }
-  ] },
-  { "id": "g08", "grupo": "galera", "quando": "Sábado, 14h", "enunciado": "Um vizinho vai abrir uma horta comunitária na praça. Você…", "opcoes": [
-    { "key": "A", "label": "Calculo quanto dá pra plantar em cada canteiro", "pesos": { "analisar": 2, "esportes": 1 } },
-    { "key": "B", "label": "Faço as plaquinhas e a divulgação", "pesos": { "criar": 3 } },
-    { "key": "C", "label": "Ensino as crianças da rua a cuidar das plantas", "pesos": { "cuidar": 2, "esportes": 1 } },
-    { "key": "D", "label": "Penso em vender as mudas pra manter a horta", "pesos": { "negocios": 3 } }
-  ] },
-  { "id": "g09", "grupo": "galera", "quando": "Sexta, 22h", "enunciado": "Seu time no game online tá perdendo todas. Você…", "opcoes": [
-    { "key": "A", "label": "Abro as estatísticas da partida e acho onde a gente erra", "pesos": { "analisar": 2, "tech": 1 } },
-    { "key": "B", "label": "Testo outra estratégia e outra configuração", "pesos": { "tech": 3 } },
-    { "key": "C", "label": "Seguro a onda da galera pra ninguém brigar", "pesos": { "cuidar": 2 } },
-    { "key": "D", "label": "Assumo o comando e divido as funções", "pesos": { "negocios": 2, "esportes": 1 } }
-  ] },
-  { "id": "g10", "grupo": "galera", "quando": "Segunda, 13h", "enunciado": "A escola vai ter feira de profissões e precisa de voluntários. Você…", "opcoes": [
-    { "key": "A", "label": "Faço a pesquisa de quais profissões a turma quer ver", "pesos": { "analisar": 3 } },
-    { "key": "B", "label": "Monto o vídeo de divulgação da feira", "pesos": { "criar": 2, "tech": 1 } },
-    { "key": "C", "label": "Fico na recepção ajudando quem chega", "pesos": { "cuidar": 3 } },
-    { "key": "D", "label": "Convido os comércios do bairro pra participar", "pesos": { "negocios": 3 } }
-  ] },
-  { "id": "w01", "grupo": "semana", "quando": "Desafio da semana", "enunciado": "O time de futsal da escola vai jogar fora e o ônibus atrasou. Você…", "opcoes": [
-    { "key": "A", "label": "Calculo a rota mais rápida e o horário de chegada", "pesos": { "analisar": 3 } },
-    { "key": "B", "label": "Faço uma live da viagem pro Insta da escola", "pesos": { "criar": 2, "tech": 1 } },
-    { "key": "C", "label": "Acalmo o time e faço o aquecimento ali mesmo", "pesos": { "cuidar": 1, "esportes": 2 } },
-    { "key": "D", "label": "Ligo pra organização e negocio um novo horário", "pesos": { "negocios": 3 } }
-  ] },
-  { "id": "w02", "grupo": "semana", "quando": "Desafio da semana", "enunciado": "Sua tia quer começar a vender bolo pela internet. Você…", "opcoes": [
-    { "key": "A", "label": "Faço as contas de custo e preço de cada fatia", "pesos": { "analisar": 2, "negocios": 1 } },
-    { "key": "B", "label": "Crio o perfil e o cardápio no celular", "pesos": { "tech": 2, "criar": 1 } },
-    { "key": "C", "label": "Tiro as fotos e escrevo as legendas", "pesos": { "criar": 3 } },
-    { "key": "D", "label": "Penso em quem compraria e onde divulgar", "pesos": { "negocios": 3 } }
-  ] },
-  { "id": "w03", "grupo": "semana", "quando": "Desafio da semana", "enunciado": "Um colega novo chegou na turma e não conhece ninguém. Você…", "opcoes": [
-    { "key": "A", "label": "Chamo pra jogar bola no intervalo", "pesos": { "esportes": 2, "cuidar": 1 } },
-    { "key": "B", "label": "Coloco ele no grupo da sala e apresento todo mundo", "pesos": { "cuidar": 2, "tech": 1 } },
-    { "key": "C", "label": "Puxo papo sobre os jogos que ele curte", "pesos": { "tech": 2 } },
-    { "key": "D", "label": "Chamo pro trabalho em grupo e divido as tarefas", "pesos": { "negocios": 2, "analisar": 1 } }
-  ] }
+  {
+    "id": "g01",
+    "grupo": "galera",
+    "quando": "Segunda, 7h",
+    "enunciado": "O ônibus atrasou e você vai perder a primeira aula. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Abro o app e calculo se compensa ir a pé",
+        "pesos": {
+          "analisar": 3,
+          "tech": 1
+        }
+      },
+      {
+        "key": "B",
+        "label": "Mando áudio no grupo avisando a galera",
+        "pesos": {
+          "cuidar": 2,
+          "criar": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Vou correndo: é meu aquecimento do dia",
+        "pesos": {
+          "esportes": 3
+        }
+      },
+      {
+        "key": "D",
+        "label": "Aproveito o ponto cheio pra vender o brigadeiro que trouxe",
+        "pesos": {
+          "negocios": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "g02",
+    "grupo": "galera",
+    "quando": "Terça, 15h",
+    "enunciado": "O professor pediu um trabalho em grupo sobre o bairro. Você fica com…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "A pesquisa: entrevistar e contar quem faz o quê",
+        "pesos": {
+          "analisar": 3
+        }
+      },
+      {
+        "key": "B",
+        "label": "O vídeo e a edição",
+        "pesos": {
+          "criar": 3,
+          "tech": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Organizar quem faz o quê e o prazo",
+        "pesos": {
+          "negocios": 2,
+          "analisar": 1
+        }
+      },
+      {
+        "key": "D",
+        "label": "Conversar com os moradores mais antigos",
+        "pesos": {
+          "cuidar": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "g03",
+    "grupo": "galera",
+    "quando": "Quarta, 20h",
+    "enunciado": "Seu primo pediu ajuda porque o celular dele travou. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Pesquiso o erro e resolvo passo a passo",
+        "pesos": {
+          "tech": 3,
+          "analisar": 1
+        }
+      },
+      {
+        "key": "B",
+        "label": "Explico com calma pra ele conseguir sozinho da próxima vez",
+        "pesos": {
+          "cuidar": 3
+        }
+      },
+      {
+        "key": "C",
+        "label": "Resolvo e ofereço o serviço pros vizinhos também",
+        "pesos": {
+          "negocios": 2,
+          "tech": 1
+        }
+      },
+      {
+        "key": "D",
+        "label": "Chamo ele pra jogar bola enquanto o celular reinicia",
+        "pesos": {
+          "esportes": 2,
+          "cuidar": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "g04",
+    "grupo": "galera",
+    "quando": "Sábado, 10h",
+    "enunciado": "Vai rolar um campeonato de games no centro cultural. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Me inscrevo e treino a semana toda",
+        "pesos": {
+          "tech": 2,
+          "esportes": 2
+        }
+      },
+      {
+        "key": "B",
+        "label": "Faço a transmissão ao vivo e narro as partidas",
+        "pesos": {
+          "criar": 3,
+          "tech": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Monto a planilha de chaveamento e pontuação",
+        "pesos": {
+          "analisar": 3
+        }
+      },
+      {
+        "key": "D",
+        "label": "Corro atrás de patrocínio pro prêmio",
+        "pesos": {
+          "negocios": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "g05",
+    "grupo": "galera",
+    "quando": "Domingo, 16h",
+    "enunciado": "A praça do bairro está cheia de lixo. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Chamo a galera pra um mutirão e um futebol depois",
+        "pesos": {
+          "esportes": 2,
+          "cuidar": 2
+        }
+      },
+      {
+        "key": "B",
+        "label": "Faço um post de antes e depois pra cobrar a prefeitura",
+        "pesos": {
+          "criar": 2,
+          "cuidar": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Conto quanto lixo tem de cada tipo pra mostrar o tamanho do problema",
+        "pesos": {
+          "analisar": 3,
+          "esportes": 1
+        }
+      },
+      {
+        "key": "D",
+        "label": "Penso num jeito de vender o reciclável e reverter o dinheiro pra praça",
+        "pesos": {
+          "negocios": 3,
+          "esportes": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "g06",
+    "grupo": "galera",
+    "quando": "Quinta, 13h",
+    "enunciado": "Chegou um colega novo na turma e ele está sozinho no intervalo. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Chamo pra sentar com a gente e apresento a turma",
+        "pesos": {
+          "cuidar": 3
+        }
+      },
+      {
+        "key": "B",
+        "label": "Chamo pro futsal do intervalo",
+        "pesos": {
+          "esportes": 3
+        }
+      },
+      {
+        "key": "C",
+        "label": "Descubro que ele joga o mesmo game e a gente troca o nick",
+        "pesos": {
+          "tech": 2,
+          "cuidar": 1
+        }
+      },
+      {
+        "key": "D",
+        "label": "Puxo assunto sobre a música que ele está ouvindo",
+        "pesos": {
+          "criar": 2,
+          "cuidar": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "g07",
+    "grupo": "galera",
+    "quando": "Sexta, 19h",
+    "enunciado": "O grêmio quer fazer o interclasse e ninguém se mexeu. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Monto a tabela de jogos e o chaveamento",
+        "pesos": {
+          "analisar": 3,
+          "esportes": 1
+        }
+      },
+      {
+        "key": "B",
+        "label": "Faço a arte e os posts pro Insta do grêmio",
+        "pesos": {
+          "criar": 3,
+          "tech": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Vou atrás de patrocínio na lanchonete do bairro",
+        "pesos": {
+          "negocios": 3
+        }
+      },
+      {
+        "key": "D",
+        "label": "Fico de juiz e resolvo as tretas",
+        "pesos": {
+          "cuidar": 2,
+          "esportes": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "g08",
+    "grupo": "galera",
+    "quando": "Terça, 19h",
+    "enunciado": "Você ganhou R$ 200 de aniversário. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Faço uma planilha: quanto guardo e quanto gasto",
+        "pesos": {
+          "analisar": 3,
+          "negocios": 1
+        }
+      },
+      {
+        "key": "B",
+        "label": "Compro material pra começar a vender alguma coisa",
+        "pesos": {
+          "negocios": 3
+        }
+      },
+      {
+        "key": "C",
+        "label": "Compro o jogo ou a peça pro PC que eu queria",
+        "pesos": {
+          "tech": 3
+        }
+      },
+      {
+        "key": "D",
+        "label": "Compro uma chuteira nova",
+        "pesos": {
+          "esportes": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "g09",
+    "grupo": "galera",
+    "quando": "Sexta, 14h",
+    "enunciado": "A feira de ciências é semana que vem e o seu grupo está sem ideia. Você sugere…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Testar qual tênis amortece melhor o salto",
+        "pesos": {
+          "esportes": 2,
+          "analisar": 2
+        }
+      },
+      {
+        "key": "B",
+        "label": "Um app simples que lembra de beber água",
+        "pesos": {
+          "tech": 3,
+          "cuidar": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Uma maquete caprichada do sistema solar",
+        "pesos": {
+          "criar": 3
+        }
+      },
+      {
+        "key": "D",
+        "label": "Uma pesquisa sobre como a turma anda se sentindo",
+        "pesos": {
+          "cuidar": 3,
+          "analisar": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "g10",
+    "grupo": "galera",
+    "quando": "Sábado, 21h",
+    "enunciado": "Sua rua vai fazer festa junina. Você fica com…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "As contas: quanto cada um paga e quanto sobra",
+        "pesos": {
+          "analisar": 2,
+          "negocios": 2
+        }
+      },
+      {
+        "key": "B",
+        "label": "A decoração e o convite",
+        "pesos": {
+          "criar": 3
+        }
+      },
+      {
+        "key": "C",
+        "label": "As barracas de comida pra vender",
+        "pesos": {
+          "negocios": 3,
+          "cuidar": 1
+        }
+      },
+      {
+        "key": "D",
+        "label": "As brincadeiras e a quadrilha",
+        "pesos": {
+          "esportes": 2,
+          "cuidar": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "w01",
+    "grupo": "semana",
+    "quando": "Desafio da semana",
+    "enunciado": "A cantina subiu o salgado de R$ 5 pra R$ 6. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Calculo quanto isso pesa no mês e corto outro gasto",
+        "pesos": {
+          "analisar": 3,
+          "negocios": 1
+        }
+      },
+      {
+        "key": "B",
+        "label": "Levo lanche de casa e divido com quem precisa",
+        "pesos": {
+          "cuidar": 3
+        }
+      },
+      {
+        "key": "C",
+        "label": "Proponho pro grêmio uma barraca de lanche mais barata",
+        "pesos": {
+          "negocios": 3,
+          "cuidar": 1
+        }
+      },
+      {
+        "key": "D",
+        "label": "Faço um meme sobre o preço que roda a escola toda",
+        "pesos": {
+          "criar": 3,
+          "tech": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "w02",
+    "grupo": "semana",
+    "quando": "Desafio da semana",
+    "enunciado": "O fone custa R$ 210 à vista ou 10x de R$ 25. Você…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Faço a conta: parcelado dá R$ 250, R$ 40 a mais",
+        "pesos": {
+          "analisar": 3
+        }
+      },
+      {
+        "key": "B",
+        "label": "Guardo R$ 25 por mês e compro à vista depois",
+        "pesos": {
+          "negocios": 2,
+          "analisar": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Uso um app que compara o preço em outras lojas",
+        "pesos": {
+          "tech": 3
+        }
+      },
+      {
+        "key": "D",
+        "label": "Prefiro gastar com o ingresso do jogo do meu time",
+        "pesos": {
+          "esportes": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "w03",
+    "grupo": "semana",
+    "quando": "Desafio da semana",
+    "enunciado": "A escola vai escolher um projeto pra receber R$ 1.000. Você defende…",
+    "opcoes": [
+      {
+        "key": "A",
+        "label": "Material pra quadra e um campeonato entre turmas",
+        "pesos": {
+          "esportes": 3
+        }
+      },
+      {
+        "key": "B",
+        "label": "Computadores pra um clube de programação",
+        "pesos": {
+          "tech": 3,
+          "analisar": 1
+        }
+      },
+      {
+        "key": "C",
+        "label": "Um mural e oficinas de arte",
+        "pesos": {
+          "criar": 3
+        }
+      },
+      {
+        "key": "D",
+        "label": "Uma rede de monitoria entre estudantes",
+        "pesos": {
+          "cuidar": 3,
+          "analisar": 1
+        }
+      }
+    ]
+  }
 ]

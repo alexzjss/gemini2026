@@ -18,10 +18,18 @@ export const dynamic = "force-dynamic";
 const nomeCarreira = (i: MentorInput) => careerById(i.careerId)?.nome ?? i.careerId.replace(/-/g, " ");
 
 /**
- * Offline não há quem avalie o raciocínio: aceita respostas que mostram a conta ou a ideia
- * central do desafio padrão (média 6 ÷ 5 = 1,2 que esconde os zeros). Senão, devolve a pista.
+ * Offline não há quem avalie o raciocínio: cada roteiro traz em `{careerId}:aceita` o padrão de uma
+ * resposta plausível (a conta ou a ideia central do desafio); o genérico fica em `default:aceita`.
+ * Resposta que não bate recebe a pista.
  */
-const RESPOSTA_PLAUSIVEL = /(1[,.]2\b|6\s*(\/|÷|dividido)\s*5|zer[oa]|n[aã]o (fez|marcou)|mediana|varia|esconde|n[aã]o conta)/i;
+function respostaPlausivel(careerId: string, texto: string): boolean {
+  const { padrao } = getFallback<{ padrao: string }>("mentor", [`${careerId}:aceita`, "default:aceita"]).data;
+  try {
+    return new RegExp(padrao, "i").test(texto);
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Roteiro offline (data/fallbacks/mentor.json):
@@ -34,7 +42,8 @@ function chaveRoteiro(i: MentorInput): string {
   if (i.desafioJaResolvido) return "fim";
   if (i.desafioAberto) {
     const ultima = i.historico[i.historico.length - 1]?.texto ?? "";
-    return RESPOSTA_PLAUSIVEL.test(ultima) ? "3" : "pista";
+    const especifico = temFallback("mentor", `${i.careerId}:1`);
+    return respostaPlausivel(especifico ? i.careerId : "default", ultima) ? "3" : "pista";
   }
   return "2";
 }

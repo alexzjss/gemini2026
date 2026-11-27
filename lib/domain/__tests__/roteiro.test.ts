@@ -28,8 +28,8 @@ describe("roteiro do Kauã (integração do domínio)", () => {
   });
 
   it("Big Tech aparece bloqueado (nível 4) e a analista do clube aberta no detalhe", () => {
-    const big = r.mentoresDetalhe.find((m) => m.mentor.id === "m10")!;
-    const clube = r.mentoresDetalhe.find((m) => m.mentor.id === "m01")!;
+    const big = r.mentoresDetalhe.find((m) => m.mentor.id === "m10-cientista-dados-bigtech")!;
+    const clube = r.mentoresDetalhe.find((m) => m.mentor.id === "m01-analista-clube")!;
     expect(big.aberto).toBe(false);
     expect(clube.aberto).toBe(true);
   });
@@ -42,7 +42,7 @@ describe("roteiro do Kauã (integração do domínio)", () => {
   it("Match Day: elegível e match com a analista do clube (m01)", () => {
     expect(r.presenca.reduce((s, e) => s + e.pontos, 0)).toBe(90);
     expect(r.match.eligible).toBe(true);
-    if (r.match.eligible) expect(r.match.mentorId).toBe("m01");
+    if (r.match.eligible) expect(r.match.mentorId).toBe("m01-analista-clube");
   });
 
   it("professor vê a célula do Kauã mudar ao vivo", () => {
@@ -59,7 +59,7 @@ describe("roteiro do Kauã (integração do domínio)", () => {
     expect(bruno.nivel).toBe(4);
     expect(bruno.snapshot.skills.filter((s) => s.level === "defasagem").length).toBeGreaterThanOrEqual(3);
     expect(carla.nivel).toBe(1);
-    expect(carla.mentores.find((m) => m.mentor.id === "m10")?.aberto).toBe(false);
+    expect(carla.mentores.find((m) => m.mentor.id === "m10-cientista-dados-bigtech")?.aberto).toBe(false);
     expect(carla.mentores).toHaveLength(seed.mentors.length);
   });
 });

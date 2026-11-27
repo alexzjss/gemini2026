@@ -17,7 +17,7 @@ function roteiro() {
   run({ type: "consent", studentId: "s001", at });
   run({ type: "finishGalera", studentId: "s001", at });                                       // +50
   run({ type: "swipe", studentId: "s001", careerId: "analista-dados-esportivos", kind: "want", at }); // +10
-  run({ type: "preferMentor", studentId: "s001", mentorId: "m01" });
+  run({ type: "preferMentor", studentId: "s001", mentorId: "m01-analista-clube" });
   run({ type: "awardMiniChallenge", studentId: "s001", sessionId: "sessao-1", at });            // +20
   run({ type: "finishMission", studentId: "s001", skillCode: "EM13MAT316", acertos: 3, at });   // +110
   return { s, run };
@@ -49,7 +49,7 @@ describe("roteiro do Kauã até o Match Day", () => {
     const view = studentView(s.local, "s001", at)!;
     expect(view.nivel).toBe(4);
     expect(view.elegivel.eligible).toBe(true);
-    expect(escolherMentor(view.snapshot, mentors)?.mentor.id).toBe("m01");
+    expect(escolherMentor(view.snapshot, mentors)?.mentor.id).toBe("m01-analista-clube");
   });
 
   it("não deixa farmar: simular de novo, mini-desafio da mesma sessão e Quero conhecer repetido valem 0", () => {

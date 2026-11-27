@@ -53,7 +53,7 @@
     { "id": "quiz-inflacao", "tipo": "quiz", "titulo": "Quiz: inflação na cantina", "resumo": "Questões sobre variação percentual de preços e comparação de índices.", "minutos": 5, "trabalha": ["EM13MAT104"], "explica": ["inflação"] },
 
     { "id": "aula-funcao-afim", "tipo": "aula", "titulo": "Função de 1º grau: tarifa fixa + valor por uso", "resumo": "Modelar situações como plano de celular e corrida de aplicativo com uma função afim.", "minutos": 7, "trabalha": ["EM13MAT302"], "explica": [] },
-    { "id": "quiz-funcao", "tipo": "quiz", "titulo": "Quiz: qual plano compensa?", "resumo": "Comparar duas funções de 1º grau para descobrir a partir de quando um plano fica mais barato.", "minutos": 5, "trabalha": ["EM13MAT302"], "explica": [] },
+    { "id": "quiz-funcao", "tipo": "quiz", "titulo": "Quiz: qual plano compensa?", "resumo": "Comparar duas funções de 1º grau para descobrir a partir de quando um plano fica mais barato.", "minutos": 5, "trabalha": ["EM13MAT302"], "explica": [], "rota": "/aluno/missoes/EM13MAT302" },
 
     { "id": "aula-juros", "tipo": "aula", "titulo": "Juros simples × compostos sem complicação", "resumo": "Como cada tipo de juros cresce mês a mês, com tabela lado a lado.", "minutos": 8, "trabalha": ["EM13MAT303"], "explica": ["juros simples", "juros compostos"] },
     { "id": "flash-juros", "tipo": "flashcard", "titulo": "Flashcards: juros sobre juros", "resumo": "Diferença entre juros simples e compostos; montante após 2 ou 3 meses.", "minutos": 4, "trabalha": ["EM13MAT303"], "explica": ["juros simples", "juros compostos"] },

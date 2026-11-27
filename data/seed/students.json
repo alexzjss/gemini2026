@@ -35,9 +35,9 @@
       "g01": "A",
       "g02": "A",
       "g03": "D",
-      "g04": "A",
-      "g05": "A",
-      "g06": "A"
+      "g04": "C",
+      "g05": "C",
+      "g06": "B"
     }
   },
   {
@@ -163,11 +163,9 @@
         "esportes": 81
       },
       "queroConhecer": [
-        "jornalista-esportivo"
-      ],
-      "salvas": [
         "analista-dados-esportivos"
-      ]
+      ],
+      "salvas": []
     }
   },
   {
@@ -259,7 +257,7 @@
         "esportes": 12
       },
       "queroConhecer": [
-        "dev-games"
+        "desenvolvedor-games"
       ],
       "salvas": [
         "gestor-esports"
@@ -307,7 +305,7 @@
         "esportes": 20
       },
       "queroConhecer": [
-        "gestor-esports"
+        "desenvolvedor-games"
       ],
       "salvas": []
     }
@@ -356,7 +354,7 @@
         "empreendedor-local"
       ],
       "salvas": [
-        "tecnico-adm-marketing"
+        "tecnico-marketing-digital"
       ]
     }
   },
@@ -402,7 +400,7 @@
       },
       "queroConhecer": [],
       "salvas": [
-        "jornalista-esportivo"
+        "desenvolvedor-games"
       ]
     }
   },
@@ -448,7 +446,7 @@
       },
       "queroConhecer": [],
       "salvas": [
-        "dev-games"
+        "desenvolvedor-games"
       ]
     }
   },
@@ -574,7 +572,7 @@
         "designer-ux"
       ],
       "salvas": [
-        "dev-software"
+        "desenvolvedor-software"
       ]
     }
   },
@@ -619,7 +617,7 @@
         "esportes": 81
       },
       "queroConhecer": [
-        "tecnico-adm-marketing"
+        "tecnico-marketing-digital"
       ],
       "salvas": [
         "jornalista-esportivo"
@@ -667,7 +665,7 @@
         "esportes": 85
       },
       "queroConhecer": [
-        "dev-software"
+        "desenvolvedor-software"
       ],
       "salvas": [
         "tecnico-logistica"
@@ -779,7 +777,7 @@
         "esportes": 19
       },
       "queroConhecer": [
-        "tecnico-adm-marketing"
+        "tecnico-marketing-digital"
       ],
       "salvas": [
         "tecnico-meio-ambiente"
@@ -1148,7 +1146,7 @@
         "criador-conteudo"
       ],
       "salvas": [
-        "tecnico-adm-marketing"
+        "tecnico-marketing-digital"
       ]
     }
   },
@@ -1242,7 +1240,7 @@
         "jornalista-esportivo"
       ],
       "salvas": [
-        "dev-games"
+        "desenvolvedor-games"
       ]
     }
   },
