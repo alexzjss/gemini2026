@@ -192,7 +192,7 @@ async function herois() {
     } else pular(`galera ${id}: fallback`);
 
     const freq = st.frequencia.reduce((a, b) => a + b, 0) / st.frequencia.length;
-    const m = await chamar<{ eligible: boolean; explicacao?: string; perguntasSugeridas?: string[] }>("match", {
+    const m = await chamar<{ eligible: boolean; mentorId?: string; explicacao?: string; perguntasSugeridas?: string[] }>("match", {
       snapshot: {
         studentId: id,
         serie: st.serie,
@@ -210,7 +210,7 @@ async function herois() {
       },
     });
     if (m?.source === "ai" && m.data.eligible && m.data.explicacao) {
-      gravar("match", id, { explicacao: m.data.explicacao, perguntasSugeridas: m.data.perguntasSugeridas });
+      gravar("match", id, { mentorId: m.data.mentorId, explicacao: m.data.explicacao, perguntasSugeridas: m.data.perguntasSugeridas });
     } else pular(`match ${id}: fallback ou não elegível`);
   }
 }

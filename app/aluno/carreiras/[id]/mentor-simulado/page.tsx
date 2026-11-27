@@ -168,7 +168,7 @@ export default function MentorSimuladoPage() {
             <TypingDots label="O mentor simulado está escrevendo" />
           </Box>
         )}
-        {meta.desafioAberto && <MiniChallengeChip code={meta.desafioAberto.skillCode} />}
+        {meta.desafioAberto && <MiniChallengeChip code={meta.desafioAberto.skillCode} enunciado={meta.desafioAberto.enunciado} />}
         {meta.resolvido && <MiniChallengeChip code={meta.resolvidoCode ?? skillCode} resolvido />}
         {acabou && (
           <Typography sx={{ alignSelf: "center", textAlign: "center", color: tokens.mutedOnInk, fontSize: 14, mt: 1 }}>

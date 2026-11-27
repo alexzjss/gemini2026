@@ -97,7 +97,7 @@ export default function Carreiras() {
     <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2, md: 4 } }}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 1 }}>
         <Typography variant="h1" sx={{ fontSize: { xs: 34, md: 48 } }}>Carreiras</Typography>
-        <Box component="span" sx={{ border, borderRadius: 999, px: 1.5, py: 0.75, fontWeight: 700, fontSize: 14, bgcolor: tokens.surface }}>{salvas} salvas</Box>
+        <Box component="span" sx={{ border, borderRadius: 999, px: 1.5, py: 0.75, fontWeight: 700, fontSize: 14, bgcolor: tokens.surface }}>{salvas} {salvas === 1 ? "salva" : "salvas"}</Box>
       </Box>
 
       {atual ? (

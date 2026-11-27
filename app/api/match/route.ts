@@ -21,7 +21,11 @@ export const dynamic = "force-dynamic";
 function textosFallback(snapshot: StudentSnapshot, mentor: Mentor): MatchOutput {
   const carreira = mentor.careerIds.map(careerById).find(Boolean);
   const evoluiu = snapshot.skills.find((s) => s.subiuEm) ?? snapshot.skills.find((s) => s.tendencia === "subindo");
-  return preencher(getFallback<MatchOutput>("match", [snapshot.studentId]).data, {
+  // O texto por aluno foi escrito para o mentor do roteiro; com outro mentor, usa o genérico.
+  const porAluno = getFallback<MatchOutput & { mentorId?: string }>("match", [snapshot.studentId]);
+  const { mentorId, ...texto } = porAluno.data;
+  const base = mentorId && mentorId !== mentor.id ? getFallback<MatchOutput>("match", []).data : texto;
+  return preencher(base, {
     cargo: minuscula(mentor.cargo),
     organizacao: mentor.organizacao,
     carreira: minuscula(carreira?.nome ?? mentor.cargo),

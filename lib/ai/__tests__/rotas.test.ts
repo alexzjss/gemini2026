@@ -107,6 +107,15 @@ describe("offline (sem chave)", () => {
     }
   });
 
+  it("match offline: texto do roteiro do aluno só vale para o mentor do roteiro", async () => {
+    // O mock escolhe "m-teste"; o texto de s001 foi escrito para m01 (futebol) e não pode vazar.
+    const { data } = await (await match(req({ snapshot }))).json();
+    expect(data.mentorId).toBe("m-teste");
+    expect(data.explicacao).not.toMatch(/jogo/);
+    expect(data.perguntasSugeridas.join(" ")).not.toMatch(/jogador/);
+    expect(data.explicacao).toContain("analista de desempenho");
+  });
+
   it("mentor offline: resposta certa resolve, resposta vazia ganha pista", async () => {
     const h = chat("oi", "fala", "mostra", "desafio:");
     const certo = await (await mentor(req(mentorBody([...h, { role: "aluno", texto: "dá 1,2 mas ele zerou 2 jogos", at }], { desafioAberto: desafio })))).json();
