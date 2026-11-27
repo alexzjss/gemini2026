@@ -1,5 +1,6 @@
 export { default as SparkIcon } from "./SparkIcon";
-export { default as Logo } from "./Logo";
+export { default as Logo, type LogoProps } from "./Logo";
+export { default as BrandSymbol, type BrandTone } from "./brand/BrandSymbol";
 export { default as InkCard } from "./InkCard";
 export { default as LimeCard } from "./LimeCard";
 export { default as SurfaceCard } from "./SurfaceCard";

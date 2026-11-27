@@ -2,7 +2,8 @@
  * Dono: Agente 1. Mudanças só em PR próprio e pequeno. */
 import type { AffinityAxis, NivelId, PointEventType, SkillLevel } from "./types";
 
-export const APP_NAME = "Gemini2026";
+export const APP_NAME = "Próxio";
+export const APP_TAGLINE = "Seu próximo passo começa aqui.";
 export const STORAGE_KEY = "gemini2026:v1";
 export const STORAGE_VERSION = 1 as const;
 

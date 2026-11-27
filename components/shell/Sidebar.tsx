@@ -10,7 +10,7 @@ import type { NavItem } from "./nav";
 export const SIDEBAR_WIDTH = 232;
 
 /** Sidebar desktop (232px, branca, borda direita 2px; item ativo lime + borda, raio 14). */
-export default function Sidebar({ items, footer, label = "Navegação principal" }: { items: NavItem[]; footer?: React.ReactNode; label?: string }) {
+export default function Sidebar({ items, footer, label = "Navegação principal", homeHref }: { items: NavItem[]; footer?: React.ReactNode; label?: string; homeHref?: string }) {
   const pathname = usePathname() ?? "";
   return (
     <Box component="aside" sx={{
@@ -18,7 +18,7 @@ export default function Sidebar({ items, footer, label = "Navegação principal"
       px: 2.5, py: 3.5, bgcolor: tokens.surface, borderRight: border, position: "sticky", top: "var(--demobar-h, 0px)",
       height: "calc(100dvh - var(--demobar-h, 0px))", overflowY: "auto",
     }}>
-      <Box><Logo size={16} /></Box>
+      <Box><Logo size={20} href={homeHref} /></Box>
       <Box component="nav" aria-label={label} sx={{ display: "flex", flexDirection: "column", gap: 0.75 }}>
         {items.map((it) => {
           const active = it.match(pathname);

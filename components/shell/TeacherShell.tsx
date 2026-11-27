@@ -51,11 +51,12 @@ export default function TeacherShell({ children }: { children: React.ReactNode }
       <Sidebar
         label="Navegação do professor"
         items={NAV_PROFESSOR}
+        homeHref={`/professor/turma/${DEMO.turmaPadrao}`}
         footer={<SidebarUser avatar={<Avatar inicial={iniciais} tone="ink" />} nome={teacher.nome} sub={teacher.disciplina} />}
       />
       <Box sx={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
         <Box component="header" sx={{ display: { xs: "flex", md: "none" }, flexDirection: "column", gap: 1.5, px: 2.5, pt: 2.5, pb: 1.5, borderBottom: border, bgcolor: tokens.surface }}>
-          <Logo />
+          <Box><Logo size={18} href={`/professor/turma/${DEMO.turmaPadrao}`} /></Box>
           <Box component="nav" aria-label="Navegação do professor" sx={{ display: "flex", gap: 1 }}>
             {NAV_PROFESSOR.map((it) => {
               const active = it.match(pathname);

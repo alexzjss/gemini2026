@@ -31,7 +31,7 @@ export default function Landing() {
   return (
     <Box component="main" id="conteudo" sx={{ minHeight: "calc(100dvh - var(--demobar-h, 0px))", bgcolor: tokens.blue, color: tokens.white, display: "flex", justifyContent: "center", px: 2.5, py: { xs: 4, md: 8 } }}>
       <Box sx={{ width: "100%", maxWidth: 480, display: "flex", flexDirection: "column", gap: 3.5 }}>
-        <Box><Logo onBlue /></Box>
+        <Box><Logo onBlue size={26} /></Box>
         <Typography variant="h1" sx={{ color: tokens.white }}>Bora descobrir pra onde a escola te leva.</Typography>
         <Box component="form" noValidate onSubmit={(e) => { e.preventDefault(); entrar(matricula); }}
           sx={{ bgcolor: tokens.surface, color: tokens.ink, border, borderRadius: "24px", boxShadow: hardShadow, p: 3, display: "flex", flexDirection: "column", gap: 2 }}>
