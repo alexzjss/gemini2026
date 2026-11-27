@@ -5,6 +5,7 @@ Projeto **Gemini2026** (nome provisório, `APP_NAME` em `lib/config.ts`): plataf
 ## Onde está cada coisa
 - `docs/02` decisões · `03` escopo, rotas, roteiro de demo · `04` arquitetura e contratos · `05` tipos e seed · `06` prompts e RAG · `07` regras (pontos, níveis, match, evasão) · `08` plano de execução · `09` design system · `10` especificação tela a tela.
 - `design/*.dc.html`: protótipos do aluno (Claude Design). São referência visual; não entram no bundle.
+- `prototipo-aluno/`: protótipo navegável das telas do aluno em HTML/CSS/JS puro (fora do Next). Referência de interação; não entra no bundle.
 
 ## Stack
 Next.js 15 App Router + TypeScript strict · **MUI com tema custom** (sem Tailwind) · framer-motion · canvas-confetti · @mui/x-charts · `@google/genai` (`gemini-2.5-flash`, embeddings `text-embedding-004`) · zod · Vitest (só `lib/domain`) · seed JSON + `localStorage` (`gemini2026:v1`) · Vercel.
