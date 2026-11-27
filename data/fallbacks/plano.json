@@ -1,0 +1,215 @@
+{
+  "2A:EM13MAT316:futebol": {
+    "titulo": "Quem é o artilheiro de verdade? Média, mediana e dispersão no interclasse",
+    "objetivo": "Interpretar e comparar conjuntos de dados de desempenho no interclasse usando medidas de tendência central (média, moda e mediana) e de dispersão, discutindo qual medida descreve melhor cada situação (EM13MAT316).",
+    "etapas": [
+      {
+        "nome": "Abertura: o artilheiro em disputa",
+        "minutos": 8,
+        "descricao": "O professor projeta os gols por jogo de dois atacantes do interclasse com a mesma média e comportamentos diferentes (2, 2, 2, 2 e 0, 4, 0, 4). Pergunta disparadora: quem merece o troféu? Os estudantes votam e justificam em uma frase.",
+        "citacoes": [1]
+      },
+      {
+        "nome": "Investigação em grupos",
+        "minutos": 20,
+        "descricao": "Em grupos de 4, com níveis misturados, os estudantes recebem a tabela de um time (gols, passes certos, finalizações) e calculam média, moda, mediana e amplitude de cada jogador. Cada grupo escolhe a medida que melhor conta a história do jogador e registra o argumento. O professor circula fazendo perguntas, sem entregar respostas.",
+        "citacoes": [1, 2]
+      },
+      {
+        "nome": "Sistematização",
+        "minutos": 12,
+        "descricao": "Cada grupo apresenta em 1 minuto. O professor organiza no quadro quando cada medida é mais adequada (valores extremos, dados repetidos, regularidade) e formaliza o desvio padrão como medida de dispersão.",
+        "citacoes": [1, 3]
+      },
+      {
+        "nome": "Fechamento e bilhete de saída",
+        "minutos": 10,
+        "descricao": "Cada estudante responde: \"A média de gols conta a história toda? Dê um exemplo.\" O professor discute que ferramentas digitais e IA calculam medidas rapidamente, mas a interpretação e a decisão continuam humanas.",
+        "citacoes": [5, 6]
+      }
+    ],
+    "avaliacao": "Formativa: observação dos argumentos nos grupos (uso correto das medidas) e bilhete de saída classificado em três níveis (calcula; calcula e compara; compara e justifica a escolha da medida). Os resultados orientam a missão da semana seguinte.",
+    "adaptacoes": [
+      {
+        "nivel": "defasagem",
+        "sugestao": "Começar com conjuntos de 5 valores pequenos, calculando média e mediana com apoio de reta numérica e um roteiro de perguntas guiadas no grupo."
+      },
+      {
+        "nivel": "em_desenvolvimento",
+        "sugestao": "Comparar dois jogadores com a mesma média e explicar a diferença usando amplitude e mediana."
+      },
+      {
+        "nivel": "dominada",
+        "sugestao": "Calcular o desvio padrão na planilha e propor um índice próprio de regularidade para o troféu, justificando a escolha."
+      }
+    ],
+    "seloEtico": [
+      {
+        "criterio": "Pensamento crítico",
+        "atendido": true,
+        "comoAtende": "Os estudantes decidem qual medida descreve melhor os dados e justificam, em vez de aceitar um número pronto.",
+        "citacao": 5
+      },
+      {
+        "criterio": "Autonomia docente",
+        "atendido": true,
+        "comoAtende": "O professor revisa, edita e aprova o plano; a IA só propõe um rascunho.",
+        "citacao": 6
+      },
+      {
+        "criterio": "Transparência no uso de IA",
+        "atendido": true,
+        "comoAtende": "O fechamento discute o que a IA calcula e o que depende de interpretação humana, e o plano é identificado como gerado com apoio de IA.",
+        "citacao": 5
+      },
+      {
+        "criterio": "Equidade",
+        "atendido": true,
+        "comoAtende": "Grupos com níveis misturados e adaptações por nível garantem que todos participem do mesmo desafio.",
+        "citacao": 6
+      }
+    ]
+  },
+  "2A:EM13MAT316:games": {
+    "titulo": "Ranking justo: média, mediana e dispersão no desempenho de jogadores",
+    "objetivo": "Interpretar e comparar dados de desempenho de jogadores de um game usando medidas de tendência central e de dispersão, argumentando qual medida torna um ranking mais justo (EM13MAT316).",
+    "etapas": [
+      {
+        "nome": "Abertura: quem é o melhor da squad?",
+        "minutos": 8,
+        "descricao": "O professor mostra a pontuação de dois jogadores com a mesma média e variações diferentes (9, 10, 11 e 0, 10, 20). Pergunta: quem você escalaria num campeonato? Votação rápida com justificativa.",
+        "citacoes": [1]
+      },
+      {
+        "nome": "Investigação em grupos",
+        "minutos": 20,
+        "descricao": "Em grupos de 4, os estudantes recebem a tabela de partidas de uma squad (pontos, abates, tempo de partida) e calculam média, moda, mediana e amplitude. Cada grupo propõe uma regra de ranking e testa se ela é justa com os dados.",
+        "citacoes": [1, 2]
+      },
+      {
+        "nome": "Sistematização",
+        "minutos": 12,
+        "descricao": "Os grupos comparam suas regras de ranking. O professor sistematiza o efeito de valores extremos sobre a média e formaliza o desvio padrão como medida de dispersão.",
+        "citacoes": [1, 3]
+      },
+      {
+        "nome": "Fechamento e bilhete de saída",
+        "minutos": 10,
+        "descricao": "Cada estudante responde: \"Por que um ranking só pela média pode ser injusto?\" Discussão breve sobre rankings automáticos de jogos e plataformas: quem define a regra e como questioná-la.",
+        "citacoes": [5, 6]
+      }
+    ],
+    "avaliacao": "Formativa: qualidade das regras de ranking propostas pelos grupos e bilhete de saída classificado em três níveis (calcula; compara; justifica com dispersão).",
+    "adaptacoes": [
+      {
+        "nivel": "defasagem",
+        "sugestao": "Trabalhar com 3 a 5 partidas e números pequenos, calculando média e mediana com apoio de roteiro guiado."
+      },
+      {
+        "nivel": "em_desenvolvimento",
+        "sugestao": "Comparar dois jogadores de mesma média usando amplitude e mediana para justificar a escalação."
+      },
+      {
+        "nivel": "dominada",
+        "sugestao": "Calcular o desvio padrão em planilha e propor um índice de consistência para o ranking."
+      }
+    ],
+    "seloEtico": [
+      {
+        "criterio": "Pensamento crítico",
+        "atendido": true,
+        "comoAtende": "Os estudantes questionam a regra do ranking e testam se ela é justa com os dados.",
+        "citacao": 5
+      },
+      {
+        "criterio": "Autonomia docente",
+        "atendido": true,
+        "comoAtende": "O professor revisa, edita e aprova o plano; a IA só propõe um rascunho.",
+        "citacao": 6
+      },
+      {
+        "criterio": "Transparência no uso de IA",
+        "atendido": true,
+        "comoAtende": "O fechamento discute como sistemas automáticos ranqueiam pessoas e como questionar suas regras.",
+        "citacao": 5
+      },
+      {
+        "criterio": "Equidade",
+        "atendido": true,
+        "comoAtende": "Grupos com níveis misturados e adaptações por nível garantem participação de todos.",
+        "citacao": 6
+      }
+    ]
+  },
+  "default": {
+    "titulo": "{skillCode} na prática: investigando com {interesse}",
+    "objetivo": "Desenvolver a habilidade {skillCode} ({descricao}) a partir de situações reais ligadas a {interesse}, com investigação em grupos e sistematização coletiva.",
+    "etapas": [
+      {
+        "nome": "Abertura e problematização",
+        "minutos": 10,
+        "descricao": "O professor apresenta uma situação concreta de {interesse} ligada a {descricao} e faz uma pergunta disparadora. Os estudantes registram hipóteses individuais em uma frase.",
+        "citacoes": [1]
+      },
+      {
+        "nome": "Investigação em grupos",
+        "minutos": 20,
+        "descricao": "Em grupos de 4, com níveis misturados, os estudantes resolvem um problema ligado a {interesse} que exige a habilidade {skillCode}, registrando estratégia e resposta. O professor circula com perguntas, sem entregar respostas.",
+        "citacoes": [1, 2]
+      },
+      {
+        "nome": "Sistematização",
+        "minutos": 12,
+        "descricao": "Os grupos compartilham estratégias. O professor organiza no quadro os conceitos centrais de {skillCode} e as diferentes formas de resolver.",
+        "citacoes": [1, 3]
+      },
+      {
+        "nome": "Fechamento",
+        "minutos": 8,
+        "descricao": "Bilhete de saída com uma questão curta sobre o tema. Breve conversa sobre como ferramentas digitais e IA podem apoiar a análise, mantendo a decisão com os estudantes.",
+        "citacoes": [5, 6]
+      }
+    ],
+    "avaliacao": "Formativa: observação do trabalho em grupo e bilhete de saída classificado em três níveis, usado para planejar a próxima aula.",
+    "adaptacoes": [
+      {
+        "nivel": "defasagem",
+        "sugestao": "Roteiro guiado com exemplos resolvidos e números pequenos, retomando os pré-requisitos de {skillCode}."
+      },
+      {
+        "nivel": "em_desenvolvimento",
+        "sugestao": "Problema com duas etapas, comparando estratégias com um colega."
+      },
+      {
+        "nivel": "dominada",
+        "sugestao": "Criar uma nova situação-problema de {interesse} para outro grupo resolver."
+      }
+    ],
+    "seloEtico": [
+      {
+        "criterio": "Pensamento crítico",
+        "atendido": true,
+        "comoAtende": "Os estudantes formulam hipóteses e justificam estratégias em vez de receber respostas prontas.",
+        "citacao": 5
+      },
+      {
+        "criterio": "Autonomia docente",
+        "atendido": true,
+        "comoAtende": "O professor revisa, edita e aprova o plano; a IA só propõe um rascunho.",
+        "citacao": 6
+      },
+      {
+        "criterio": "Transparência no uso de IA",
+        "atendido": true,
+        "comoAtende": "O plano é identificado como gerado com apoio de IA e o fechamento discute os limites da ferramenta.",
+        "citacao": 5
+      },
+      {
+        "criterio": "Equidade",
+        "atendido": true,
+        "comoAtende": "Grupos com níveis misturados e adaptações por nível garantem participação de todos.",
+        "citacao": 6
+      }
+    ]
+  }
+}

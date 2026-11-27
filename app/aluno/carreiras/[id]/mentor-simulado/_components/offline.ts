@@ -1,62 +1,42 @@
-/* Roteiro offline do mentor simulado (fallback de 3 turnos, docs/06 §Fallbacks).
- * Puro: usado pela rota provisória e pelo cliente quando a rede cai. */
+/* Roteiro offline do mentor no CLIENTE (rede caiu antes de chegar à rota).
+ * Mesmo formato e mesmas chaves de data/fallbacks/mentor.json (dono: Agente 3) e mesma regra da rota. */
 import type { ChatTurn, MentorChatReply, Serie } from "@/lib/types";
 import { LIMITES } from "@/lib/config";
-import { getCareer, getSkill } from "@/lib/store/seed";
+import { getCareer } from "@/lib/store/seed";
 import fallback from "@/data/fallbacks/mentor.json";
 
 export interface MentorInput {
   careerId: string; skillCode: string; serie: Serie; historico: ChatTurn[];
-  desafioAberto?: { skillCode: string; enunciado: string }; desafioResolvido?: boolean;
+  desafioAberto?: { skillCode: string; enunciado: string }; desafioJaResolvido?: boolean;
 }
 
-type Entry = { fala: string; miniDesafio?: { skillCode: string; enunciado: string }; desafioResolvido?: boolean };
-const FB = fallback as unknown as Record<string, Entry> & { abertura: Record<string, string> };
+type Entry = { fala: string; miniDesafio?: { skillCode?: string; enunciado: string }; desafioResolvido?: boolean };
+const FB = fallback as unknown as Record<string, Entry>;
 
-export const ABERTURA_PADRAO: Record<string, string> = FB.abertura;
-
-const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-const PISTAS_MEDIA = ["mediana", "moda", "zer", "nao marcou", "varia", "irregular", "desvio", "espalh", "oscil", "nem sempre", "depende", "2 jogos", "dois jogos", "nao conta", "esconde", "constan"];
-
-function avaliar(careerId: string, resposta: string): boolean {
-  const t = norm(resposta);
-  if (careerId === "analista-dados-esportivos") return PISTAS_MEDIA.some((p) => t.includes(p));
-  return t.trim().length >= 25;
+/** Fala de abertura fixa (sem chamada à IA), sempre identificando a simulação. */
+export function abertura(careerNome: string): string {
+  return `Oi! Sou uma simulação por IA de alguém que trabalha como ${careerNome.toLowerCase()}. Pode perguntar o que quiser: rotina, escola, como começar.`;
 }
+
+const RESPOSTA_PLAUSIVEL = /(1[,.]2\b|6\s*(\/|÷|dividido)\s*5|zer[oa]|n[aã]o (fez|marcou)|mediana|varia|esconde|n[aã]o conta)/i;
 
 /** Bloqueio gentil de dados pessoais (telefone, e-mail, @usuário, endereço). */
 export function contemDadoPessoal(texto: string): boolean {
-  const t = norm(texto);
+  const t = texto.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   return /\b\d{4,5}[-\s]?\d{4}\b/.test(t) || /\S+@\S+\.\S+/.test(t) || /(^|\s)@[a-z0-9_.]{3,}/.test(t) || /\b(rua|avenida|av\.)\s+\w+/.test(t) || /\b(whats|zap|insta|instagram|tiktok)\b.*\d/.test(t);
 }
 
-export function falaOffline(input: MentorInput): MentorChatReply {
-  const career = getCareer(input.careerId);
-  const skill = getSkill(input.skillCode);
-  const base = FB[`${input.careerId}:1`] ? input.careerId : "default";
-  const vars: Record<string, string> = {
-    careerNome: career?.nome.toLowerCase() ?? "profissional",
-    raioX: career?.raioX.map((r) => `${r.t} ${r.what.toLowerCase()}`).join("; ") ?? "",
-    descricaoJovem: skill?.descricaoJovem.toLowerCase() ?? input.skillCode,
-    skillCode: input.skillCode,
-    comoChegar: career?.comoChegar ?? "",
-  };
-  const doAluno = input.historico.filter((h) => h.role === "aluno");
-  const ultima = doAluno.at(-1)?.texto ?? "";
-
-  let entry: Entry;
-  if (input.desafioAberto && !input.desafioResolvido) entry = FB[`${base}:3:${avaliar(input.careerId, ultima) ? "certo" : "pista"}`];
-  else if (doAluno.length <= 1) entry = FB[`${base}:1`];
-  else if (!input.desafioResolvido) entry = FB[`${base}:2`];
-  else entry = FB[`${base}:4`];
-
-  const f = (s: string) => s.replace(/\{(\w+)\}/g, (_, k: string) => vars[k] ?? "");
-  const out: MentorChatReply = { fala: f(entry.fala).slice(0, LIMITES.falaMentorMaxChars) };
-  if (entry.miniDesafio && !input.desafioResolvido) {
-    // Roteiro escrito para uma habilidade específica (ex.: média → EM13MAT316) mantém o código dele.
-    const fixo = !entry.miniDesafio.skillCode.includes("{");
-    out.miniDesafio = { skillCode: fixo ? entry.miniDesafio.skillCode : input.skillCode, enunciado: f(entry.miniDesafio.enunciado) };
-  }
-  if (typeof entry.desafioResolvido === "boolean") out.desafioResolvido = entry.desafioResolvido;
+export function falaOffline(i: MentorInput): MentorChatReply {
+  const turno = i.historico.filter((t) => t.role === "aluno").length;
+  const ultima = i.historico.at(-1)?.texto ?? "";
+  const k = turno <= 1 ? "1" : i.desafioJaResolvido ? "fim" : i.desafioAberto ? (RESPOSTA_PLAUSIVEL.test(ultima) ? "3" : "pista") : "2";
+  const especifico = `${i.careerId}:1` in FB;
+  const chaves = k === "fim" ? [] : especifico ? [`${i.careerId}:${k}`, `default:${k}`] : [`default:${k}`];
+  const e = chaves.map((c) => FB[c]).find(Boolean) ?? FB.default;
+  const nome = (getCareer(i.careerId)?.nome ?? i.careerId).toLowerCase();
+  const f = (s: string) => s.replace(/\{careerNome\}/g, nome).replace(/\{skillCode\}/g, i.skillCode);
+  const out: MentorChatReply = { fala: f(e.fala).slice(0, LIMITES.falaMentorMaxChars) };
+  if (e.miniDesafio && !i.desafioAberto && !i.desafioJaResolvido) out.miniDesafio = { skillCode: i.skillCode, enunciado: f(e.miniDesafio.enunciado) };
+  if (i.desafioAberto && !i.desafioJaResolvido && typeof e.desafioResolvido === "boolean") out.desafioResolvido = e.desafioResolvido;
   return out;
 }

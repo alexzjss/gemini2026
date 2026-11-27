@@ -1,0 +1,9 @@
+// Referencial de IA na Educação (MEC). Cole aqui 8–12 trechos LITERAIS do documento oficial (D58).
+// Formato (linhas começando com // são ignoradas):
+//
+// ### REF-ETICA | Referencial de IA na Educação (MEC), Uso ético e responsável, seção X
+// <texto literal>
+//
+// Cobrir: uso ético e responsável · protagonismo e autonomia docente · pensamento crítico e criatividade ·
+// equidade e não discriminação · transparência e explicabilidade · privacidade e proteção de dados de
+// crianças e adolescentes · supervisão humana. Cada texto ≥ 80 caracteres.

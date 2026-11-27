@@ -1,0 +1,12 @@
+// BNCC – Ensino Médio. Cole aqui os textos LITERAIS do documento oficial (D58). Nunca gere com IA.
+// Formato de cada bloco (linhas começando com // são ignoradas):
+//
+// ### EM13MAT316 | BNCC – Ensino Médio, Matemática, Competência Específica 3, p. 536
+// <texto literal da habilidade, copiado do PDF>
+//
+// ### CE3-MAT | BNCC – Ensino Médio, Matemática, Competência Específica 3, p. 535
+// <texto literal da competência específica>
+//
+// Ref das competências específicas: CE<n>-<MAT|LGG|CNT|CHS> (EM13MAT316 → CE3-MAT, EM13LGG701 → CE7-LGG).
+// Textos de área: ### AREA-MAT | BNCC – Ensino Médio, Matemática e suas Tecnologias, p. X
+// Mínimo: as 16 habilidades do seed + suas competências (~8) + 4 textos de área. Cada texto ≥ 80 caracteres.

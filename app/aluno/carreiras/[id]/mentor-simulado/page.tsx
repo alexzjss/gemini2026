@@ -25,7 +25,7 @@ import { fonts, tokens } from "@/lib/theme";
 import ChatBubble from "./_components/ChatBubble";
 import MiniChallengeChip from "./_components/MiniChallengeChip";
 import TypingDots from "./_components/TypingDots";
-import { ABERTURA_PADRAO, contemDadoPessoal, falaOffline } from "./_components/offline";
+import { abertura as aberturaDe, contemDadoPessoal, falaOffline } from "./_components/offline";
 
 const SUGESTOES = ["Como é seu dia?", "Precisa ser bom em mat?", "Como eu começo?"];
 
@@ -78,7 +78,7 @@ export default function MentorSimuladoPage() {
 
   const turnosAluno = chat.filter((t) => t.role === "aluno").length;
   const acabou = turnosAluno >= LIMITES.chatMaxTurnos;
-  const abertura = (ABERTURA_PADRAO[career.id] ?? ABERTURA_PADRAO.default).replace("{careerNome}", career.nome.toLowerCase());
+  const abertura = aberturaDe(career.nome);
 
   const enviar = async (msg: string) => {
     const limpo = msg.trim().slice(0, LIMITES.textoMaxChars);
@@ -91,9 +91,10 @@ export default function MentorSimuladoPage() {
     setTexto("");
     const turnoAluno: ChatTurn = { role: "aluno", texto: limpo, at: now() };
     dispatch({ type: "chatTurn", studentId, careerId: career.id, turn: turnoAluno });
-    const historico = [...chat, turnoAluno].slice(-LIMITES.chatMaxTurnos * 2);
+    // A rota aceita no máximo 12 mensagens; a última é sempre do aluno.
+    const historico = [...chat, turnoAluno].slice(-LIMITES.chatMaxTurnos);
     setDigitando(true);
-    const body = { careerId: career.id, skillCode, serie: view.student.serie, historico, desafioAberto: meta.desafioAberto, desafioResolvido: meta.resolvido };
+    const body = { careerId: career.id, skillCode, serie: view.student.serie, historico, desafioAberto: meta.desafioAberto, desafioJaResolvido: meta.resolvido };
     const { data } = await callApi<MentorChatReply>("/api/mentor-simulado", body, () => falaOffline(body));
     setDigitando(false);
     dispatch({ type: "chatTurn", studentId, careerId: career.id, turn: { role: "mentor", texto: data.fala.slice(0, LIMITES.falaMentorMaxChars), at: now() } });
