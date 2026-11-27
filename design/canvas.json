@@ -1,0 +1,17 @@
+{"v":3,"createdOnFiles":{"v":1,"at":"2026-11-27T17:30:00Z"},"title":"App do aluno — telas","launch":{"view":"canvas"},"pages":[],"boards":{
+"Main.dc.html":{"x":0,"y":0,"w":390,"h":844,"title":"Mobile · Início","radius":28},
+"M-Teste.dc.html":{"x":470,"y":0,"w":390,"h":844,"title":"Mobile · Teste Da Galera","radius":28,"is_interactive":true},
+"M-Resultado.dc.html":{"x":940,"y":0,"w":390,"h":844,"title":"Mobile · Resultado do teste","radius":28},
+"M-Carreiras.dc.html":{"x":1410,"y":0,"w":390,"h":844,"title":"Mobile · Swipe de carreiras","radius":28,"is_interactive":true},
+"M-Live.dc.html":{"x":1880,"y":0,"w":390,"h":844,"title":"Mobile · Mentor simulado (Gemini Live)","radius":28},
+"M-Perfil.dc.html":{"x":2350,"y":0,"w":390,"h":844,"title":"Mobile · Ficha BNCC","radius":28},
+"M-Missoes.dc.html":{"x":2820,"y":0,"w":390,"h":844,"title":"Mobile · Pontos, missões e mentores","radius":28},
+"D-Inicio.dc.html":{"x":0,"y":1400,"w":1440,"h":1000,"title":"Desktop · Início","expand":"fill"},
+"D-Carreiras.dc.html":{"x":1520,"y":1400,"w":1440,"h":1000,"title":"Desktop · Swipe de carreiras","expand":"fill","is_interactive":true},
+"D-Teste.dc.html":{"x":3040,"y":1400,"w":1440,"h":1000,"title":"Desktop · Teste Da Galera","expand":"fill","is_interactive":true},
+"D-Perfil.dc.html":{"x":4560,"y":1400,"w":1440,"h":1000,"title":"Desktop · Ficha BNCC e mentores","expand":"fill"}
+},"order":["Main.dc.html","M-Teste.dc.html","M-Resultado.dc.html","M-Carreiras.dc.html","M-Live.dc.html","M-Perfil.dc.html","M-Missoes.dc.html","D-Inicio.dc.html","D-Carreiras.dc.html","D-Teste.dc.html","D-Perfil.dc.html"],
+"notes":{
+"tMobile":{"x":0,"y":-300,"text":"Mobile — aluno(a) do 1º ao 3º ano EM","kind":"title1","maxW":3210},
+"tDesktop":{"x":0,"y":1100,"text":"Desktop — aluno(a) do 1º ao 3º ano EM","kind":"title1","maxW":6000}
+},"designSystems":[]}

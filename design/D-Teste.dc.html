@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Teste Da Galera — desktop</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#3045F0}
+a{color:#FFFFFF}a:hover{color:#CFF24A}
+button{font:inherit}
+</style>
+</helmet>
+<div style="width: 100%; min-height: 1000px; box-sizing: border-box; background: #3045F0; color: #FFFFFF; font-family: Inter, system-ui, sans-serif; display: flex; flex-direction: column">
+
+  <header style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 28px 48px">
+    <a href="D-Inicio.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; background: rgba(255,255,255,0.14); text-decoration: none; font-weight: 700; font-size: 15px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      Sair e continuar depois</a>
+    <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px">Da Galera</span>
+    <div role="progressbar" aria-label="Progresso do teste" aria-valuemin="0" aria-valuemax="10" aria-valuenow="7" style="flex: 1 1 240px; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px">
+      <span style="height: 8px; border-radius: 4px; background: #CFF24A"></span>
+      <span style="height: 8px; border-radius: 4px; background: #CFF24A"></span>
+      <span style="height: 8px; border-radius: 4px; background: #CFF24A"></span>
+      <span style="height: 8px; border-radius: 4px; background: #CFF24A"></span>
+      <span style="height: 8px; border-radius: 4px; background: #CFF24A"></span>
+      <span style="height: 8px; border-radius: 4px; background: #CFF24A"></span>
+      <span style="height: 8px; border-radius: 4px; background: #FFFFFF"></span>
+      <span style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.25)"></span>
+      <span style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.25)"></span>
+      <span style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.25)"></span>
+    </div>
+    <span style="font-weight: 700; font-size: 16px">Cenário 7 de 10</span>
+  </header>
+
+  <main style="flex: 1; display: flex; flex-wrap: wrap; gap: 48px; padding: 24px 48px 56px; align-items: flex-start">
+    <div style="flex: 999 1 560px; min-width: 0; max-width: 920px; display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <span style="align-self: flex-start; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: #CFF24A; color: #16150F; padding: 6px 12px; border-radius: 8px">Sexta, 19h</span>
+        <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 56px; line-height: 1.02; letter-spacing: -0.02em">O grêmio quer fazer o interclasse e ninguém se mexeu. Você…</h1>
+      </div>
+
+      <div role="radiogroup" aria-label="Escolha uma opção" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+        <sc-for list="{{ options }}" as="opt" hint-placeholder-count="4">
+          <button type="button" role="radio" aria-checked="{{ opt.checked }}" onClick="{{ opt.pick }}" style="{{ opt.style }}">
+            <span style="width: 48px; height: 48px; flex: none; border-radius: 14px; background: #F4F1EA; border: 2px solid #16150F; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; color: #16150F">{{ opt.key }}</span>
+            <span style="flex: 1; text-align: left; font-size: 19px; font-weight: 600; line-height: 1.3">{{ opt.label }}</span>
+          </button>
+        </sc-for>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+        <p style="margin: 0; font-size: 15px; color: #DCE1FF">Não tem resposta certa e ninguém vai te dar nota aqui.</p>
+        <sc-if value="{{ hasPick }}" hint-placeholder-val="{{ false }}">
+          <a href="D-Carreiras.dc.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 60px; padding: 0 28px; background: #CFF24A; color: #16150F; border: 2px solid #16150F; border-radius: 999px; font-weight: 800; font-size: 18px; text-decoration: none; box-shadow: 4px 4px 0 #16150F">Próximo cenário
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </sc-if>
+        <sc-if value="{{ noPick }}" hint-placeholder-val="{{ true }}">
+          <span style="display: inline-flex; align-items: center; min-height: 60px; padding: 0 28px; border: 2px dashed rgba(255,255,255,0.5); border-radius: 999px; font-weight: 700; font-size: 17px; color: #DCE1FF">Escolha uma opção</span>
+        </sc-if>
+      </div>
+    </div>
+
+    <aside aria-label="O que já apareceu" style="flex: 1 1 280px; max-width: 360px; background: #16150F; color: #F4F1EA; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #C9C5B8">Até agora, você curte</span>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <div style="display: flex; justify-content: space-between; font-size: 15px; font-weight: 700"><span>Organizar e analisar</span></div>
+        <div style="height: 10px; border-radius: 999px; background: #3A3830"><div style="width: 82%; height: 100%; border-radius: 999px; background: #CFF24A"></div></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <div style="font-size: 15px; font-weight: 700">Esportes e competição</div>
+        <div style="height: 10px; border-radius: 999px; background: #3A3830"><div style="width: 74%; height: 100%; border-radius: 999px; background: #CFF24A"></div></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <div style="font-size: 15px; font-weight: 600; color: #C9C5B8">Negócios</div>
+        <div style="height: 10px; border-radius: 999px; background: #3A3830"><div style="width: 46%; height: 100%; border-radius: 999px; background: #8A8670"></div></div>
+      </div>
+      <p style="margin: 0; font-size: 14px; line-height: 1.45; color: #C9C5B8">Isso se mistura com a sua ficha BNCC pra sugerir carreiras. Quem decide o caminho é você.</p>
+    </aside>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { picked: null };
+  }
+  renderVals() {
+    const base = 'display: flex; align-items: center; gap: 16px; width: 100%; min-height: 96px; padding: 18px 20px; border-radius: 22px; cursor: pointer; box-sizing: border-box; ';
+    const idle = base + 'background: #FFFFFF; color: #16150F; border: 2px solid #16150F;';
+    const on = base + 'background: #CFF24A; color: #16150F; border: 2px solid #16150F; box-shadow: 5px 5px 0 #16150F; transform: translate(-2px, -2px);';
+    const raw = [
+      { key: 'A', label: 'Monto a tabela de jogos e o chaveamento' },
+      { key: 'B', label: 'Faço a arte e os posts pro Insta do grêmio' },
+      { key: 'C', label: 'Vou atrás de patrocínio na lanchonete do bairro' },
+      { key: 'D', label: 'Fico de juiz e resolvo as tretas' }
+    ];
+    const picked = this.state.picked;
+    return {
+      options: raw.map((o) => ({
+        ...o,
+        checked: picked === o.key ? 'true' : 'false',
+        style: picked === o.key ? on : idle,
+        pick: () => this.setState({ picked: o.key })
+      })),
+      hasPick: picked !== null,
+      noPick: picked === null
+    };
+  }
+}
+</script>
+</body>
+</html>
