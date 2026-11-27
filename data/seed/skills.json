@@ -1,0 +1,18 @@
+[
+  { "code": "EM13MAT101", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Ler gráficos e números das notícias", "chunkId": "bncc-EM13MAT101" },
+  { "code": "EM13MAT302", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Funções pra modelar situações do dia a dia", "chunkId": "bncc-EM13MAT302" },
+  { "code": "EM13MAT310", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Problemas de contagem e combinações", "chunkId": "bncc-EM13MAT310" },
+  { "code": "EM13MAT316", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Estatística: média, moda, mediana e desvio", "chunkId": "bncc-EM13MAT316" },
+  { "code": "EM13LGG101", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Entender como textos e mídias constroem sentido", "chunkId": "bncc-EM13LGG101" },
+  { "code": "EM13LGG303", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Debater e defender um ponto de vista com argumento", "chunkId": "bncc-EM13LGG303" },
+  { "code": "EM13LGG701", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Usar tecnologia digital pra se expressar e produzir", "chunkId": "bncc-EM13LGG701" },
+  { "code": "EM13LP01", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Relacionar o texto com o contexto em que foi produzido", "chunkId": "bncc-EM13LP01" },
+  { "code": "EM13CNT101", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Energia e matéria nas transformações do dia a dia", "chunkId": "bncc-EM13CNT101" },
+  { "code": "EM13CNT204", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Movimentos da Terra, do Sol e de outros astros", "chunkId": "bncc-EM13CNT204" },
+  { "code": "EM13CNT301", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Levantar hipóteses e testar com dados", "chunkId": "bncc-EM13CNT301" },
+  { "code": "EM13CNT303", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Checar se uma informação científica é confiável", "chunkId": "bncc-EM13CNT303" },
+  { "code": "EM13CHS101", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Comparar fontes e narrativas diferentes sobre um fato", "chunkId": "bncc-EM13CHS101" },
+  { "code": "EM13CHS401", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Entender as mudanças no mundo do trabalho", "chunkId": "bncc-EM13CHS401" },
+  { "code": "EM13CHS403", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Pensar trabalho, renda e desigualdade", "chunkId": "bncc-EM13CHS403" },
+  { "code": "EM13CHS501", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Direitos humanos e respeito às diferenças", "chunkId": "bncc-EM13CHS501" }
+]

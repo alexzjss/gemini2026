@@ -1,0 +1,26 @@
+[
+  { "studentId": "s001", "avaliacoes": [
+    { "id": "s001-a1", "componente": "Matemática", "titulo": "Prova 1 – Estatística", "bimestre": 1, "nota": 5.2, "skillCodes": ["EM13MAT316"] },
+    { "id": "s001-a2", "componente": "Matemática", "titulo": "Prova 2 – Estatística", "bimestre": 2, "nota": 6.4, "skillCodes": ["EM13MAT316"] },
+    { "id": "s001-a3", "componente": "Matemática", "titulo": "Trabalho – Contagem", "bimestre": 2, "nota": 4.6, "skillCodes": ["EM13MAT310"] },
+    { "id": "s001-a4", "componente": "Língua Portuguesa", "titulo": "Seminário – Debate", "bimestre": 1, "nota": 8.4, "skillCodes": ["EM13LGG303", "EM13LGG701"] },
+    { "id": "s001-a5", "componente": "História", "titulo": "Prova – Fontes", "bimestre": 2, "nota": 7.8, "skillCodes": ["EM13CHS101"] },
+    { "id": "s001-a6", "componente": "Física", "titulo": "Relatório – Experimento", "bimestre": 2, "nota": 6.1, "skillCodes": ["EM13CNT301"] }
+  ] },
+  { "studentId": "s002", "avaliacoes": [
+    { "id": "s002-a1", "componente": "Matemática", "titulo": "Prova 1 – Estatística", "bimestre": 1, "nota": 3.8, "skillCodes": ["EM13MAT316"] },
+    { "id": "s002-a2", "componente": "Matemática", "titulo": "Prova 2 – Estatística", "bimestre": 2, "nota": 4.6, "skillCodes": ["EM13MAT316", "EM13MAT310"] },
+    { "id": "s002-a3", "componente": "Língua Portuguesa", "titulo": "Seminário – Debate", "bimestre": 1, "nota": 5.5, "skillCodes": ["EM13LGG303", "EM13LGG701"] },
+    { "id": "s002-a4", "componente": "Língua Portuguesa", "titulo": "Produção de texto", "bimestre": 2, "nota": 5.2, "skillCodes": ["EM13LGG303"] },
+    { "id": "s002-a5", "componente": "História", "titulo": "Prova – Fontes", "bimestre": 2, "nota": 4.4, "skillCodes": ["EM13CHS101"] },
+    { "id": "s002-a6", "componente": "Física", "titulo": "Relatório – Experimento", "bimestre": 2, "nota": 3.5, "skillCodes": ["EM13CNT301"] }
+  ] },
+  { "studentId": "s003", "avaliacoes": [
+    { "id": "s003-a1", "componente": "Matemática", "titulo": "Prova 1 – Funções", "bimestre": 1, "nota": 9.2, "skillCodes": ["EM13MAT302", "EM13MAT316"] },
+    { "id": "s003-a2", "componente": "Matemática", "titulo": "Prova 2 – Contagem", "bimestre": 2, "nota": 9.6, "skillCodes": ["EM13MAT310"] },
+    { "id": "s003-a3", "componente": "Língua Portuguesa", "titulo": "Redação", "bimestre": 1, "nota": 8.8, "skillCodes": ["EM13LGG303", "EM13LP01"] },
+    { "id": "s003-a4", "componente": "Língua Portuguesa", "titulo": "Seminário", "bimestre": 2, "nota": 8.5, "skillCodes": ["EM13LGG701"] },
+    { "id": "s003-a5", "componente": "Sociologia", "titulo": "Prova – Trabalho", "bimestre": 2, "nota": 9.0, "skillCodes": ["EM13CHS401", "EM13CHS501"] },
+    { "id": "s003-a6", "componente": "Biologia", "titulo": "Prova – Ciência", "bimestre": 2, "nota": 8.9, "skillCodes": ["EM13CNT303", "EM13CNT301"] }
+  ] }
+]

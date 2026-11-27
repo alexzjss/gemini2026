@@ -1,0 +1,14 @@
+[
+  { "id": "s001", "matricula": "2026001", "nome": "Kauã", "inicial": "K", "classId": "2A", "serie": 2, "hero": "kaua",
+    "frequencia": [92, 88, 95, 90, 85, 93, 90, 91], "frequenciaProjetada": [90, 88, 92, 90, 70, 72, 90, 88],
+    "ultimoAcessoDiasAtras": 2, "pontosSeed": 1240, "missoesSeed": 3, "evolucoesSeed": 1,
+    "galeraParcialSeed": { "g01": "A", "g02": "D", "g03": "A", "g04": "A", "g05": "D", "g06": "A" } },
+  { "id": "s002", "matricula": "2026002", "nome": "Bruno", "inicial": "B", "classId": "2A", "serie": 2, "hero": "bruno",
+    "frequencia": [85, 80, 55, 50, 70, 78, 80, 82], "frequenciaProjetada": [85, 88, 90, 85, 86, 80, 84, 88],
+    "ultimoAcessoDiasAtras": 1, "pontosSeed": 1580, "missoesSeed": 14, "evolucoesSeed": 5,
+    "galeraSeed": { "perfil": { "analisar": 40, "tech": 85, "criar": 60, "cuidar": 30, "negocios": 70, "esportes": 45 }, "queroConhecer": ["gestor-esports"], "salvas": ["dev-games"] } },
+  { "id": "s003", "matricula": "2026003", "nome": "Carla", "inicial": "C", "classId": "3A", "serie": 3, "hero": "carla",
+    "frequencia": [96, 94, 95, 92, 90, 94, 93, 95], "frequenciaProjetada": [94, 92, 95, 93, 90, 92, 94, 95],
+    "ultimoAcessoDiasAtras": 20, "pontosSeed": 180, "missoesSeed": 0, "evolucoesSeed": 0,
+    "galeraSeed": { "perfil": { "analisar": 70, "tech": 40, "criar": 55, "cuidar": 85, "negocios": 30, "esportes": 20 }, "queroConhecer": [], "salvas": ["psicologo"] } }
+]
