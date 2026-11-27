@@ -9,7 +9,7 @@ import { buildStudentView, localState, studentLocalVazio, type SeedData } from "
 export const AGORA = "2026-11-27T13:00:00.000Z";
 export const KAUA = "s001";
 /** Respostas do passo 4 (os 4 cenários que faltam). */
-export const RESPOSTAS_RESTANTES: Record<string, string> = { g07: "A", g08: "A", g09: "D", g10: "B" };
+export const RESPOSTAS_RESTANTES: Record<string, string> = { g07: "A", g08: "D", g09: "A", g10: "A" };
 
 function comAluno(state: LocalState, id: string, fn: (l: StudentLocal) => StudentLocal): LocalState {
   return { ...state, porAluno: { ...state.porAluno, [id]: fn(state.porAluno[id] ?? studentLocalVazio()) } };
@@ -55,7 +55,7 @@ export function roteiroKaua(seed: SeedData, at = AGORA) {
 
   // 7 Detalhe: Big Tech bloqueado; "Quero no meu Match Day" na analista do clube
   const mentoresDetalhe = view().mentores.filter((m) => m.mentor.careerIds.includes("analista-dados-esportivos"));
-  state = comAluno(state, KAUA, (l) => ({ ...l, preferenciasMentor: [...l.preferenciasMentor, "m01"] }));
+  state = comAluno(state, KAUA, (l) => ({ ...l, preferenciasMentor: [...l.preferenciasMentor, "m01-analista-clube"] }));
 
   // 8 Mentor simulado: mini-desafio resolvido → +20
   state = comAluno(state, KAUA, (l) =>

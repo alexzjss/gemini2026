@@ -1,46 +1,54 @@
 [
   {
-    "id": "analista-dados-esportivos", "nome": "Analista de dados esportivos",
+    "id": "analista-dados-esportivos",
+    "nome": "Analista de dados esportivos",
     "affinity": { "analisar": 95, "tech": 55, "criar": 20, "cuidar": 15, "negocios": 30, "esportes": 90 },
     "combinaCom": { "analisar": "números", "esportes": "futebol", "tech": "tecnologia" },
-    "tags": ["futebol", "dados"], "interesseQuiz": "futebol", "diaACor": "blue",
+    "tags": ["futebol", "dados"],
+    "interesseQuiz": "futebol",
+    "diaACor": "blue",
     "raioX": [
       { "t": "9h", "what": "Puxa os números do jogo de ontem" },
       { "t": "14h", "what": "Monta o relatório pro técnico" },
       { "t": "17h", "what": "Mostra quem cansa mais no 2º tempo" }
     ],
-    "skills": ["EM13MAT316", "EM13MAT310", "EM13MAT101", "EM13CNT301"],
+    "skills": ["EM13MAT316", "EM13MAT310", "EM13MAT101"],
     "escola": {
       "EM13MAT316": "Média e desvio padrão pra comparar jogadores e saber se um resultado foi sorte ou padrão.",
-      "EM13MAT310": "Contagem pra saber quantas escalações diferentes dá pra montar.",
-      "EM13MAT101": "Ler gráfico de desempenho sem cair em número enganoso.",
-      "EM13CNT301": "Levantar uma hipótese (\"o time cansa no fim\") e testar com os dados."
+      "EM13MAT310": "Contagem pra saber quantas formações e substituições dá pra testar.",
+      "EM13MAT101": "Ler gráfico de desempenho ao longo da temporada sem cair em escala enganosa."
     },
     "comoChegar": "Graduação ou tecnólogo em Ciência de Dados, Estatística ou Educação Física com foco em análise."
   },
   {
-    "id": "gestor-esports", "nome": "Gestor(a) de equipe de e-sports",
-    "affinity": { "analisar": 55, "tech": 80, "criar": 30, "cuidar": 25, "negocios": 85, "esportes": 60 },
-    "combinaCom": { "tech": "games", "negocios": "negócios", "esportes": "competição", "analisar": "estratégia" },
-    "tags": ["games", "empreendedorismo"], "interesseQuiz": "games", "diaACor": "lime",
+    "id": "gestor-esports",
+    "nome": "Gestor(a) de equipe de e-sports",
+    "affinity": { "analisar": 55, "tech": 85, "criar": 35, "cuidar": 30, "negocios": 85, "esportes": 50 },
+    "combinaCom": { "tech": "games", "negocios": "negócios", "analisar": "organizar" },
+    "tags": ["games", "empreendedorismo"],
+    "interesseQuiz": "games",
+    "diaACor": "lime",
     "raioX": [
       { "t": "10h", "what": "Fecha a agenda de treinos da semana" },
       { "t": "15h", "what": "Negocia com um patrocinador" },
       { "t": "20h", "what": "Revê replay com o time" }
     ],
-    "skills": ["EM13LGG303", "EM13MAT316", "EM13CHS403"],
+    "skills": ["EM13LGG303", "EM13MAT316", "EM13LGG701"],
     "escola": {
       "EM13LGG303": "Argumentar e defender uma proposta quando você negocia com patrocinador ou com o próprio time.",
-      "EM13MAT316": "Estatística das partidas pra saber o que melhorar.",
-      "EM13CHS403": "Entender como o mercado de games gera trabalho e renda."
+      "EM13MAT316": "Estatística das partidas pra decidir quem joga a final.",
+      "EM13LGG701": "Produzir conteúdo digital que mostra o time pros patrocinadores."
     },
     "comoChegar": "Graduação em Administração, Marketing ou Gestão Desportiva; muita gente começa organizando campeonato amador."
   },
   {
-    "id": "tecnico-logistica", "nome": "Técnico(a) em logística",
-    "affinity": { "analisar": 90, "tech": 35, "criar": 10, "cuidar": 20, "negocios": 60, "esportes": 25 },
-    "combinaCom": { "analisar": "organizar", "negocios": "resolver", "tech": "sistemas" },
-    "tags": ["organização", "logística"], "interesseQuiz": "entregas", "diaACor": "ink",
+    "id": "tecnico-logistica",
+    "nome": "Técnico(a) em logística",
+    "affinity": { "analisar": 90, "tech": 40, "criar": 10, "cuidar": 20, "negocios": 65, "esportes": 25 },
+    "combinaCom": { "analisar": "organizar", "negocios": "resolver" },
+    "tags": ["organizacao", "dados"],
+    "interesseQuiz": "entregas e rotas",
+    "diaACor": "ink",
     "raioX": [
       { "t": "7h", "what": "Planeja a rota das entregas" },
       { "t": "11h", "what": "Confere o estoque" },
@@ -49,225 +57,261 @@
     "skills": ["EM13MAT310", "EM13MAT302", "EM13MAT316"],
     "escola": {
       "EM13MAT310": "Contagem e combinações pra comparar rotas e escolher a mais curta.",
-      "EM13MAT302": "Funções pra prever custo de frete por distância.",
-      "EM13MAT316": "Média de tempo de entrega pra achar onde atrasa."
+      "EM13MAT302": "Função pra calcular o custo do frete por quilômetro rodado.",
+      "EM13MAT316": "Média de tempo de entrega pra saber se a rota nova melhorou mesmo."
     },
     "comoChegar": "Curso técnico em Logística, inclusive integrado ao Ensino Médio ou em instituições públicas de ensino técnico."
   },
   {
-    "id": "dev-games", "nome": "Desenvolvedor(a) de games",
-    "affinity": { "analisar": 45, "tech": 95, "criar": 75, "cuidar": 10, "negocios": 20, "esportes": 15 },
-    "combinaCom": { "tech": "games", "criar": "criar", "analisar": "lógica" },
-    "tags": ["games", "tecnologia"], "interesseQuiz": "games", "diaACor": "blue",
+    "id": "desenvolvedor-games",
+    "nome": "Desenvolvedor(a) de games",
+    "affinity": { "analisar": 60, "tech": 95, "criar": 75, "cuidar": 10, "negocios": 30, "esportes": 20 },
+    "combinaCom": { "tech": "games", "criar": "criar mundos", "analisar": "lógica" },
+    "tags": ["games", "tecnologia"],
+    "interesseQuiz": "games",
+    "diaACor": "blue",
     "raioX": [
-      { "t": "10h", "what": "Programa a fase nova" },
-      { "t": "14h", "what": "Testa um bug com o time" },
-      { "t": "18h", "what": "Mostra a demo pros jogadores" }
+      { "t": "10h", "what": "Programa o pulo do personagem" },
+      { "t": "14h", "what": "Testa a fase e caça bug" },
+      { "t": "17h", "what": "Ajusta a dificuldade com dados dos jogadores" }
     ],
-    "skills": ["EM13MAT302", "EM13LGG701", "EM13CNT101"],
+    "skills": ["EM13MAT310", "EM13CNT204", "EM13LGG701"],
     "escola": {
-      "EM13MAT302": "Funções pra fazer o personagem pular e cair do jeito certo.",
-      "EM13LGG701": "Usar ferramenta digital pra criar e contar uma história.",
-      "EM13CNT101": "Física de energia e movimento dentro do jogo."
+      "EM13MAT310": "Contagem pra saber quantas combinações de itens e fases o jogo gera.",
+      "EM13CNT204": "Gravidade e trajetória pra fazer o pulo do personagem parecer real.",
+      "EM13LGG701": "Usar ferramentas digitais pra criar e contar uma história jogável."
     },
-    "comoChegar": "Técnico em Informática ou em Programação de Jogos Digitais, ou graduação em Jogos Digitais ou Computação."
+    "comoChegar": "Curso técnico em informática ou em programação de jogos digitais (há opções gratuitas em Institutos Federais e escolas técnicas públicas) ou graduação em Ciência da Computação ou Jogos Digitais. Portfólio com jogos pequenos conta muito."
   },
   {
-    "id": "dev-software", "nome": "Desenvolvedor(a) de software",
-    "affinity": { "analisar": 75, "tech": 95, "criar": 40, "cuidar": 10, "negocios": 25, "esportes": 5 },
-    "combinaCom": { "tech": "tecnologia", "analisar": "lógica", "criar": "criar" },
-    "tags": ["tecnologia", "programação"], "interesseQuiz": "apps", "diaACor": "ink",
+    "id": "desenvolvedor-software",
+    "nome": "Desenvolvedor(a) de software",
+    "affinity": { "analisar": 80, "tech": 95, "criar": 40, "cuidar": 15, "negocios": 35, "esportes": 10 },
+    "combinaCom": { "tech": "tecnologia", "analisar": "lógica", "criar": "criar coisas" },
+    "tags": ["tecnologia", "dados"],
+    "interesseQuiz": "aplicativos",
+    "diaACor": "ink",
     "raioX": [
-      { "t": "9h", "what": "Reunião rápida com o time" },
-      { "t": "11h", "what": "Programa uma tela nova do app" },
-      { "t": "16h", "what": "Corrige um erro que um usuário achou" }
+      { "t": "9h", "what": "Combina com o time o que entra hoje" },
+      { "t": "11h", "what": "Escreve e testa o código de uma tela" },
+      { "t": "16h", "what": "Corrige um bug que um usuário relatou" }
     ],
     "skills": ["EM13MAT310", "EM13MAT302", "EM13LGG701"],
     "escola": {
-      "EM13MAT310": "Contagem pra saber quantas combinações uma senha pode ter.",
-      "EM13MAT302": "Funções são a base da lógica de programação.",
-      "EM13LGG701": "Produzir com tecnologia digital, que é o próprio trabalho."
+      "EM13MAT310": "Contagem pra calcular quantas senhas diferentes um sistema aceita.",
+      "EM13MAT302": "Funções pra entender como o tempo de resposta cresce com mais usuários.",
+      "EM13LGG701": "Linguagens digitais: código também é um jeito de se expressar."
     },
-    "comoChegar": "Técnico em Informática ou Desenvolvimento de Sistemas; graduação em Computação, Sistemas de Informação ou Engenharia de Software."
+    "comoChegar": "Curso técnico em informática ou desenvolvimento de sistemas, ou graduação em Ciência da Computação, Sistemas de Informação ou Análise e Desenvolvimento de Sistemas. Dá pra começar com cursos gratuitos online e projetos próprios."
   },
   {
-    "id": "designer-ux", "nome": "Designer gráfico/UX",
-    "affinity": { "analisar": 35, "tech": 60, "criar": 95, "cuidar": 35, "negocios": 25, "esportes": 5 },
-    "combinaCom": { "criar": "criar", "tech": "telas", "cuidar": "pessoas" },
-    "tags": ["design", "arte"], "interesseQuiz": "redes sociais", "diaACor": "lime",
+    "id": "designer-ux",
+    "nome": "Designer gráfico/UX",
+    "affinity": { "analisar": 45, "tech": 70, "criar": 95, "cuidar": 45, "negocios": 30, "esportes": 10 },
+    "combinaCom": { "criar": "arte", "tech": "tecnologia", "cuidar": "pensar nas pessoas" },
+    "tags": ["arte", "tecnologia"],
+    "interesseQuiz": "aplicativos",
+    "diaACor": "lime",
     "raioX": [
-      { "t": "9h", "what": "Conversa com quem usa o app" },
-      { "t": "13h", "what": "Desenha a tela nova" },
-      { "t": "17h", "what": "Testa o protótipo com o time" }
+      { "t": "9h", "what": "Conversa com usuários sobre o que trava no app" },
+      { "t": "13h", "what": "Desenha as telas novas" },
+      { "t": "16h", "what": "Testa o protótipo e ajusta" }
     ],
-    "skills": ["EM13LGG701", "EM13LGG101", "EM13MAT101"],
+    "skills": ["EM13LGG701", "EM13LGG101", "EM13MAT316"],
     "escola": {
-      "EM13LGG701": "Usar ferramenta digital pra se expressar e criar.",
-      "EM13LGG101": "Entender como imagem e texto convencem quem vê.",
-      "EM13MAT101": "Ler os números de uso pra saber se a tela funciona."
+      "EM13LGG701": "Criar com ferramentas digitais: do rascunho no papel ao protótipo clicável.",
+      "EM13LGG101": "Entender a mensagem que cada cor, imagem e palavra passa pra quem usa.",
+      "EM13MAT316": "Comparar o tempo que as pessoas levam em duas versões da tela."
     },
-    "comoChegar": "Técnico em Design Gráfico ou Multimídia; graduação em Design. Portfólio conta muito."
+    "comoChegar": "Curso técnico em design ou multimídia, ou graduação em Design. Um portfólio com projetos (até redesenhar um app que você usa) abre portas."
   },
   {
-    "id": "jornalista-esportivo", "nome": "Jornalista esportivo(a)",
-    "affinity": { "analisar": 40, "tech": 30, "criar": 85, "cuidar": 20, "negocios": 20, "esportes": 85 },
-    "combinaCom": { "esportes": "futebol", "criar": "comunicar", "analisar": "números" },
-    "tags": ["futebol", "comunicação"], "interesseQuiz": "futebol", "diaACor": "blue",
+    "id": "jornalista-esportivo",
+    "nome": "Jornalista esportivo(a)",
+    "affinity": { "analisar": 50, "tech": 30, "criar": 85, "cuidar": 25, "negocios": 20, "esportes": 85 },
+    "combinaCom": { "criar": "contar histórias", "esportes": "futebol", "analisar": "apurar" },
+    "tags": ["futebol", "comunicacao"],
+    "interesseQuiz": "futebol",
+    "diaACor": "blue",
     "raioX": [
-      { "t": "10h", "what": "Apura a notícia do treino" },
-      { "t": "15h", "what": "Grava a matéria" },
-      { "t": "21h", "what": "Comenta o jogo ao vivo" }
+      { "t": "8h", "what": "Apura a escalação com fontes do clube" },
+      { "t": "13h", "what": "Escreve a matéria e checa os números" },
+      { "t": "19h", "what": "Comenta o jogo ao vivo" }
     ],
-    "skills": ["EM13LGG303", "EM13CHS101", "EM13MAT316"],
+    "skills": ["EM13CHS101", "EM13LP01", "EM13MAT316"],
     "escola": {
-      "EM13LGG303": "Defender sua análise do jogo com argumento.",
-      "EM13CHS101": "Comparar fontes antes de publicar.",
-      "EM13MAT316": "Estatística pra contar a história do jogo com números."
+      "EM13CHS101": "Comparar fontes antes de publicar: o boato do vestiário não é notícia.",
+      "EM13LP01": "Escrever pensando em quem vai ler e onde o texto vai circular.",
+      "EM13MAT316": "Usar estatística sem distorcer: média de gols com contexto."
     },
-    "comoChegar": "Graduação em Jornalismo; muita gente começa com canal ou podcast sobre o time do bairro."
+    "comoChegar": "Graduação em Jornalismo; muita gente começa com blog, podcast ou canal cobrindo o time da cidade."
   },
   {
-    "id": "criador-conteudo", "nome": "Criador(a) de conteúdo/audiovisual",
-    "affinity": { "analisar": 20, "tech": 60, "criar": 95, "cuidar": 25, "negocios": 55, "esportes": 25 },
+    "id": "criador-conteudo",
+    "nome": "Criador(a) de conteúdo/audiovisual",
+    "affinity": { "analisar": 35, "tech": 70, "criar": 95, "cuidar": 30, "negocios": 60, "esportes": 30 },
     "combinaCom": { "criar": "criar", "tech": "internet", "negocios": "negócios" },
-    "tags": ["internet", "comunicação"], "interesseQuiz": "redes sociais", "diaACor": "lime",
+    "tags": ["comunicacao", "empreendedorismo", "arte"],
+    "interesseQuiz": "redes sociais",
+    "diaACor": "lime",
     "raioX": [
-      { "t": "10h", "what": "Escreve o roteiro do vídeo" },
-      { "t": "14h", "what": "Grava e edita" },
-      { "t": "19h", "what": "Responde comentários e vê o alcance" }
+      { "t": "10h", "what": "Roteiriza o vídeo da semana" },
+      { "t": "14h", "what": "Grava e edita no celular" },
+      { "t": "18h", "what": "Olha as métricas pra decidir o próximo tema" }
     ],
-    "skills": ["EM13LGG701", "EM13LGG101", "EM13MAT101"],
+    "skills": ["EM13LGG701", "EM13LGG101", "EM13MAT316"],
     "escola": {
-      "EM13LGG701": "Produzir vídeo, áudio e texto com ferramenta digital.",
-      "EM13LGG101": "Entender como uma mídia convence quem assiste.",
-      "EM13MAT101": "Ler as métricas do vídeo sem se enganar."
+      "EM13LGG701": "Produzir vídeo, áudio e imagem com intenção, do roteiro à edição.",
+      "EM13LGG101": "Saber quem é o público e como o algoritmo faz o conteúdo circular.",
+      "EM13MAT316": "Média de visualizações pra entender o que funcionou de verdade."
     },
-    "comoChegar": "Técnico em Produção de Áudio e Vídeo ou graduação em Comunicação/Audiovisual; portfólio publicado ajuda muito."
+    "comoChegar": "Não exige diploma específico; cursos técnicos em audiovisual ou multimídia e graduação em Comunicação ou Cinema ajudam. Constância e portfólio pesam mais que seguidores no começo."
   },
   {
-    "id": "enfermeiro", "nome": "Enfermeiro(a)",
-    "affinity": { "analisar": 40, "tech": 10, "criar": 10, "cuidar": 95, "negocios": 10, "esportes": 45 },
-    "combinaCom": { "cuidar": "cuidar", "esportes": "saúde", "analisar": "atenção" },
-    "tags": ["saúde"], "interesseQuiz": "saúde", "diaACor": "ink",
+    "id": "enfermeiro",
+    "nome": "Enfermeiro(a)",
+    "affinity": { "analisar": 45, "tech": 15, "criar": 20, "cuidar": 95, "negocios": 15, "esportes": 40 },
+    "combinaCom": { "cuidar": "cuidar de gente", "analisar": "atenção aos detalhes" },
+    "tags": ["saude", "cuidar"],
+    "interesseQuiz": "saúde",
+    "diaACor": "ink",
     "raioX": [
-      { "t": "7h", "what": "Passa o plantão com a equipe" },
-      { "t": "10h", "what": "Atende quem chega na UBS" },
-      { "t": "15h", "what": "Faz uma visita em casa" }
+      { "t": "7h", "what": "Passa o plantão e confere os pacientes" },
+      { "t": "10h", "what": "Acompanha medicação e sinais vitais" },
+      { "t": "15h", "what": "Orienta famílias na unidade de saúde" }
     ],
-    "skills": ["EM13CNT301", "EM13MAT316", "EM13CHS501"],
+    "skills": ["EM13CNT303", "EM13MAT316", "EM13CHS501"],
     "escola": {
-      "EM13CNT301": "Levantar hipótese sobre o que o paciente tem e checar com dados.",
-      "EM13MAT316": "Média de pressão e temperatura pra acompanhar o paciente.",
-      "EM13CHS501": "Respeito e direitos de quem está sendo cuidado."
+      "EM13CNT303": "Ler um estudo de saúde e checar se os dados sustentam a conclusão.",
+      "EM13MAT316": "Acompanhar a média de pressão e temperatura de um paciente ao longo do dia.",
+      "EM13CHS501": "Ética no cuidado: respeito, sigilo e decisões em equipe."
     },
-    "comoChegar": "Técnico em Enfermagem (dá pra fazer em escola pública) e depois graduação em Enfermagem."
+    "comoChegar": "Curso técnico em Enfermagem (há vagas gratuitas em escolas técnicas públicas) ou graduação em Enfermagem."
   },
   {
-    "id": "professor", "nome": "Professor(a)",
-    "affinity": { "analisar": 45, "tech": 20, "criar": 55, "cuidar": 95, "negocios": 20, "esportes": 25 },
+    "id": "professor",
+    "nome": "Professor(a)",
+    "affinity": { "analisar": 50, "tech": 30, "criar": 60, "cuidar": 95, "negocios": 20, "esportes": 30 },
     "combinaCom": { "cuidar": "ensinar", "criar": "comunicar", "analisar": "explicar" },
-    "tags": ["educação"], "interesseQuiz": "escola", "diaACor": "lime",
+    "tags": ["educacao", "cuidar"],
+    "interesseQuiz": "escola",
+    "diaACor": "blue",
     "raioX": [
-      { "t": "7h", "what": "Dá a primeira aula do dia" },
-      { "t": "12h", "what": "Prepara uma atividade nova" },
-      { "t": "16h", "what": "Conversa com um aluno que sumiu" }
+      { "t": "7h", "what": "Dá aula pra três turmas" },
+      { "t": "12h", "what": "Prepara a atividade da semana" },
+      { "t": "18h", "what": "Corrige e vê quem precisa de ajuda" }
     ],
-    "skills": ["EM13LGG303", "EM13LP01", "EM13CHS501"],
+    "skills": ["EM13LGG303", "EM13MAT316", "EM13CHS501"],
     "escola": {
-      "EM13LGG303": "Explicar e defender uma ideia na frente da turma.",
-      "EM13LP01": "Ler o contexto de um texto pra ensinar melhor.",
-      "EM13CHS501": "Ética e respeito na convivência da escola."
+      "EM13LGG303": "Mediar debate na sala, dando voz a quem pensa diferente.",
+      "EM13MAT316": "Olhar a média e a distribuição das notas pra planejar a próxima aula.",
+      "EM13CHS501": "Combinar regras de convivência e cooperação com a turma."
     },
-    "comoChegar": "Licenciatura na disciplina que você curte; universidades públicas têm muitas vagas noturnas."
+    "comoChegar": "Licenciatura na área que você curte (Matemática, Letras, Biologia, Educação Física…), com vagas em universidades públicas e bolsas como as do ProUni."
   },
   {
-    "id": "psicologo", "nome": "Psicólogo(a)",
-    "affinity": { "analisar": 55, "tech": 5, "criar": 30, "cuidar": 95, "negocios": 10, "esportes": 10 },
-    "combinaCom": { "cuidar": "ouvir", "analisar": "entender", "criar": "conversar" },
-    "tags": ["saúde", "comportamento"], "interesseQuiz": "comportamento", "diaACor": "ink",
+    "id": "psicologo",
+    "nome": "Psicólogo(a)",
+    "affinity": { "analisar": 65, "tech": 15, "criar": 35, "cuidar": 95, "negocios": 15, "esportes": 15 },
+    "combinaCom": { "cuidar": "ouvir as pessoas", "analisar": "entender o porquê" },
+    "tags": ["saude", "cuidar"],
+    "interesseQuiz": "comportamento",
+    "diaACor": "lime",
     "raioX": [
       { "t": "9h", "what": "Atende uma pessoa no consultório" },
-      { "t": "14h", "what": "Faz uma roda de conversa na escola" },
-      { "t": "17h", "what": "Escreve as anotações do dia" }
+      { "t": "13h", "what": "Registra o atendimento com cuidado" },
+      { "t": "16h", "what": "Faz uma roda de conversa numa escola" }
     ],
-    "skills": ["EM13CHS501", "EM13LP01", "EM13CNT301"],
+    "skills": ["EM13CNT301", "EM13LGG303", "EM13CHS501"],
     "escola": {
-      "EM13CHS501": "Ética e respeito em cada conversa.",
-      "EM13LP01": "Entender o que a pessoa quis dizer, além das palavras.",
-      "EM13CNT301": "Pesquisa: levantar hipótese e testar com dados."
+      "EM13CNT301": "Levantar hipóteses e testar: o que está por trás de um comportamento?",
+      "EM13LGG303": "Escutar argumentos diferentes sem julgar.",
+      "EM13CHS501": "Ética e sigilo: o que a pessoa conta fica entre vocês."
     },
-    "comoChegar": "Graduação em Psicologia (5 anos); dá pra começar como monitor em projetos sociais."
+    "comoChegar": "Graduação em Psicologia (5 anos), com estágio supervisionado; há vagas em universidades públicas e bolsas pelo ProUni."
   },
   {
-    "id": "empreendedor-local", "nome": "Empreendedor(a) de negócio local",
-    "affinity": { "analisar": 50, "tech": 30, "criar": 45, "cuidar": 30, "negocios": 95, "esportes": 10 },
-    "combinaCom": { "negocios": "negócios", "criar": "ideias", "analisar": "contas" },
-    "tags": ["empreendedorismo", "negócios"], "interesseQuiz": "empreendedorismo", "diaACor": "lime",
+    "id": "empreendedor-local",
+    "nome": "Empreendedor(a) de negócio local",
+    "affinity": { "analisar": 55, "tech": 30, "criar": 45, "cuidar": 40, "negocios": 95, "esportes": 15 },
+    "combinaCom": { "negocios": "empreendedorismo", "criar": "criar", "analisar": "fazer as contas" },
+    "tags": ["empreendedorismo", "dinheiro"],
+    "interesseQuiz": "vendas",
+    "diaACor": "ink",
     "raioX": [
-      { "t": "8h", "what": "Abre a loja e confere o caixa" },
-      { "t": "13h", "what": "Posta as novidades no Instagram" },
-      { "t": "18h", "what": "Faz as contas do mês" }
+      { "t": "8h", "what": "Confere o estoque e faz o pedido" },
+      { "t": "12h", "what": "Atende cliente e fecha venda no Pix" },
+      { "t": "18h", "what": "Fecha o caixa e vê se o mês está no azul" }
     ],
-    "skills": ["EM13MAT302", "EM13CHS403", "EM13LGG303"],
+    "skills": ["EM13MAT302", "EM13MAT101", "EM13CHS401"],
     "escola": {
-      "EM13MAT302": "Funções pra calcular lucro conforme você vende mais.",
-      "EM13CHS403": "Entender trabalho e renda no seu bairro.",
-      "EM13LGG303": "Argumentar pra convencer cliente e fornecedor."
+      "EM13MAT302": "Função pra achar quantas unidades precisa vender pra pagar os custos.",
+      "EM13MAT101": "Ler o gráfico de vendas e de preços pra decidir quando reajustar.",
+      "EM13CHS401": "Entender como o Pix e as vendas pela internet mudaram o comércio do bairro."
     },
-    "comoChegar": "Não precisa de diploma pra começar; cursos gratuitos de empreendedorismo e técnico em Administração ajudam."
+    "comoChegar": "Cursos gratuitos de gestão para pequenos negócios, curso técnico em Administração ou graduação em Administração. Começar pequeno (vender doce na escola, fazer arte pra amigos) já ensina muito."
   },
   {
-    "id": "tecnico-adm-marketing", "nome": "Técnico(a) em administração/marketing digital",
-    "affinity": { "analisar": 65, "tech": 60, "criar": 55, "cuidar": 15, "negocios": 85, "esportes": 5 },
-    "combinaCom": { "negocios": "negócios", "tech": "internet", "analisar": "números" },
-    "tags": ["marketing", "empreendedorismo"], "interesseQuiz": "redes sociais", "diaACor": "blue",
+    "id": "tecnico-marketing-digital",
+    "nome": "Técnico(a) em administração/marketing digital",
+    "affinity": { "analisar": 65, "tech": 70, "criar": 70, "cuidar": 20, "negocios": 85, "esportes": 10 },
+    "combinaCom": { "negocios": "negócios", "tech": "internet", "criar": "criatividade" },
+    "tags": ["empreendedorismo", "comunicacao", "dados"],
+    "interesseQuiz": "redes sociais",
+    "diaACor": "blue",
     "raioX": [
-      { "t": "9h", "what": "Vê os números da campanha de ontem" },
-      { "t": "13h", "what": "Planeja os posts da semana" },
-      { "t": "16h", "what": "Apresenta o resultado pro cliente" }
+      { "t": "9h", "what": "Vê quantas pessoas o anúncio alcançou" },
+      { "t": "13h", "what": "Cria a campanha da semana com o time" },
+      { "t": "16h", "what": "Ajusta o orçamento dos anúncios" }
     ],
-    "skills": ["EM13MAT101", "EM13LGG101", "EM13CHS403"],
+    "skills": ["EM13MAT316", "EM13LGG101", "EM13MAT302"],
     "escola": {
-      "EM13MAT101": "Ler gráfico de vendas e de alcance.",
-      "EM13LGG101": "Entender como uma propaganda convence.",
-      "EM13CHS403": "Pensar no público e na renda de quem compra."
+      "EM13MAT316": "Média e comparação de resultados pra saber qual anúncio funcionou.",
+      "EM13LGG101": "Entender como uma mensagem é feita pra convencer, e usar isso com ética.",
+      "EM13MAT302": "Função pra prever o custo da campanha conforme o número de cliques."
     },
-    "comoChegar": "Técnico em Administração ou Marketing (muitos integrados ao Ensino Médio); graduação em Administração ou Publicidade."
+    "comoChegar": "Curso técnico em Administração ou Marketing (há opções gratuitas em escolas técnicas públicas) ou graduação em Marketing, Publicidade ou Administração."
   },
   {
-    "id": "educador-fisico", "nome": "Educador(a) físico(a)/preparador(a) físico(a)",
-    "affinity": { "analisar": 30, "tech": 10, "criar": 15, "cuidar": 70, "negocios": 20, "esportes": 95 },
-    "combinaCom": { "esportes": "esporte", "cuidar": "cuidar", "analisar": "treino" },
-    "tags": ["esportes", "saúde"], "interesseQuiz": "futebol", "diaACor": "lime",
+    "id": "educador-fisico",
+    "nome": "Educador(a) físico(a)/preparador(a) físico(a)",
+    "affinity": { "analisar": 45, "tech": 15, "criar": 20, "cuidar": 70, "negocios": 20, "esportes": 95 },
+    "combinaCom": { "esportes": "esporte", "cuidar": "cuidar de gente", "analisar": "acompanhar evolução" },
+    "tags": ["futebol", "saude", "esporte"],
+    "interesseQuiz": "futebol",
+    "diaACor": "lime",
     "raioX": [
-      { "t": "7h", "what": "Dá treino pro time de base" },
-      { "t": "11h", "what": "Monta o plano de cada atleta" },
-      { "t": "17h", "what": "Dá aula numa escola do bairro" }
+      { "t": "7h", "what": "Monta o treino do time sub-17" },
+      { "t": "10h", "what": "Avalia a condição física dos atletas" },
+      { "t": "16h", "what": "Dá aula de educação física" }
     ],
     "skills": ["EM13CNT101", "EM13MAT316", "EM13CHS501"],
     "escola": {
-      "EM13CNT101": "Energia do corpo: o que o treino gasta e repõe.",
-      "EM13MAT316": "Média e desvio pra ver a evolução do atleta.",
-      "EM13CHS501": "Respeito e inclusão no esporte."
+      "EM13CNT101": "Energia e movimento: como o corpo transforma energia no treino.",
+      "EM13MAT316": "Média e desvio dos testes físicos pra ver quem evoluiu.",
+      "EM13CHS501": "Cooperação e respeito no time, dentro e fora de campo."
     },
-    "comoChegar": "Graduação em Educação Física (licenciatura pra escola, bacharelado pra clube e academia)."
+    "comoChegar": "Graduação em Educação Física (licenciatura pra dar aula, bacharelado pra clubes e academias)."
   },
   {
-    "id": "tecnico-meio-ambiente", "nome": "Técnico(a) em meio ambiente",
-    "affinity": { "analisar": 65, "tech": 25, "criar": 15, "cuidar": 55, "negocios": 15, "esportes": 75 },
-    "combinaCom": { "esportes": "natureza", "analisar": "investigar", "cuidar": "cuidar" },
-    "tags": ["natureza", "ciência"], "interesseQuiz": "natureza", "diaACor": "ink",
+    "id": "tecnico-meio-ambiente",
+    "nome": "Técnico(a) em meio ambiente",
+    "affinity": { "analisar": 70, "tech": 20, "criar": 25, "cuidar": 60, "negocios": 15, "esportes": 75 },
+    "combinaCom": { "esportes": "natureza", "analisar": "investigar", "cuidar": "cuidar do lugar" },
+    "tags": ["meio ambiente", "ciencia"],
+    "interesseQuiz": "meio ambiente",
+    "diaACor": "ink",
     "raioX": [
       { "t": "8h", "what": "Coleta água do rio pra análise" },
-      { "t": "13h", "what": "Confere os resultados no laboratório" },
-      { "t": "16h", "what": "Orienta uma escola sobre reciclagem" }
+      { "t": "13h", "what": "Lança os resultados na planilha" },
+      { "t": "16h", "what": "Orienta uma empresa sobre descarte de lixo" }
     ],
-    "skills": ["EM13CNT301", "EM13CNT303", "EM13CNT204"],
+    "skills": ["EM13CNT301", "EM13CNT303", "EM13MAT316"],
     "escola": {
-      "EM13CNT301": "Levantar hipótese sobre a poluição e testar com dados.",
-      "EM13CNT303": "Checar se uma informação ambiental é confiável.",
-      "EM13CNT204": "Prever o clima e os ciclos da natureza."
+      "EM13CNT301": "Levantar hipóteses e testar: a água piorou depois que a fábrica abriu?",
+      "EM13CNT303": "Ler relatório ambiental e checar se os dados batem.",
+      "EM13MAT316": "Média das medições pra comparar o rio antes e depois."
     },
-    "comoChegar": "Curso técnico em Meio Ambiente (oferecido em institutos federais) e depois graduação em Gestão Ambiental ou Biologia."
+    "comoChegar": "Curso técnico em Meio Ambiente (inclusive integrado ao Ensino Médio em Institutos Federais) ou graduação em Engenharia Ambiental, Gestão Ambiental ou Biologia."
   }
 ]

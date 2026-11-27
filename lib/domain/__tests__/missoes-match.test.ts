@@ -65,7 +65,7 @@ describe("match", () => {
 
   it("candidatos respeitam nível e vagas", () => {
     const ids = candidatos(snapshot({ nivel: 3 }), seed.mentors).map((x) => x.id);
-    expect(ids).not.toContain("m10");
+    expect(ids).not.toContain("m10-cientista-dados-bigtech");
     expect(seed.mentors.filter((x) => x.nivelMinimo === 4).every((x) => !ids.includes(x.id))).toBe(true);
     expect(candidatos(snapshot({ nivel: 4 }), [m({ vagasSemestre: 0 })])).toHaveLength(0);
   });

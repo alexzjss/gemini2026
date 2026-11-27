@@ -115,6 +115,20 @@ describe("offline (sem chave)", () => {
     expect(chute.data.desafioResolvido).toBe(false);
   });
 
+  it("mentor offline de outra carreira usa o critério dela (brigadeiro: 18)", async () => {
+    const desafioB = { skillCode: "EM13MAT302", enunciado: "brigadeiro" };
+    const body = (resp: string) => ({
+      careerId: "empreendedor-local", skillCode: "EM13MAT302", serie: 2,
+      historico: [...chat("oi", "fala", "bora", "desafio:"), { role: "aluno", texto: resp, at }],
+      desafioAberto: desafioB,
+    });
+    const certo = await (await mentor(req(body("preciso vender 18 por semana")))).json();
+    expect(certo.data).toMatchObject({ desafioResolvido: true });
+    expect(certo.data.fala).toMatch(/18 brigadeiros/);
+    const errado = await (await mentor(req(body("acho que 12")))).json();
+    expect(errado.data.desafioResolvido).toBe(false);
+  });
+
   it("mentor offline não abre 2º desafio depois de resolvido", async () => {
     const r = await (await mentor(req(mentorBody(chat("oi", "fala", "outro?"), { desafioJaResolvido: true })))).json();
     expect(r.data.miniDesafio).toBeUndefined();

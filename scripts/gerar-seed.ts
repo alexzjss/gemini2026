@@ -62,13 +62,13 @@ const ARQUETIPOS: Record<string, AffinityProfile> = {
 
 /** Gerados da 2A, escritos para bater as metas da demo (MAT316 70%, 3 alertas, interesses). */
 const PLANO_2A: { arq: string; quero: string[]; salvas: string[]; mat316: "def" | "ok"; extra?: "inativo" | "queda" }[] = [
-  { arq: "futebol", quero: ["jornalista-esportivo"], salvas: ["analista-dados-esportivos"], mat316: "def" },
+  { arq: "futebol", quero: ["analista-dados-esportivos"], salvas: [], mat316: "def" },
   { arq: "futebol", quero: ["analista-dados-esportivos"], salvas: ["jornalista-esportivo"], mat316: "def" },
-  { arq: "games", quero: ["dev-games"], salvas: ["gestor-esports"], mat316: "def" },
-  { arq: "games", quero: ["gestor-esports"], salvas: [], mat316: "def" },
-  { arq: "negocios", quero: ["empreendedor-local"], salvas: ["tecnico-adm-marketing"], mat316: "def" },
-  { arq: "futebol", quero: [], salvas: ["jornalista-esportivo"], mat316: "def" },
-  { arq: "games", quero: [], salvas: ["dev-games"], mat316: "ok", extra: "inativo" },
+  { arq: "games", quero: ["desenvolvedor-games"], salvas: ["gestor-esports"], mat316: "def" },
+  { arq: "games", quero: ["desenvolvedor-games"], salvas: [], mat316: "def" },
+  { arq: "negocios", quero: ["empreendedor-local"], salvas: ["tecnico-marketing-digital"], mat316: "def" },
+  { arq: "futebol", quero: [], salvas: ["desenvolvedor-games"], mat316: "def" },
+  { arq: "games", quero: [], salvas: ["desenvolvedor-games"], mat316: "ok", extra: "inativo" },
   { arq: "cuidar", quero: ["enfermeiro"], salvas: [], mat316: "ok", extra: "queda" },
 ];
 
@@ -89,7 +89,7 @@ export function gerar() {
       id: "s001", matricula: "2026001", nome: "Kauã Oliveira", inicial: "K", classId: "2A", serie: 2, hero: "kaua",
       frequencia: [92, 88, 95, 90, 85, 93, 90, 91], frequenciaProjetada: [90, 88, 92, 90, 70, 72, 90, 88],
       ultimoAcessoDiasAtras: 1, pontosSeed: 1240, missoesSeed: 3, evolucoesSeed: 1,
-      galeraParcialSeed: { g01: "A", g02: "A", g03: "D", g04: "A", g05: "A", g06: "A" },
+      galeraParcialSeed: { g01: "A", g02: "A", g03: "D", g04: "C", g05: "C", g06: "B" },
     },
     {
       id: "s002", matricula: "2026002", nome: "Bruno Santos", inicial: "B", classId: "2A", serie: 2, hero: "bruno",
@@ -190,7 +190,7 @@ export function validar(gerados: ReturnType<typeof gerar>): string[] {
   checa(mat?.defasagem === 7 && mat.total === 10, `2A EM13MAT316: esperava 7/10 em defasagem, veio ${mat?.defasagem}/${mat?.total}`);
   checa(turma.resumo.maiorDefasagem?.code === "EM13MAT316", `maior defasagem da 2A deveria ser EM13MAT316, veio ${turma.resumo.maiorDefasagem?.code}`);
   const top3 = turma.topInteresses.slice(0, 3).map((t) => t.tag).join(",");
-  checa(top3 === "futebol,games,empreendedorismo", `top interesses 2A: esperava futebol,games,empreendedorismo, veio ${top3}`);
+  checa(top3 === "futebol,games,empreendedorismo", `top interesses 2A: esperava futebol,games,empreendedorismo, veio ${top3} (pesos: ${turma.topInteresses.map((t) => `${t.tag}=${t.peso}`).join(" ")})`);
   const alertas = turma.atencao.map((a) => a.student.id).sort();
   checa(alertas.length === 3 && alertas.includes("s002"), `2A: esperava 3 alertas incluindo Bruno, veio ${alertas.join(",")}`);
 
@@ -213,7 +213,7 @@ export function validar(gerados: ReturnType<typeof gerar>): string[] {
 
   const r = roteiroKaua(seed);
   checa(r.final.pontos === 1520 && r.final.nivel === 4, `roteiro do Kauã: esperava 1.520 pts nível 4, veio ${r.final.pontos}/${r.final.nivel}`);
-  checa(r.match.eligible && r.match.mentorId === "m01", `roteiro do Kauã: match esperado m01 (analista do clube), veio ${JSON.stringify(r.match)}`);
+  checa(r.match.eligible && r.match.mentorId === "m01-analista-clube", `roteiro do Kauã: match esperado m01-analista-clube (analista do clube), veio ${JSON.stringify(r.match)}`);
   return erros;
 }
 
