@@ -6,6 +6,8 @@ import { cortar, minuscula, rotaIA } from "@/lib/ai/rota";
 import { mentorInput, mentorOutput, mentorSchema, type MentorInput, type MentorOutput } from "@/lib/ai/schemas";
 import { careerById } from "@/lib/ai/seed";
 import { getFallback, preencher, temFallback } from "@/lib/fallbacks";
+import { grafoPadrao } from "@/lib/grafo";
+import { montarContextoTutor } from "@/lib/rag/graphrag";
 import { retrieve } from "@/lib/rag/retriever";
 import type { MentorChatReply } from "@/lib/types";
 
@@ -68,12 +70,20 @@ export const POST = rotaIA({
   nome: "mentor-simulado",
   input: mentorInput,
   run: async (i, ctx) => {
-    const chunks = await retrieve(i.skillCode, { k: 1, exato: true, rotulo: "mentor" });
+    let chunks = await retrieve(i.skillCode, { k: 1, exato: true, rotulo: "mentor" });
+    let blocoGrafo: string | undefined;
+    if (i.estadoGrafo) {
+      // GraphRAG: competências da pergunta + pré-requisitos pendentes + texto literal da BNCC.
+      const pergunta = i.historico[i.historico.length - 1].texto;
+      const tutor = await montarContextoTutor(grafoPadrao, { alunoId: "anon", ...i.estadoGrafo }, pergunta, { base: chunks });
+      chunks = tutor.chunks;
+      blocoGrafo = tutor.blocoGrafo;
+    }
     const career = careerById(i.careerId);
     const r = await generateJson({
       rota: "mentor-simulado",
       deadline: ctx.deadline,
-      system: `${SYSTEM_BASE}\n\n${buildMentorSystem(i, career, minuscula(nomeCarreira(i)), chunks)}`,
+      system: `${SYSTEM_BASE}\n\n${buildMentorSystem(i, career, minuscula(nomeCarreira(i)), chunks, blocoGrafo)}`,
       user: buildMentorPrompt(i),
       responseSchema: mentorSchema,
       zod: mentorOutput,

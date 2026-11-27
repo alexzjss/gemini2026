@@ -25,6 +25,7 @@ Ecossistema web de **combate à evasão escolar e planejamento pedagógico** par
 | [docs/09-design-system.md](docs/09-design-system.md) | Tokens, tipografia, componentes e movimento |
 | [docs/10-telas.md](docs/10-telas.md) | Especificação de todas as telas |
 | [docs/11-handoff-agente1.md](docs/11-handoff-agente1.md) | O que a fundação entregou e os stubs provisórios |
+| [docs/11-grafo-educacional.md](docs/11-grafo-educacional.md) | Grafo de competências, trilha adaptativa e GraphRAG |
 | [design/](design/) | Protótipos das telas do aluno (Claude Design) |
 
 ## Stack

@@ -1,0 +1,87 @@
+{
+  "versao": 1,
+  "competencias": [
+    { "codigo": "BASE-PROPORCAO", "titulo": "Razão e proporção", "area_bncc": "MAT", "eixo_tematico": "Números e álgebra", "dificuldade": 1, "bncc": false },
+    { "codigo": "BASE-PORCENTAGEM", "titulo": "Porcentagem no dia a dia", "area_bncc": "MAT", "eixo_tematico": "Educação financeira", "dificuldade": 1, "bncc": false },
+    { "codigo": "BASE-MEDIA", "titulo": "Média aritmética", "area_bncc": "MAT", "eixo_tematico": "Estatística", "dificuldade": 1, "bncc": false },
+    { "codigo": "EM13MAT104", "titulo": "Taxas e índices: inflação e custo de vida", "area_bncc": "MAT", "eixo_tematico": "Educação financeira", "dificuldade": 2, "bncc": true },
+    { "codigo": "EM13MAT302", "titulo": "Funções de 1º e 2º grau como modelo", "area_bncc": "MAT", "eixo_tematico": "Números e álgebra", "dificuldade": 2, "bncc": true },
+    { "codigo": "EM13MAT303", "titulo": "Juros simples e compostos: parcelar ou pagar à vista", "area_bncc": "MAT", "eixo_tematico": "Educação financeira", "dificuldade": 2, "bncc": true },
+    { "codigo": "EM13MAT203", "titulo": "Planilha de orçamento: planejar com números", "area_bncc": "MAT", "eixo_tematico": "Educação financeira", "dificuldade": 3, "bncc": true },
+    { "codigo": "EM13MAT316", "titulo": "Estatística: média, moda, mediana e desvio", "area_bncc": "MAT", "eixo_tematico": "Estatística", "dificuldade": 2, "bncc": true },
+    { "codigo": "EM13MAT101", "titulo": "Ler gráficos de economia e sociedade", "area_bncc": "MAT", "eixo_tematico": "Estatística", "dificuldade": 3, "bncc": true },
+    { "codigo": "EM13MAT310", "titulo": "Problemas de contagem e combinações", "area_bncc": "MAT", "eixo_tematico": "Probabilidade e contagem", "dificuldade": 2, "bncc": true },
+    { "codigo": "EM13CNT301", "titulo": "Levantar hipóteses e testar com dados", "area_bncc": "CNT", "eixo_tematico": "Investigação científica", "dificuldade": 2, "bncc": true },
+    { "codigo": "EM13CHS101", "titulo": "Comparar fontes e narrativas sobre um fato", "area_bncc": "CHS", "eixo_tematico": "Leitura crítica", "dificuldade": 2, "bncc": true }
+  ],
+  "prerequisitos": [
+    { "de": "BASE-PROPORCAO", "para": "BASE-PORCENTAGEM", "peso": 1.0 },
+    { "de": "BASE-PROPORCAO", "para": "BASE-MEDIA", "peso": 0.5 },
+    { "de": "BASE-PORCENTAGEM", "para": "EM13MAT104", "peso": 0.9 },
+    { "de": "BASE-PORCENTAGEM", "para": "EM13MAT303", "peso": 1.0 },
+    { "de": "EM13MAT302", "para": "EM13MAT303", "peso": 0.6 },
+    { "de": "EM13MAT303", "para": "EM13MAT203", "peso": 0.9 },
+    { "de": "EM13MAT104", "para": "EM13MAT203", "peso": 0.5 },
+    { "de": "BASE-MEDIA", "para": "EM13MAT316", "peso": 1.0 },
+    { "de": "EM13MAT316", "para": "EM13MAT101", "peso": 0.7 },
+    { "de": "EM13MAT104", "para": "EM13MAT101", "peso": 0.6 },
+    { "de": "EM13MAT316", "para": "EM13CNT301", "peso": 0.6 },
+    { "de": "EM13CHS101", "para": "EM13MAT101", "peso": 0.4 }
+  ],
+  "conceitos": [
+    { "nome": "razão", "definicao_curta": "Comparação entre duas quantidades por divisão: 3 gols em 6 chutes é a razão 3/6, ou 1 gol a cada 2 chutes." },
+    { "nome": "porcentagem", "definicao_curta": "Razão com denominador 100: 25% quer dizer 25 de cada 100." },
+    { "nome": "inflação", "definicao_curta": "Aumento geral dos preços ao longo do tempo: com inflação de 5% ao ano, o que custava R$ 100 passa a custar cerca de R$ 105." },
+    { "nome": "juros simples", "definicao_curta": "Juros calculados sempre sobre o valor inicial: o mesmo acréscimo em todo período." },
+    { "nome": "juros compostos", "definicao_curta": "Juros calculados sobre o valor já corrigido: juros sobre juros, o acréscimo cresce a cada período." },
+    { "nome": "parcelamento", "definicao_curta": "Dividir um pagamento em partes ao longo do tempo; a soma das parcelas pode ser maior que o preço à vista por causa dos juros." },
+    { "nome": "orçamento", "definicao_curta": "Plano que lista quanto entra e quanto sai de dinheiro num período, para decidir onde gastar e quanto guardar." },
+    { "nome": "média", "definicao_curta": "Soma dos valores dividida pela quantidade de valores." },
+    { "nome": "mediana", "definicao_curta": "Valor do meio quando os dados estão em ordem; não é puxada por valores extremos." },
+    { "nome": "desvio", "definicao_curta": "Quanto os valores se afastam da média; desvio pequeno indica dados regulares." },
+    { "nome": "hipótese", "definicao_curta": "Explicação possível que ainda precisa ser testada com dados." }
+  ],
+  "conteudos": [
+    { "id": "aula-razao-proporcao", "tipo": "aula", "titulo": "Razão e proporção em 5 minutos", "resumo": "Comparar quantidades por divisão e manter a proporção ao ampliar uma receita ou uma escala.", "minutos": 5, "trabalha": ["BASE-PROPORCAO"], "explica": ["razão"] },
+    { "id": "flash-razao", "tipo": "flashcard", "titulo": "Flashcards: razão e proporção", "resumo": "Cartões rápidos para reconhecer razões equivalentes e regra de três simples.", "minutos": 3, "trabalha": ["BASE-PROPORCAO"], "explica": ["razão"] },
+
+    { "id": "aula-porcentagem", "tipo": "aula", "titulo": "Porcentagem: desconto, aumento e 'de cada 100'", "resumo": "Calcular porcentagem de um valor, desconto e aumento percentual com exemplos de preço de loja.", "minutos": 6, "trabalha": ["BASE-PORCENTAGEM"], "explica": ["porcentagem", "razão"] },
+    { "id": "flash-porcentagem", "tipo": "flashcard", "titulo": "Flashcards: porcentagem de cabeça", "resumo": "10%, 25% e 50% de um valor de cabeça; transformar fração em porcentagem.", "minutos": 3, "trabalha": ["BASE-PORCENTAGEM"], "explica": ["porcentagem"] },
+    { "id": "quiz-porcentagem", "tipo": "quiz", "titulo": "Quiz: promoção de verdade ou pegadinha?", "resumo": "Quatro questões sobre descontos, aumentos sucessivos e preço final.", "minutos": 5, "trabalha": ["BASE-PORCENTAGEM"], "explica": ["porcentagem"] },
+
+    { "id": "aula-inflacao", "tipo": "aula", "titulo": "Inflação: por que o lanche fica mais caro", "resumo": "O que é um índice de preços e como a inflação muda o poder de compra ao longo do ano.", "minutos": 6, "trabalha": ["EM13MAT104"], "explica": ["inflação", "porcentagem"] },
+    { "id": "quiz-inflacao", "tipo": "quiz", "titulo": "Quiz: inflação na cantina", "resumo": "Questões sobre variação percentual de preços e comparação de índices.", "minutos": 5, "trabalha": ["EM13MAT104"], "explica": ["inflação"] },
+
+    { "id": "aula-funcao-afim", "tipo": "aula", "titulo": "Função de 1º grau: tarifa fixa + valor por uso", "resumo": "Modelar situações como plano de celular e corrida de aplicativo com uma função afim.", "minutos": 7, "trabalha": ["EM13MAT302"], "explica": [] },
+    { "id": "quiz-funcao", "tipo": "quiz", "titulo": "Quiz: qual plano compensa?", "resumo": "Comparar duas funções de 1º grau para descobrir a partir de quando um plano fica mais barato.", "minutos": 5, "trabalha": ["EM13MAT302"], "explica": [] },
+
+    { "id": "aula-juros", "tipo": "aula", "titulo": "Juros simples × compostos sem complicação", "resumo": "Como cada tipo de juros cresce mês a mês, com tabela lado a lado.", "minutos": 8, "trabalha": ["EM13MAT303"], "explica": ["juros simples", "juros compostos"] },
+    { "id": "flash-juros", "tipo": "flashcard", "titulo": "Flashcards: juros sobre juros", "resumo": "Diferença entre juros simples e compostos; montante após 2 ou 3 meses.", "minutos": 4, "trabalha": ["EM13MAT303"], "explica": ["juros simples", "juros compostos"] },
+    { "id": "quiz-juros", "tipo": "quiz", "titulo": "Quiz: parcelar o celular ou juntar e pagar à vista?", "resumo": "Comparar o total parcelado com juros e o preço à vista.", "minutos": 6, "trabalha": ["EM13MAT303"], "explica": ["parcelamento", "juros compostos"] },
+    { "id": "pratica-parcelado-avista", "tipo": "atividade_pratica", "titulo": "Prática: simule a compra do celular", "resumo": "Pesquise o preço de um celular, simule 10x com juros de 3% ao mês e compare com juntar R$ 100 por mês para pagar à vista.", "minutos": 15, "trabalha": ["EM13MAT303", "BASE-PORCENTAGEM"], "explica": ["parcelamento", "juros compostos"] },
+
+    { "id": "aula-orcamento", "tipo": "aula", "titulo": "Orçamento: entra, sai e sobra", "resumo": "Montar categorias de gasto, prever receitas e decidir o que cortar.", "minutos": 6, "trabalha": ["EM13MAT203"], "explica": ["orçamento"] },
+    { "id": "pratica-orcamento-gremio", "tipo": "atividade_pratica", "titulo": "Prática: orçamento da festa do grêmio na planilha", "resumo": "Com uma planilha, monte receitas (rifas, cantina) e despesas (som, decoração) da festa do grêmio, com reserva de 10% e um cenário de preços 5% mais caros.", "minutos": 20, "trabalha": ["EM13MAT203", "EM13MAT104"], "explica": ["orçamento", "inflação", "porcentagem"] },
+    { "id": "quiz-orcamento", "tipo": "quiz", "titulo": "Quiz: o orçamento fecha?", "resumo": "Interpretar uma planilha de orçamento e achar o erro que faz a conta não fechar.", "minutos": 5, "trabalha": ["EM13MAT203"], "explica": ["orçamento"] },
+
+    { "id": "aula-media", "tipo": "aula", "titulo": "Média em 4 minutos", "resumo": "Somar e dividir: média de gols, de notas e de tempo de partida.", "minutos": 4, "trabalha": ["BASE-MEDIA"], "explica": ["média"] },
+    { "id": "flash-media", "tipo": "flashcard", "titulo": "Flashcards: média de cabeça", "resumo": "Médias com números pequenos e o que acontece quando entra um valor muito alto.", "minutos": 3, "trabalha": ["BASE-MEDIA"], "explica": ["média"] },
+
+    { "id": "aula-estatistica", "tipo": "aula", "titulo": "Média, moda, mediana e desvio no interclasse", "resumo": "Qual medida conta melhor a história de um jogador, com dados do campeonato da escola.", "minutos": 7, "trabalha": ["EM13MAT316"], "explica": ["média", "mediana", "desvio"] },
+    { "id": "flash-estatistica", "tipo": "flashcard", "titulo": "Flashcards: média, moda ou mediana?", "resumo": "Escolher a medida certa para cada situação.", "minutos": 4, "trabalha": ["EM13MAT316"], "explica": ["média", "mediana"] },
+    { "id": "quiz-estatistica", "tipo": "quiz", "titulo": "Quiz: quem é o artilheiro de verdade?", "resumo": "Missão BNCC de estatística ambientada no interclasse.", "minutos": 8, "trabalha": ["EM13MAT316"], "explica": ["média", "mediana", "desvio"], "rota": "/aluno/missoes/EM13MAT316" },
+    { "id": "pratica-estatistica-time", "tipo": "atividade_pratica", "titulo": "Prática: o relatório do analista", "resumo": "Colete os gols por jogo do time da sala e escreva um relatório de 5 linhas para o técnico com média, mediana e quem é mais regular.", "minutos": 15, "trabalha": ["EM13MAT316"], "explica": ["média", "mediana", "desvio"] },
+
+    { "id": "aula-graficos-economia", "tipo": "aula", "titulo": "Gráfico que engana: eixos, escalas e recortes", "resumo": "Ler gráficos de preços e de renda percebendo escala cortada e período escolhido a dedo.", "minutos": 7, "trabalha": ["EM13MAT101"], "explica": ["inflação"] },
+    { "id": "quiz-graficos", "tipo": "quiz", "titulo": "Quiz: o gráfico diz isso mesmo?", "resumo": "Interpretar gráficos de variação de preços e de desemprego.", "minutos": 6, "trabalha": ["EM13MAT101"], "explica": [], "rota": "/aluno/missoes/EM13MAT101" },
+
+    { "id": "aula-contagem", "tipo": "aula", "titulo": "Princípio multiplicativo: uniformes e senhas", "resumo": "Contar possibilidades multiplicando escolhas independentes.", "minutos": 6, "trabalha": ["EM13MAT310"], "explica": [] },
+    { "id": "quiz-contagem", "tipo": "quiz", "titulo": "Quiz: quantos uniformes dá pra montar?", "resumo": "Missão BNCC de contagem com o time da escola.", "minutos": 8, "trabalha": ["EM13MAT310"], "explica": [], "rota": "/aluno/missoes/EM13MAT310" },
+
+    { "id": "pratica-hipotese-bola", "tipo": "atividade_pratica", "titulo": "Prática: a bola cheia vai mais longe?", "resumo": "Planeje um teste justo com 3 pressões de bola, repita os chutes e compare as médias.", "minutos": 20, "trabalha": ["EM13CNT301", "EM13MAT316"], "explica": ["hipótese", "média"] },
+    { "id": "quiz-hipotese", "tipo": "quiz", "titulo": "Quiz: hipótese em campo", "resumo": "Missão BNCC sobre hipótese, variável controlada e conclusão com dados.", "minutos": 8, "trabalha": ["EM13CNT301"], "explica": ["hipótese"], "rota": "/aluno/missoes/EM13CNT301" },
+
+    { "id": "aula-fontes", "tipo": "aula", "titulo": "Mesmo fato, fontes diferentes", "resumo": "Comparar quem produziu, como mediu e quando, antes de acreditar num número.", "minutos": 6, "trabalha": ["EM13CHS101"], "explica": [] },
+    { "id": "quiz-fontes", "tipo": "quiz", "titulo": "Quiz: em qual fonte confiar?", "resumo": "Missão BNCC de leitura crítica de fontes.", "minutos": 8, "trabalha": ["EM13CHS101"], "explica": [], "rota": "/aluno/missoes/EM13CHS101" }
+  ]
+}
