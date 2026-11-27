@@ -4,19 +4,34 @@
     "questoes": [
       {
         "enunciado": "No interclasse, o Léo fez 2, 0, 1, 3 e 0 gols em 5 jogos. Quantos gols ele fez, em média, por jogo?",
-        "alternativas": ["1,2", "1", "2", "1,5"],
+        "alternativas": [
+          "1,2",
+          "1",
+          "2",
+          "1,5"
+        ],
         "correta": 0,
         "explicacao": "Some os gols: 2 + 0 + 1 + 3 + 0 = 6. Divida pelo número de jogos: 6 ÷ 5 = 1,2. A média reparte o total igualmente entre os jogos."
       },
       {
         "enunciado": "Os gols por jogo do time da 2ª A no campeonato foram 1, 3, 1, 0, 2 e 1. Qual é a moda?",
-        "alternativas": ["3", "2", "1", "0"],
+        "alternativas": [
+          "3",
+          "2",
+          "1",
+          "0"
+        ],
         "correta": 2,
         "explicacao": "Moda é o valor que mais se repete. O 1 aparece três vezes, mais que qualquer outro. A moda mostra o resultado mais comum do time."
       },
       {
         "enunciado": "Num treino de pênaltis, cinco jogadores acertaram 4, 9, 5, 3 e 8 cobranças. Qual é a mediana dos acertos?",
-        "alternativas": ["5,8", "5", "8", "4"],
+        "alternativas": [
+          "5,8",
+          "5",
+          "8",
+          "4"
+        ],
         "correta": 1,
         "explicacao": "Coloque em ordem: 3, 4, 5, 8, 9. Com 5 valores, a mediana é o do meio: 5. Repare que a média (29 ÷ 5 = 5,8) é diferente da mediana."
       },
@@ -38,19 +53,34 @@
     "questoes": [
       {
         "enunciado": "Numa partida, você fez 4, 6, 2, 8 e 5 abates em 5 rodadas. Qual a média de abates por rodada?",
-        "alternativas": ["4", "6", "5", "25"],
+        "alternativas": [
+          "4",
+          "6",
+          "5",
+          "25"
+        ],
         "correta": 2,
         "explicacao": "Some: 4 + 6 + 2 + 8 + 5 = 25. Divida pelas 5 rodadas: 25 ÷ 5 = 5. Esse é o seu desempenho típico por rodada."
       },
       {
         "enunciado": "Seu tempo pra passar de fase, em minutos, foi 7, 5, 7, 9, 7 e 6. Qual é a moda?",
-        "alternativas": ["7", "6", "9", "5"],
+        "alternativas": [
+          "7",
+          "6",
+          "9",
+          "5"
+        ],
         "correta": 0,
         "explicacao": "A moda é o valor que mais aparece. O 7 aparece três vezes. É o tempo mais comum, mesmo que a média seja outra."
       },
       {
         "enunciado": "A pontuação da squad foi 120, 80, 300, 100 e 90. Qual é a mediana?",
-        "alternativas": ["138", "120", "300", "100"],
+        "alternativas": [
+          "138",
+          "120",
+          "300",
+          "100"
+        ],
         "correta": 3,
         "explicacao": "Em ordem: 80, 90, 100, 120, 300. O valor do meio é 100. A média (690 ÷ 5 = 138) foi puxada pra cima pelo 300; a mediana não se deixa levar por um valor extremo."
       },
@@ -72,25 +102,45 @@
     "questoes": [
       {
         "enunciado": "O time tem 3 camisas e 2 shorts diferentes. Quantos uniformes (camisa + short) dá pra montar?",
-        "alternativas": ["5", "6", "3", "9"],
+        "alternativas": [
+          "5",
+          "6",
+          "3",
+          "9"
+        ],
         "correta": 1,
         "explicacao": "Pra cada uma das 3 camisas existem 2 shorts: 3 × 2 = 6. É o princípio multiplicativo: escolhas independentes se multiplicam."
       },
       {
         "enunciado": "Agora são 3 camisas, 2 shorts e 2 pares de meião. Quantos uniformes completos diferentes?",
-        "alternativas": ["7", "10", "12", "8"],
+        "alternativas": [
+          "7",
+          "10",
+          "12",
+          "8"
+        ],
         "correta": 2,
         "explicacao": "Multiplique as escolhas: 3 × 2 × 2 = 12. Somar (3 + 2 + 2 = 7) não funciona, porque cada camisa combina com todas as opções de short e de meião."
       },
       {
         "enunciado": "No interclasse, 4 times jogam todos contra todos uma única vez. Quantos jogos acontecem?",
-        "alternativas": ["6", "8", "12", "4"],
+        "alternativas": [
+          "6",
+          "8",
+          "12",
+          "4"
+        ],
         "correta": 0,
         "explicacao": "Cada time enfrenta 3 adversários: 4 × 3 = 12, mas assim cada jogo foi contado duas vezes (A×B e B×A). Então são 12 ÷ 2 = 6 jogos."
       },
       {
         "enunciado": "O técnico vai escolher capitão e vice entre 5 jogadores. Quantas duplas (capitão, vice) são possíveis?",
-        "alternativas": ["10", "25", "15", "20"],
+        "alternativas": [
+          "10",
+          "25",
+          "15",
+          "20"
+        ],
         "correta": 3,
         "explicacao": "São 5 opções pra capitão e sobram 4 pra vice: 5 × 4 = 20. Aqui a ordem importa; se fosse só escolher 2 jogadores sem cargo, seriam 20 ÷ 2 = 10."
       }
@@ -150,19 +200,34 @@
     "questoes": [
       {
         "enunciado": "Na gincana da escola, sua equipe fez 6, 8, 7, 9 e 5 pontos nas provas. Qual foi a média de pontos por prova?",
-        "alternativas": ["7", "8", "6", "35"],
+        "alternativas": [
+          "7",
+          "8",
+          "6",
+          "35"
+        ],
         "correta": 0,
         "explicacao": "Some: 6 + 8 + 7 + 9 + 5 = 35. Divida pelas 5 provas: 35 ÷ 5 = 7."
       },
       {
         "enunciado": "As idades de seis colegas são 16, 17, 16, 15, 16 e 17. Qual é a moda?",
-        "alternativas": ["17", "15", "16", "16,2"],
+        "alternativas": [
+          "17",
+          "15",
+          "16",
+          "16,2"
+        ],
         "correta": 2,
         "explicacao": "A moda é o valor que mais se repete: 16 aparece três vezes."
       },
       {
         "enunciado": "Cinco colegas levam 10, 40, 15, 20 e 12 minutos pra chegar à escola. Qual é a mediana?",
-        "alternativas": ["19,4", "15", "20", "12"],
+        "alternativas": [
+          "19,4",
+          "15",
+          "20",
+          "12"
+        ],
         "correta": 1,
         "explicacao": "Em ordem: 10, 12, 15, 20, 40. O do meio é 15. A média (97 ÷ 5 = 19,4) é puxada pelo 40; a mediana descreve melhor o colega típico."
       },
@@ -179,12 +244,164 @@
       }
     ]
   },
+  "EM13MAT101": {
+    "titulo": "O preço do lanche subiu quanto?",
+    "questoes": [
+      {
+        "enunciado": "O gráfico da cantina mostra o salgado a R$ 5,00 em janeiro e a R$ 6,00 em junho. De quanto foi o aumento, em porcentagem?",
+        "alternativas": [
+          "20%",
+          "1%",
+          "16%",
+          "6%"
+        ],
+        "correta": 0,
+        "explicacao": "O aumento foi de R$ 1 sobre o preço de partida, R$ 5: 1 ÷ 5 = 0,20 = 20%. O erro comum é dividir pelo preço novo (1 ÷ 6 ≈ 16,7%) ou achar que R$ 1 é 1%."
+      },
+      {
+        "enunciado": "Dois gráficos mostram exatamente o mesmo aumento de preço. Num, o eixo vertical começa em R$ 0; no outro, em R$ 4,90. Qual parece mostrar um aumento maior?",
+        "alternativas": [
+          "O que começa em R$ 0",
+          "Os dois parecem iguais",
+          "Depende da cor da linha",
+          "O que começa em R$ 4,90"
+        ],
+        "correta": 3,
+        "explicacao": "Cortar o começo do eixo estica diferenças pequenas: a linha parece subir muito mais. Antes de se assustar com um gráfico, olhe onde o eixo começa."
+      },
+      {
+        "enunciado": "A inflação do ano foi de 5% e a sua mesada continuou R$ 100. O que aconteceu com o que você consegue comprar?",
+        "alternativas": [
+          "Aumentou 5%",
+          "Ficou igual",
+          "Diminuiu: os mesmos R$ 100 compram menos",
+          "Dobrou"
+        ],
+        "correta": 2,
+        "explicacao": "O que custava R$ 100 passou a custar cerca de R$ 105. Com a mesma mesada, você compra um pouco menos. Esse é o poder de compra caindo."
+      },
+      {
+        "enunciado": "Um gráfico (dados fictícios) mostra o desemprego entre jovens: 30% em 2020, 25% em 2022 e 22% em 2024. O que dá pra afirmar?",
+        "alternativas": [
+          "Caiu 8%",
+          "Caiu 8 pontos percentuais entre 2020 e 2024",
+          "O desemprego jovem acabou",
+          "Subiu, porque 22 ainda é alto"
+        ],
+        "correta": 1,
+        "explicacao": "De 30% para 22% são 8 pontos percentuais a menos. Em relação ao valor inicial, a queda foi 8 ÷ 30 ≈ 27%. Ponto percentual e porcentagem são coisas diferentes."
+      }
+    ]
+  },
+  "EM13MAT302": {
+    "titulo": "Qual plano de celular compensa?",
+    "questoes": [
+      {
+        "enunciado": "O plano A cobra R$ 20 fixos por mês mais R$ 2 por GB usado. Quanto custa um mês com 5 GB?",
+        "alternativas": [
+          "R$ 22",
+          "R$ 30",
+          "R$ 100",
+          "R$ 27"
+        ],
+        "correta": 1,
+        "explicacao": "Parte fixa mais a parte que depende do uso: 20 + 2 × 5 = 20 + 10 = R$ 30. Isso é uma função de 1º grau: P = 20 + 2x."
+      },
+      {
+        "enunciado": "Plano A: R$ 20 + R$ 2 por GB. Plano B: R$ 35 fixos, internet à vontade. A partir de quantos GB o plano B fica mais barato?",
+        "alternativas": [
+          "8 GB",
+          "7 GB",
+          "15 GB",
+          "35 GB"
+        ],
+        "correta": 0,
+        "explicacao": "Os planos empatam quando 20 + 2x = 35, ou seja, x = 7,5 GB. Com 8 GB, o A custa R$ 36 e o B continua R$ 35. Comparar duas funções mostra quando uma passa a outra."
+      },
+      {
+        "enunciado": "A corrida de app cobra R$ 5 de bandeirada mais R$ 2 por km. Qual função dá o preço P de uma corrida de x km?",
+        "alternativas": [
+          "P = 5x + 2",
+          "P = 7x",
+          "P = 2x + 5",
+          "P = 5 + x"
+        ],
+        "correta": 2,
+        "explicacao": "O que muda com a distância é o R$ 2 por km (2x); o R$ 5 é fixo. Então P = 2x + 5. Trocar os papéis (5x + 2) é o erro mais comum."
+      },
+      {
+        "enunciado": "Você vende brigadeiro: gasta R$ 30 por semana com gás e embalagem, cada brigadeiro custa R$ 0,80 pra fazer e sai por R$ 2,50. Quantos precisa vender na semana pra não ter prejuízo?",
+        "alternativas": [
+          "12",
+          "30",
+          "38",
+          "18"
+        ],
+        "correta": 3,
+        "explicacao": "Cada brigadeiro deixa R$ 2,50 − R$ 0,80 = R$ 1,70. Pra cobrir os R$ 30: 30 ÷ 1,70 ≈ 17,6, então 18 brigadeiros. Dividir 30 por 2,50 (= 12) esquece o custo de cada unidade."
+      }
+    ]
+  },
+  "EM13MAT310:games": {
+    "titulo": "Lógica do game: quantas combinações?",
+    "questoes": [
+      {
+        "enunciado": "Seu personagem tem 4 skins e 3 armas. Quantas combinações de skin + arma dá pra montar?",
+        "alternativas": [
+          "7",
+          "12",
+          "43",
+          "24"
+        ],
+        "correta": 1,
+        "explicacao": "Pra cada uma das 4 skins existem 3 armas: 4 × 3 = 12. Escolhas independentes se multiplicam; somar (4 + 3) é o erro comum."
+      },
+      {
+        "enunciado": "Uma senha de 4 dígitos usa números de 0 a 9 e pode repetir. Quantas senhas diferentes existem?",
+        "alternativas": [
+          "40",
+          "5.040",
+          "10.000",
+          "9.999"
+        ],
+        "correta": 2,
+        "explicacao": "São 10 opções em cada uma das 4 posições: 10 × 10 × 10 × 10 = 10.000. Sem repetir dígito seriam 10 × 9 × 8 × 7 = 5.040."
+      },
+      {
+        "enunciado": "No torneio online, 6 times jogam todos contra todos uma única vez. Quantas partidas acontecem?",
+        "alternativas": [
+          "15",
+          "30",
+          "36",
+          "12"
+        ],
+        "correta": 0,
+        "explicacao": "Cada time enfrenta 5 adversários: 6 × 5 = 30, mas assim cada partida foi contada duas vezes. 30 ÷ 2 = 15."
+      },
+      {
+        "enunciado": "Você vai escolher 3 dos 5 personagens pro seu time, e a ordem não importa. Quantos times diferentes dá pra formar?",
+        "alternativas": [
+          "60",
+          "15",
+          "125",
+          "10"
+        ],
+        "correta": 3,
+        "explicacao": "Com ordem seriam 5 × 4 × 3 = 60. Cada time de 3 aparece 3 × 2 × 1 = 6 vezes nessa conta, então 60 ÷ 6 = 10."
+      }
+    ]
+  },
   "default": {
     "titulo": "Missão relâmpago: pensa com os dados!",
     "questoes": [
       {
         "enunciado": "Numa pesquisa com 20 colegas da sala, 5 disseram que vão a pé pra escola. Que porcentagem é essa?",
-        "alternativas": ["20%", "25%", "5%", "50%"],
+        "alternativas": [
+          "20%",
+          "25%",
+          "5%",
+          "50%"
+        ],
         "correta": 1,
         "explicacao": "5 de 20 é a mesma coisa que 5 ÷ 20 = 0,25. Multiplicando por 100: 25%."
       },
@@ -201,7 +418,12 @@
       },
       {
         "enunciado": "A biblioteca emprestou 40 livros em março e 60 em abril. De quanto foi o aumento, em porcentagem?",
-        "alternativas": ["50%", "20%", "60%", "33%"],
+        "alternativas": [
+          "50%",
+          "20%",
+          "60%",
+          "33%"
+        ],
         "correta": 0,
         "explicacao": "O aumento foi de 20 livros. Compare com o valor inicial: 20 ÷ 40 = 0,5, ou seja, 50%."
       },

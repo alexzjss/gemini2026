@@ -1,0 +1,18 @@
+[
+  { "skillCode": "EM13MAT101", "titulo": "O preço do lanche subiu quanto? Lendo o gráfico da inflação", "minutos": 8 },
+  { "skillCode": "EM13MAT302", "titulo": "Qual plano de celular compensa? Função no dia a dia", "minutos": 8 },
+  { "skillCode": "EM13MAT310", "titulo": "Quantos uniformes dá pra montar?", "minutos": 8 },
+  { "skillCode": "EM13MAT316", "titulo": "Quem é o artilheiro de verdade? Média, moda e mediana no interclasse", "minutos": 8 },
+  { "skillCode": "EM13LGG101", "titulo": "Quem quer te convencer? Por trás de um post patrocinado", "minutos": 7 },
+  { "skillCode": "EM13LGG303", "titulo": "Bate-papo com argumento: defendendo o interclasse misto", "minutos": 7 },
+  { "skillCode": "EM13LGG701", "titulo": "Do celular pro mundo: planejando um vídeo curto", "minutos": 7 },
+  { "skillCode": "EM13LP01", "titulo": "Quem escreveu, pra quem e quando? Lendo a notícia inteira", "minutos": 7 },
+  { "skillCode": "EM13CNT101", "titulo": "Pra onde vai a energia do chute?", "minutos": 8 },
+  { "skillCode": "EM13CNT204", "titulo": "Por que a bola faz curva e cai? Gravidade em campo", "minutos": 8 },
+  { "skillCode": "EM13CNT301", "titulo": "Hipótese em campo: o que faz a bola ir mais longe?", "minutos": 8 },
+  { "skillCode": "EM13CNT303", "titulo": "Esse estudo diz isso mesmo? Checando a notícia de ciência", "minutos": 7 },
+  { "skillCode": "EM13CHS101", "titulo": "Mesmo jogo, duas manchetes: em qual fonte confiar?", "minutos": 7 },
+  { "skillCode": "EM13CHS401", "titulo": "Do caderno de fiado ao Pix: como o trabalho do comércio mudou", "minutos": 7 },
+  { "skillCode": "EM13CHS403", "titulo": "Entregador de app: tecnologia, renda e direitos", "minutos": 7 },
+  { "skillCode": "EM13CHS501", "titulo": "Combinado é combinado? Ética no trabalho em grupo", "minutos": 7 }
+]

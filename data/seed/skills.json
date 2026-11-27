@@ -1,0 +1,18 @@
+[
+  { "code": "EM13MAT101", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Ler gráficos de economia, sociedade e ciência", "chunkId": "bncc-EM13MAT101" },
+  { "code": "EM13MAT302", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Funções de 1º e 2º grau pra modelar situações reais", "chunkId": "bncc-EM13MAT302" },
+  { "code": "EM13MAT310", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Problemas de contagem e combinações", "chunkId": "bncc-EM13MAT310" },
+  { "code": "EM13MAT316", "area": "MAT", "areaLabel": "Matemática", "descricaoJovem": "Estatística: média, moda, mediana e desvio", "chunkId": "bncc-EM13MAT316" },
+  { "code": "EM13LGG101", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Entender como um discurso é produzido e circula", "chunkId": "bncc-EM13LGG101" },
+  { "code": "EM13LGG303", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Debater e defender um ponto de vista com argumento", "chunkId": "bncc-EM13LGG303" },
+  { "code": "EM13LGG701", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Usar tecnologia digital pra se expressar e produzir", "chunkId": "bncc-EM13LGG701" },
+  { "code": "EM13LP01", "area": "LGG", "areaLabel": "Linguagens", "descricaoJovem": "Ler um texto pensando em quem escreveu, quando e pra quem", "chunkId": "bncc-EM13LP01" },
+  { "code": "EM13CNT101", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Energia e movimento: o que se transforma e o que se conserva", "chunkId": "bncc-EM13CNT101" },
+  { "code": "EM13CNT204", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Gravidade e movimento: prever trajetórias", "chunkId": "bncc-EM13CNT204" },
+  { "code": "EM13CNT301", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Levantar hipóteses e testar com dados", "chunkId": "bncc-EM13CNT301" },
+  { "code": "EM13CNT303", "area": "CNT", "areaLabel": "Natureza", "descricaoJovem": "Ler divulgação científica e checar os dados", "chunkId": "bncc-EM13CNT303" },
+  { "code": "EM13CHS101", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Comparar fontes e narrativas diferentes sobre um fato", "chunkId": "bncc-EM13CHS101" },
+  { "code": "EM13CHS401", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Como a tecnologia mudou o trabalho ao longo do tempo", "chunkId": "bncc-EM13CHS401" },
+  { "code": "EM13CHS403", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Impactos da tecnologia no trabalho de hoje", "chunkId": "bncc-EM13CHS403" },
+  { "code": "EM13CHS501", "area": "CHS", "areaLabel": "Humanas", "descricaoJovem": "Ética, cooperação e autonomia no dia a dia", "chunkId": "bncc-EM13CHS501" }
+]

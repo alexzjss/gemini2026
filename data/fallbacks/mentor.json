@@ -17,6 +17,69 @@
     "fala": "Quase! Primeiro soma os gols de todos os jogos e divide pelo número de jogos. Depois olha a lista de novo: em quantos jogos ele não marcou? A média mostra isso?",
     "desafioResolvido": false
   },
+  "gestor-esports:1": {
+    "fala": "Boa! Meu dia é metade game, metade planilha e conversa. De manhã fecho a agenda de treino; à tarde negocio patrocínio; à noite vejo replay com o time pra achar onde a gente errou. Quer ver como é uma negociação na prática?"
+  },
+  "gestor-esports:2": {
+    "fala": "Bora! Situação real da semana passada:",
+    "miniDesafio": {
+      "skillCode": "EM13LGG303",
+      "enunciado": "Um patrocinador quer pagar R$ 500 pela logo na camisa do time. Você quer R$ 800. Me dá dois argumentos pra defender o seu valor, de preferência com algum número."
+    }
+  },
+  "gestor-esports:3": {
+    "fala": "Gostei! Argumento bom mostra o que o patrocinador ganha: público, visualizações, resultado. Juntar número com proposta clara é o que fecha negócio. É o mesmo debate com argumento que você treina na escola.",
+    "desafioResolvido": true
+  },
+  "gestor-esports:pista": {
+    "fala": "Pensa do lado do patrocinador: o que ele ganha aparecendo na camisa? Quantas pessoas assistem às partidas? Usa isso no argumento.",
+    "desafioResolvido": false
+  },
+  "gestor-esports:aceita": {
+    "padrao": "(\\d|alcance|visualiza|views?|seguidor|audi[eê]ncia|p[uú]blico|torcida|assist|transmiss|resultado|campe)"
+  },
+  "empreendedor-local:1": {
+    "fala": "Boa! Meu dia começa no estoque e termina no caixa. No meio, atendo cliente, vendo no Pix e respondo mensagem. O que mais aprendi foi fazer conta antes de decidir preço: senão você trabalha muito e não sobra nada. Quer testar?"
+  },
+  "empreendedor-local:2": {
+    "fala": "Então bora num desafio que eu faço toda semana:",
+    "miniDesafio": {
+      "skillCode": "EM13MAT302",
+      "enunciado": "Você vende brigadeiro: gasta R$ 30 por semana com gás e embalagem, cada brigadeiro custa R$ 0,80 pra fazer e sai por R$ 2,50. Quantos precisa vender na semana pra não ter prejuízo?"
+    }
+  },
+  "empreendedor-local:3": {
+    "fala": "Isso! Cada brigadeiro deixa R$ 1,70 (2,50 − 0,80). Pra cobrir os R$ 30 fixos: 30 ÷ 1,70 ≈ 17,6, então 18 brigadeiros. Daí pra frente é lucro. É função de 1º grau trabalhando pra você.",
+    "desafioResolvido": true
+  },
+  "empreendedor-local:pista": {
+    "fala": "Quase! Primeiro descobre quanto sobra de cada brigadeiro depois de pagar o custo dele. Depois vê quantas dessas sobras cobrem os R$ 30 da semana.",
+    "desafioResolvido": false
+  },
+  "empreendedor-local:aceita": {
+    "padrao": "(\\b18\\b|17[,.]6|\\b1[,.]70?\\b)"
+  },
+  "desenvolvedor-software:1": {
+    "fala": "Boa pergunta! Passo boa parte do dia escrevendo e testando código, mas também converso muito com o time pra decidir o que construir. E tem dia de caçar bug que só aparece no celular de um usuário. Quer ver uma conta que aparece direto no meu trabalho?"
+  },
+  "desenvolvedor-software:2": {
+    "fala": "Bora, essa cai em segurança de app:",
+    "miniDesafio": {
+      "skillCode": "EM13MAT310",
+      "enunciado": "Um app aceita senha de 4 dígitos, de 0 a 9, podendo repetir. Quantas senhas diferentes existem? E por que senha só com números é fraca?"
+    }
+  },
+  "desenvolvedor-software:3": {
+    "fala": "Mandou bem! São 10 × 10 × 10 × 10 = 10.000 senhas, e um computador testa tudo isso em segundos. Com letras e números, cada posição tem 36 opções e o total explode. Contagem é segurança na prática.",
+    "desafioResolvido": true
+  },
+  "desenvolvedor-software:pista": {
+    "fala": "Pensa posição por posição: quantas opções tem o 1º dígito? E o 2º? Como você junta isso?",
+    "desafioResolvido": false
+  },
+  "desenvolvedor-software:aceita": {
+    "padrao": "(10[.\\s]?000|10\\s*\\^\\s*4|10\\s*(x|×|\\*)\\s*10|dez mil|10 mil)"
+  },
   "default:1": {
     "fala": "Boa pergunta! Como {careerNome}, meu dia mistura rotina e imprevisto: tem tarefa que se repete e tem problema novo pra resolver. Muito do que eu faço usa coisa que você vê na escola, só que aplicada. Quer que eu te mostre com um exemplo?"
   },
@@ -34,6 +97,9 @@
   "default:pista": {
     "fala": "Boa tentativa! Soma os valores dos 5 dias e divide por 5. Depois repara: teve dia com zero? Será que a média sozinha mostra isso?",
     "desafioResolvido": false
+  },
+  "default:aceita": {
+    "padrao": "(1[,.]2\\b|6\\s*(/|÷|dividido)\\s*5|zer[oa]|n[aã]o (fez|marcou)|mediana|varia|esconde|n[aã]o conta)"
   },
   "default": {
     "fala": "Curti a conversa! Pra ir mais fundo, o melhor é falar com alguém de verdade: segue fazendo missões que o Match Day te conecta com um mentor real da área."

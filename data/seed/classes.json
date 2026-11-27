@@ -1,0 +1,5 @@
+[
+  { "id": "1A", "schoolId": "escola-demo", "serie": 1, "nome": "1º EM A" },
+  { "id": "2A", "schoolId": "escola-demo", "serie": 2, "nome": "2º EM A" },
+  { "id": "3A", "schoolId": "escola-demo", "serie": 3, "nome": "3º EM A" }
+]
