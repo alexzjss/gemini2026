@@ -8,8 +8,8 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import type { ReactNode } from "react";
-import { APP_NAME } from "@/lib/config";
-import { cores, fonteDisplay } from "./cores";
+import { Logo } from "@/components/ui";
+import { cores } from "./cores";
 import { useSessaoProfessor } from "./dados/fonte";
 
 /**
@@ -53,21 +53,8 @@ export default function ProfessorShell({ children }: { children: ReactNode }) {
   ];
 
   const logo = (
-    <Box
-      component="span"
-      sx={{
-        alignSelf: "flex-start",
-        fontFamily: fonteDisplay,
-        fontWeight: 800,
-        fontSize: 16,
-        border: `2px dashed ${cores.ink}`,
-        borderRadius: 999,
-        px: 1.5,
-        py: 0.75,
-        whiteSpace: "nowrap",
-      }}
-    >
-      {APP_NAME}
+    <Box sx={{ alignSelf: { md: "flex-start" } }}>
+      <Logo size={18} collapseBelow={380} href={`/professor/turma/${classId}`} />
     </Box>
   );
 

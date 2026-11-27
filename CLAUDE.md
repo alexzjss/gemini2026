@@ -1,6 +1,6 @@
 # CLAUDE.md — Contexto para agentes
 
-Projeto **Gemini2026** (nome provisório, `APP_NAME` em `lib/config.ts`): plataforma web contra evasão escolar no Ensino Médio público. MVP de hackathon, **2h**, demo para banca. Antes de implementar, leia `docs/`. Em caso de conflito, `docs/02-decisoes.md` (rodada 2) vence.
+Projeto **Próxio** (`APP_NAME` em `lib/config.ts`; símbolo e logotipo em `components/ui/Logo.tsx` + `components/ui/brand/`): plataforma web contra evasão escolar no Ensino Médio público. MVP de hackathon, **2h**, demo para banca. Antes de implementar, leia `docs/`. Em caso de conflito, `docs/02-decisoes.md` (rodada 2) vence.
 
 ## Onde está cada coisa
 - `docs/02` decisões · `03` escopo, rotas, roteiro de demo · `04` arquitetura e contratos · `05` tipos e seed · `06` prompts e RAG · `07` regras (pontos, níveis, match, evasão) · `08` plano de execução · `09` design system · `10` especificação tela a tela · `11` grafo educacional, trilha e GraphRAG.
