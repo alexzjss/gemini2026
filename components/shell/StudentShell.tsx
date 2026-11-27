@@ -9,7 +9,8 @@ import { Avatar, Logo, PointsPill, LoadingState, formatPontos } from "@/componen
 import Sidebar, { SidebarUser } from "./Sidebar";
 import BottomNav from "./BottomNav";
 import { NAV_ALUNO_DESKTOP, NAV_ALUNO_MOBILE, isFlowRoute } from "./nav";
-import { tokens } from "@/lib/theme";
+import { alpha } from "@mui/material/styles";
+import { layout, tokens } from "@/lib/theme";
 
 /** Shell do aluno: guarda (sessão + consentimento), header/bottom nav no mobile, sidebar no desktop. */
 export default function StudentShell({ children }: { children: React.ReactNode }) {
@@ -47,7 +48,11 @@ export default function StudentShell({ children }: { children: React.ReactNode }
         }
       />
       <Box sx={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
-        <Box component="header" sx={{ display: { xs: "flex", md: "none" }, alignItems: "center", justifyContent: "space-between", px: 2.5, pt: 2.5, pb: 1 }}>
+        <Box component="header" sx={{
+          display: { xs: "flex", md: "none" }, alignItems: "center", justifyContent: "space-between", gap: 1.5,
+          position: "sticky", top: "var(--demobar-h, 0px)", zIndex: 1050, px: 2.5, py: 1.5,
+          bgcolor: alpha(tokens.paper, 0.9), backdropFilter: "saturate(1.4) blur(10px)",
+        }}>
           <Logo size={18} collapseBelow={380} href="/aluno" />
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <PointsPill pontos={view.pontos} />
@@ -57,10 +62,10 @@ export default function StudentShell({ children }: { children: React.ReactNode }
           </Box>
         </Box>
         <Box component="main" id="conteudo" sx={{
-          flex: 1, width: "100%", px: { xs: 2.5, md: 6 }, pt: { xs: 1, md: 5 },
-          pb: { xs: "120px", md: 7 },
+          flex: 1, width: "100%", px: { xs: 2.5, sm: 4, md: 5, lg: 7 }, pt: { xs: 1, md: 5 },
+          pb: { xs: "calc(112px + env(safe-area-inset-bottom))", md: 8 },
         }}>
-          {children}
+          <Box sx={{ width: "100%", maxWidth: layout.content, mx: "auto" }}>{children}</Box>
         </Box>
       </Box>
       <BottomNav items={NAV_ALUNO_MOBILE} />

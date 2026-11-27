@@ -145,7 +145,7 @@ export default function GerarPlanoPopover({ classId, nAlunos, linha, ancora, int
           )}
 
           <Stack direction="row" justifyContent="flex-end" gap={1}>
-            <Button onClick={fechar} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
+            <Button variant="text" onClick={fechar} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
               Cancelar
             </Button>
             <Button

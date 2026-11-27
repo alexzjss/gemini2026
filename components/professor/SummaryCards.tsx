@@ -63,7 +63,7 @@ export default function SummaryCards({ view, onVerAtencao }: { view: TurmaView; 
               {nAtencao === 1 ? "aluno" : "alunos"}
             </Typography>
           </Stack>
-          <Button size="small" onClick={onVerAtencao} sx={{ px: 0, minHeight: 32, fontWeight: 700, color: cores.blue }}>
+          <Button variant="text" size="small" onClick={onVerAtencao} sx={{ px: 0, minHeight: 32, fontWeight: 700, color: cores.blue }}>
             Ver quem
           </Button>
         </Stack>

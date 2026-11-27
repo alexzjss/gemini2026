@@ -94,7 +94,7 @@ export default function Carreiras() {
   const st = atual?.ondeAEscola?.status;
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+    <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2, md: 4 } }}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 1 }}>
         <Typography variant="h1" sx={{ fontSize: { xs: 34, md: 48 } }}>Carreiras</Typography>
         <Box component="span" sx={{ border, borderRadius: 999, px: 1.5, py: 0.75, fontWeight: 700, fontSize: 14, bgcolor: tokens.surface }}>{salvas} salvas</Box>
@@ -114,7 +114,8 @@ export default function Carreiras() {
                   drag={reduce ? false : "x"} dragConstraints={{ left: 0, right: 0 }} dragElastic={0.9}
                   style={{ x, rotate: rot }}
                   onDragEnd={(_, info) => { if (info.offset.x > 120) agir("save"); else if (info.offset.x < -120) agir("pass"); }}
-                  initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                  initial={reduce ? false : { opacity: 0, y: 14, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.22, ease: [0.2, 0.8, 0.2, 1] }}
                   sx={{ position: "relative", cursor: reduce ? "auto" : "grab", touchAction: "pan-y" }}>
                   <CareerCard item={atual} pos={i + 1} total={limite} />
                 </Box>
@@ -128,7 +129,7 @@ export default function Carreiras() {
             <Typography sx={{ textAlign: "center", fontSize: 13, color: tokens.muted, mt: 1.5 }}>Arraste ou use ← passar · → salvar · Enter quero conhecer</Typography>
           </Box>
 
-          <Box sx={{ display: { xs: "none", md: "flex" }, flexDirection: "column", gap: 2 }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, flexDirection: "column", gap: 3 }}>
             {atual.ondeAEscola && (
               <SurfaceCard>
                 <Overline sx={{ color: tokens.muted }}>Onde a escola aparece</Overline>
@@ -141,7 +142,7 @@ export default function Carreiras() {
               <Overline sx={{ color: tokens.muted }}>Como chegar</Overline>
               <Typography>{atual.career.comoChegar}</Typography>
             </SurfaceCard>
-            <PillButton href={`/aluno/carreiras/${atual.career.id}`} variant="outlined" arrow>Ver detalhes e mentores reais</PillButton>
+            <Box><PillButton href={`/aluno/carreiras/${atual.career.id}`} variant="outlined" arrow>Ver detalhes e mentores reais</PillButton></Box>
           </Box>
         </Box>
       ) : (
@@ -152,7 +153,7 @@ export default function Carreiras() {
             {view.swipe.salvas.map((id) => {
               const c = fila.find((f) => f.career.id === id)?.career;
               return c ? (
-                <Box key={id} component={NextLink} href={`/aluno/carreiras/${id}`} sx={{ border, borderRadius: 999, px: 2, py: 1, fontWeight: 600, fontSize: 14, textDecoration: "none", color: tokens.ink, minHeight: 44, display: "inline-flex", alignItems: "center" }}>{c.nome}</Box>
+                <Box key={id} component={NextLink} href={`/aluno/carreiras/${id}`} sx={{ border, borderRadius: 999, px: 2, py: 1, fontWeight: 600, fontSize: 14, textDecoration: "none", color: tokens.ink, bgcolor: tokens.surface, minHeight: 44, display: "inline-flex", alignItems: "center", transition: "background-color 140ms", "&:hover": { bgcolor: tokens.lime } }}>{c.nome}</Box>
               ) : null;
             })}
           </Box>

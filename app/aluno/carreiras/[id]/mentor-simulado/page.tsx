@@ -133,7 +133,7 @@ export default function MentorSimuladoPage() {
   );
 
   return (
-    <FullscreenFlow bg="ink" maxWidth={640} aside={contexto}>
+    <FullscreenFlow bg="ink" maxWidth={680} aside={contexto} stretch>
       <Box component="header" sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", px: 2.5, pt: 2.5 }}>
         <IconButton component={NextLink} href={`/aluno/carreiras/${career.id}`} aria-label="Voltar pra carreira" sx={{ bgcolor: tokens.inkRaised, color: tokens.paper, "&:hover": { bgcolor: tokens.inkBorder } }}>
           <ArrowBackRoundedIcon />

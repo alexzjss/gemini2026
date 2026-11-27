@@ -60,7 +60,7 @@ export default function ConversationDialog({ aberto, nome, motivos, onFechar, on
         </Stack>
       </DialogContent>
       <DialogActions sx={{ px: 3, pb: 2.5 }}>
-        <Button onClick={onFechar} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
+        <Button variant="text" onClick={onFechar} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
           Cancelar
         </Button>
         <Button
