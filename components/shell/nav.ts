@@ -21,7 +21,8 @@ export const NAV_ALUNO_DESKTOP: NavItem[] = [
   NAV_ALUNO_MOBILE[0],
   NAV_ALUNO_MOBILE[1],
   { href: "/aluno/galera", label: "Da Galera", Icon: StyleRoundedIcon, match: (p) => p.startsWith("/aluno/galera") },
-  { href: "/aluno/perfil", label: "Ficha e mentores", Icon: BadgeRoundedIcon, match: (p) => p.startsWith("/aluno/perfil") || p.startsWith("/aluno/missoes") },
+  NAV_ALUNO_MOBILE[2],
+  { href: "/aluno/perfil", label: "Ficha e mentores", Icon: BadgeRoundedIcon, match: (p) => p.startsWith("/aluno/perfil") },
 ];
 
 export const NAV_PROFESSOR: NavItem[] = [

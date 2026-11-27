@@ -178,7 +178,7 @@ export default function ProfessorShell({ children }: { children: ReactNode }) {
       </Box>
 
       <Box component="main" sx={{ flex: 1, minWidth: 0, px: { xs: 2, md: 5 }, pt: { xs: 2.5, md: 5 }, pb: 7 }}>
-        <Box sx={{ maxWidth: 1120, mx: "auto" }}>{hidratado && ok ? children : null}</Box>
+        <Box sx={{ width: "100%" }}>{hidratado && ok ? children : null}</Box>
       </Box>
     </Box>
   );
