@@ -52,7 +52,11 @@ export function falaOffline(input: MentorInput): MentorChatReply {
 
   const f = (s: string) => s.replace(/\{(\w+)\}/g, (_, k: string) => vars[k] ?? "");
   const out: MentorChatReply = { fala: f(entry.fala).slice(0, LIMITES.falaMentorMaxChars) };
-  if (entry.miniDesafio && !input.desafioResolvido) out.miniDesafio = { skillCode: input.skillCode, enunciado: f(entry.miniDesafio.enunciado) };
+  if (entry.miniDesafio && !input.desafioResolvido) {
+    // Roteiro escrito para uma habilidade específica (ex.: média → EM13MAT316) mantém o código dele.
+    const fixo = !entry.miniDesafio.skillCode.includes("{");
+    out.miniDesafio = { skillCode: fixo ? entry.miniDesafio.skillCode : input.skillCode, enunciado: f(entry.miniDesafio.enunciado) };
+  }
   if (typeof entry.desafioResolvido === "boolean") out.desafioResolvido = entry.desafioResolvido;
   return out;
 }

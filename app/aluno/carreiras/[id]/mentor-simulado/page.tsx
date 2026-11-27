@@ -29,7 +29,7 @@ import { ABERTURA_PADRAO, contemDadoPessoal, falaOffline } from "./_components/o
 
 const SUGESTOES = ["Como é seu dia?", "Precisa ser bom em mat?", "Como eu começo?"];
 
-interface SessionMeta { sessionId: string; desafioAberto?: { skillCode: string; enunciado: string }; resolvido: boolean; }
+interface SessionMeta { sessionId: string; desafioAberto?: { skillCode: string; enunciado: string }; resolvido: boolean; resolvidoCode?: string; }
 
 export default function MentorSimuladoPage() {
   const { id } = useParams<{ id: string }>();
@@ -100,9 +100,9 @@ export default function MentorSimuladoPage() {
 
     if (meta.desafioAberto && data.desafioResolvido === true) {
       dispatch({ type: "awardMiniChallenge", studentId, sessionId: meta.sessionId, at: now() });
-      setMeta({ ...meta, desafioAberto: undefined, resolvido: true });
+      setMeta({ ...meta, desafioAberto: undefined, resolvido: true, resolvidoCode: meta.desafioAberto.skillCode });
     } else if (!meta.desafioAberto && !meta.resolvido && data.miniDesafio) {
-      setMeta({ ...meta, desafioAberto: { skillCode, enunciado: data.miniDesafio.enunciado } });
+      setMeta({ ...meta, desafioAberto: { skillCode: data.miniDesafio.skillCode || skillCode, enunciado: data.miniDesafio.enunciado } });
     }
   };
 
@@ -168,7 +168,7 @@ export default function MentorSimuladoPage() {
           </Box>
         )}
         {meta.desafioAberto && <MiniChallengeChip code={meta.desafioAberto.skillCode} />}
-        {meta.resolvido && <MiniChallengeChip code={skillCode} resolvido />}
+        {meta.resolvido && <MiniChallengeChip code={meta.resolvidoCode ?? skillCode} resolvido />}
         {acabou && (
           <Typography sx={{ alignSelf: "center", textAlign: "center", color: tokens.mutedOnInk, fontSize: 14, mt: 1 }}>
             Bora continuar no Match Day com alguém de verdade? <Link component={NextLink} href="/aluno" sx={{ color: tokens.lime }}>Ver meu Match Day</Link>

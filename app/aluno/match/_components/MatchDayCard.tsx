@@ -7,7 +7,7 @@ import RadioButtonUncheckedRoundedIcon from "@mui/icons-material/RadioButtonUnch
 import EventAvailableRoundedIcon from "@mui/icons-material/EventAvailableRounded";
 import { useRouter } from "next/navigation";
 import { Overline, PillButton, SurfaceCard } from "@/components/ui";
-import { useActions, useAppStore } from "@/lib/store/AppStore";
+import { useActions } from "@/lib/store/AppStore";
 import type { StudentView } from "@/lib/store/selectors";
 import { getMentor } from "@/lib/store/seed";
 import { DEMO, LIMIARES } from "@/lib/config";
@@ -15,11 +15,11 @@ import { fonts, tokens } from "@/lib/theme";
 import { dataMatchDay, diasParaMatchDay } from "./datas";
 
 export default function MatchDayCard({ view }: { view: StudentView }) {
-  const { state } = useAppStore();
   const { dispatch, now } = useActions();
   const router = useRouter();
   const mentor = view.match?.eligible && view.match.mentorId ? getMentor(view.match.mentorId) : undefined;
   const dias = diasParaMatchDay();
+  const jaSimulou = view.local.eventos.some((e) => e.type === "presenca_semana");
   const s = view.snapshot;
 
   const itens = [
@@ -37,7 +37,7 @@ export default function MatchDayCard({ view }: { view: StudentView }) {
     <SurfaceCard component="section" aria-label="Match Day">
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 1 }}>
         <Overline>Match Day · {dataMatchDay()}</Overline>
-        {!mentor && !state.semestreSimulado && (
+        {!mentor && !jaSimulou && (
           <Typography sx={{ fontFamily: fonts.display, fontWeight: 800, fontSize: 22 }}>{dias} {dias === 1 ? "dia" : "dias"}</Typography>
         )}
       </Box>
@@ -66,7 +66,7 @@ export default function MatchDayCard({ view }: { view: StudentView }) {
               </Box>
             ))}
           </Box>
-          {state.semestreSimulado ? (
+          {jaSimulou ? (
             <Box><PillButton href="/aluno/match" color="ink" arrow>Abrir o Match Day</PillButton></Box>
           ) : DEMO.enabled ? (
             <Box><PillButton color="ink" onClick={simular}>Simular fim do semestre</PillButton></Box>

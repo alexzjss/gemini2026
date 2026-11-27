@@ -57,7 +57,13 @@ export default function MatchPage() {
   const studentId = useSessionStudentId();
   const view = useStudentView(studentId);
   const { state } = useAppStore();
-  if (!view) return null;
+  const { dispatch, now } = useActions();
+  const precisaPresencas = Boolean(view && state.semestreSimulado && !view.local.eventos.some((e) => e.type === "presenca_semana"));
+  /* Semestre já simulado por outro perfil: lança as presenças deste aluno também (idempotente). */
+  useEffect(() => {
+    if (precisaPresencas && view) dispatch({ type: "simulateSemester", studentId: view.student.id, at: now() });
+  }, [precisaPresencas, view, dispatch, now]);
+  if (!view || precisaPresencas) return null;
   const chegou = matchDayChegou(state.semestreSimulado);
   if (!chegou) return <AntesDoMatchDay view={view} />;
   if (!view.elegibilidade.eligible) return <QuaseLa view={view} />;

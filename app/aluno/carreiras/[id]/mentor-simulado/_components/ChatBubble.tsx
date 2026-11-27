@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import { visuallyHidden } from "@mui/utils";
 import { tokens } from "@/lib/theme";
 
 /** Bolha do chat: aluno à direita (`blue`), mentor à esquerda (`inkRaised` + borda `inkBorder`). */
@@ -12,7 +13,7 @@ export default function ChatBubble({ role, texto }: { role: "aluno" | "mentor"; 
       border: aluno ? `2px solid ${tokens.blue}` : `2px solid ${tokens.inkBorder}`,
       borderRadius: aluno ? "18px 18px 4px 18px" : "18px 18px 18px 4px",
     }}>
-      <Box component="span" sx={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>
+      <Box component="span" sx={visuallyHidden}>
         {aluno ? "Você: " : "Mentor simulado: "}
       </Box>
       {texto}

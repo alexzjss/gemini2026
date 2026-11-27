@@ -262,12 +262,23 @@ export function AppStoreProvider({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("storage", onStorage);
   }, []);
 
+  /* Debounce de 200ms + flush ao sair/recarregar (nada se perde num F5 logo após uma ação). */
+  const latest = useRef<{ local: LocalState; dirty: boolean }>({ local: store.local, dirty: false });
   useEffect(() => {
     if (!store.ui.hydrated) return;
     if (skipNextSave.current) { skipNextSave.current = false; return; }
-    const t = window.setTimeout(() => save(store.local), 200);
+    latest.current = { local: store.local, dirty: true };
+    const t = window.setTimeout(() => { save(store.local); latest.current.dirty = false; }, 200);
     return () => window.clearTimeout(t);
   }, [store.local, store.ui.hydrated]);
+
+  useEffect(() => {
+    const flush = () => { if (latest.current.dirty) { save(latest.current.local); latest.current.dirty = false; } };
+    const onVis = () => { if (document.visibilityState === "hidden") flush(); };
+    window.addEventListener("pagehide", flush);
+    document.addEventListener("visibilitychange", onVis);
+    return () => { window.removeEventListener("pagehide", flush); document.removeEventListener("visibilitychange", onVis); };
+  }, []);
 
   const value = useMemo(() => ({ state: store.local, ui: store.ui, dispatch }), [store]);
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;

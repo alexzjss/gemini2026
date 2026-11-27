@@ -15,7 +15,7 @@ import { DEMO } from "@/lib/config";
 import { tokens } from "@/lib/theme";
 import OfflineBadge from "./OfflineBadge";
 
-export const DEMOBAR_HEIGHT = 40;
+import { DEMOBAR_HEIGHT } from "./constants";
 
 const ctrl = {
   height: 30, minHeight: 30, fontSize: 12, fontWeight: 700, borderRadius: 999, px: 1.25, border: 0, boxShadow: "none",
@@ -31,6 +31,7 @@ export default function DemoBar() {
   if (!DEMO.enabled) return null;
 
   const sessao = state.sessao;
+  const jaSimulou = sessao?.role === "aluno" && Boolean(state.porAluno[sessao.studentId]?.eventos.some((e) => e.type === "presenca_semana"));
   const perfilAtual = sessao?.role === "professor" ? "prof" : sessao?.role === "aluno" ? sessao.studentId : "";
 
   const trocar = (v: string) => {
@@ -42,7 +43,7 @@ export default function DemoBar() {
 
   const simular = () => {
     if (sessao?.role !== "aluno") return;
-    dispatch({ type: "simulateSemester", studentId: sessao.studentId, at: now() });
+    dispatch({ type: "simulateSemester", studentId: sessao.studentId, at: now() }); // idempotente
     router.push("/aluno/match");
   };
 
@@ -69,7 +70,7 @@ export default function DemoBar() {
           <MenuItem value="prof">Professor(a) · 2º EM A</MenuItem>
         </Select>
         {sessao?.role === "aluno" && (
-          <Button onClick={simular} color="lime" sx={ctrl}>Simular fim do semestre</Button>
+          <Button onClick={simular} color="lime" sx={ctrl}>{jaSimulou ? "Ver Match Day" : "Simular fim do semestre"}</Button>
         )}
         <Button onClick={() => setConfirm(true)} variant="text" sx={{ ...ctrl, color: tokens.paper, border: `1px solid ${tokens.inkBorder}` }}>Resetar dados</Button>
         <Box sx={{ ml: "auto", flex: "none" }}><OfflineBadge /></Box>
