@@ -1,39 +1,41 @@
-/* PROVISÓRIO (contrato 2 · dono: Agente 2). Regras de docs/07 §4 (anti-farm). */
-import { LIMITES, PONTOS } from "@/lib/config";
-import type { NivelId, PointEvent, PointEventType } from "@/lib/types";
+// docs/07 §4 — pontos de esforço. Nota alta vale +0 (não existe evento para nota).
+import type { NivelId, PointEvent, PointEventType } from "../types";
+import { LIMITES, PONTOS } from "../config";
+import { dia, semanaIso } from "./util";
 
-export interface EventoPedido { type: PointEventType; ref?: string; at: string; }
+/** Evento candidato. `ref` identifica o alvo: careerId, skillCode, "semana-9", id da sessão do mentor,
+ *  e em `habilidade_subiu` a transição ("EM13MAT316:em_desenvolvimento>dominada"). */
+export interface EventoCandidato { type: PointEventType; at: string; ref?: string }
 
-const dia = (iso: string) => iso.slice(0, 10);
+export const pontuar = (type: PointEventType): number => PONTOS[type];
 
-export function pontuar(e: EventoPedido): PointEvent {
-  return { type: e.type, pontos: PONTOS[e.type], at: e.at, ref: e.ref };
-}
-
-/** Valida limites diários/únicos. `nivel` libera 3 mini-desafios/dia a partir do nível 3. */
-export function podeGanhar(e: EventoPedido, historico: PointEvent[], ctx: { nivel?: NivelId } = {}): boolean {
-  const mesmos = historico.filter((h) => h.type === e.type);
+export function podeGanhar(e: EventoCandidato, historico: PointEvent[], ctx: { nivel?: NivelId } = {}): boolean {
+  const mesmoTipo = historico.filter((h) => h.type === e.type);
+  const mesmoRef = mesmoTipo.filter((h) => h.ref === e.ref);
   switch (e.type) {
     case "galera_concluido":
-      return mesmos.length === 0;
+      return mesmoTipo.length === 0;
     case "desafio_semana":
+      return !mesmoTipo.some((h) => semanaIso(h.at) === semanaIso(e.at));
     case "carreira_explorada":
+    case "habilidade_subiu":
     case "presenca_semana":
-      return !mesmos.some((h) => h.ref === e.ref);
+      return Boolean(e.ref) && mesmoRef.length === 0;
     case "missao_concluida":
     case "missao_aprovada":
-      return !mesmos.some((h) => h.ref === e.ref && dia(h.at) === dia(e.at));
-    case "habilidade_subiu": {
-      const code = e.ref?.split(":")[0];
-      if (mesmos.some((h) => h.ref === e.ref)) return false;
-      return !mesmos.some((h) => h.ref?.split(":")[0] === code && dia(h.at) === dia(e.at));
-    }
+      return Boolean(e.ref) && !mesmoRef.some((h) => dia(h.at) === dia(e.at));
     case "mini_desafio_mentor": {
-      if (mesmos.some((h) => h.ref === e.ref)) return false; // 1x por sessão
-      const max = (ctx.nivel ?? 1) >= 3 ? LIMITES.miniDesafioPorDia.nivel3 : LIMITES.miniDesafioPorDia.base;
-      return mesmos.filter((h) => dia(h.at) === dia(e.at)).length < max;
+      const limite = (ctx.nivel ?? 1) >= 3 ? LIMITES.miniDesafiosPorDia.aPartirDoNivel3 : LIMITES.miniDesafiosPorDia.base;
+      const hoje = mesmoTipo.filter((h) => dia(h.at) === dia(e.at)).length;
+      return Boolean(e.ref) && mesmoRef.length === 0 && hoje < limite;
     }
   }
+}
+
+/** Valida e devolve o evento pontuado, ou null se o limite já foi atingido (anti-farm). */
+export function registrar(e: EventoCandidato, historico: PointEvent[], ctx: { nivel?: NivelId } = {}): PointEvent | null {
+  if (!podeGanhar(e, historico, ctx)) return null;
+  return { type: e.type, pontos: pontuar(e.type), at: e.at, ...(e.ref ? { ref: e.ref } : {}) };
 }
 
 export function totalPontos(pontosSeed: number, eventos: PointEvent[]): number {

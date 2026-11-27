@@ -1,7 +1,9 @@
 /* Seed tipado (import estático). Os JSONs são do Agente 2 (F3); este arquivo é do Agente 1. */
 import type {
-  Career, ClassGroup, FraseTitulo, Mentor, MissionDef, ReportCard, Scenario, School, Skill, Student, Teacher,
+  Career, ClassGroup, Mentor, MissionDef, ReportCard, Scenario, School, Skill, Student, Teacher,
 } from "@/lib/types";
+import type { Frase } from "@/lib/domain/afinidades";
+import type { SeedData } from "./selectors";
 import schoolJson from "@/data/seed/school.json";
 import classesJson from "@/data/seed/classes.json";
 import teacherJson from "@/data/seed/teacher.json";
@@ -19,14 +21,14 @@ export const classes = classesJson as unknown as ClassGroup[];
 export const teacher = teacherJson as unknown as Teacher;
 export const skills = skillsJson as unknown as Skill[];
 export const scenarios = scenariosJson as unknown as Scenario[];
-export const frases = frasesJson as unknown as FraseTitulo[];
+export const frases = frasesJson as unknown as Frase[];
 export const careers = careersJson as unknown as Career[];
 export const mentors = mentorsJson as unknown as Mentor[];
 export const missoes = missoesJson as unknown as MissionDef[];
 export const students = studentsJson as unknown as Student[];
 export const reportCards = reportCardsJson as unknown as ReportCard[];
 
-export const seed = { school, classes, teacher, skills, scenarios, frases, careers, mentors, missoes, students, reportCards };
+export const seed: SeedData = { school, classes, teacher, skills, scenarios, frases, careers, mentors, missoes, students, reportCards };
 
 const byId = <T, K extends keyof T>(xs: T[], k: K) => new Map(xs.map((x) => [x[k] as unknown as string, x]));
 const studentsById = byId(students, "id");

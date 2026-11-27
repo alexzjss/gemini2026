@@ -1,1 +1,17 @@
-[]
+[
+  { "eixos": ["analisar", "esportes"], "frase": "Você curte organizar o caos com números." },
+  { "eixos": ["tech", "criar"], "frase": "Você transforma ideia em coisa que funciona na tela." },
+  { "eixos": ["analisar", "tech"], "frase": "Você quer entender como as coisas funcionam por dentro." },
+  { "eixos": ["analisar", "criar"], "frase": "Você planeja antes e capricha no resultado." },
+  { "eixos": ["analisar", "cuidar"], "frase": "Você observa com calma pra ajudar do jeito certo." },
+  { "eixos": ["analisar", "negocios"], "frase": "Você enxerga o plano que ninguém viu ainda." },
+  { "eixos": ["tech", "cuidar"], "frase": "Você usa tecnologia pra facilitar a vida de alguém." },
+  { "eixos": ["tech", "negocios"], "frase": "Você vê oportunidade onde os outros veem só um app." },
+  { "eixos": ["tech", "esportes"], "frase": "Você é do time que joga e também quer entender o jogo." },
+  { "eixos": ["criar", "cuidar"], "frase": "Você comunica de um jeito que acolhe a galera." },
+  { "eixos": ["criar", "negocios"], "frase": "Você tem ideia e sabe fazer ela chegar nas pessoas." },
+  { "eixos": ["criar", "esportes"], "frase": "Você conta a história do jogo como ninguém." },
+  { "eixos": ["cuidar", "negocios"], "frase": "Você lidera cuidando de quem tá do lado." },
+  { "eixos": ["cuidar", "esportes"], "frase": "Você puxa a galera pra se mexer junto." },
+  { "eixos": ["negocios", "esportes"], "frase": "Você entra pra competir e pra organizar o time." }
+]

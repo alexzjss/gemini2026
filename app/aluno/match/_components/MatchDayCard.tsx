@@ -8,7 +8,7 @@ import EventAvailableRoundedIcon from "@mui/icons-material/EventAvailableRounded
 import { useRouter } from "next/navigation";
 import { Overline, PillButton, SurfaceCard } from "@/components/ui";
 import { useActions } from "@/lib/store/AppStore";
-import type { StudentView } from "@/lib/store/selectors";
+import type { StudentView } from "@/lib/store/hooks";
 import { getMentor } from "@/lib/store/seed";
 import { DEMO, LIMIARES } from "@/lib/config";
 import { fonts, tokens } from "@/lib/theme";

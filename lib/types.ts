@@ -230,7 +230,7 @@ export interface CorpusChunk {
   texto: string;                // texto oficial literal
 }
 
-export interface FraseTitulo { eixos: [AffinityAxis, AffinityAxis]; texto: string; }
+export interface FraseTitulo { eixos: [AffinityAxis, AffinityAxis]; frase: string; }
 
 export interface DiagnosticoAI { resumo: string; destaques: string[]; proximosPassos: string[]; }
 export interface GaleraAI { porQueCombina: Record<string, string>; destravarTexto: string; }

@@ -29,6 +29,13 @@ export const PONTOS: Record<PointEventType, number> = {
 };
 
 export const LIMITES = {
+  // chaves usadas por lib/domain (Agente 2)
+  miniDesafiosPorDia: { base: 1, aPartirDoNivel3: 3 },
+  bonusSalva: 0.15,
+  bonusQueroConhecer: 0.25,
+  swipePorDia: 5,
+  topCaminhos: 4,
+  // chaves usadas pela UI/rotas
   galeraConcluido: 1,                 // 1x
   desafioSemanaPorSemana: 1,
   carreiraExploradaPorCarreira: 1,
@@ -51,7 +58,9 @@ export const LIMIARES = {
   diagnostico: { dominada: 7.0, emDesenvolvimento: 5.0, tendencia: 0.5, progressoMaxDefasagem: 45, bonusMissao: 15, progressoMaxAntesDeSubir: 95 },
   afinidade: { forte: 65, medio: 35, parcialAPartirDe: 3, topResultado: 4, topParcial: 3 },
   carreira: { bonusSalva: 0.15, bonusQuero: 0.25 },
-  evasao: { frequenciaBaixa: 75, quedaPP: 15, inatividadeDias: 14, habilidadesCaindo: 2 },
+  evasao: { frequenciaBaixa: 75, quedaPontos: 15, inatividadeDias: 14, habilidadesCaindo: 2 },
+  presenca: 75,
+  elegibilidadeFrequencia: 60,
   match: { frequenciaMinima: 60, missoesMinimas: 1, presencaSemana: 75 },
 } as const;
 
@@ -71,20 +80,20 @@ export const SEMESTRE = {
   nome: "2º semestre de 2026",
   inicio: "2026-08-03",
   fim: "2026-12-18",          // Match Day
-  semanas: 16,
+  semanasTotal: 16,
   semanasOcorridas: 8,
 } as const;
 
 /* ---------- Rótulos ---------- */
-export const EIXOS: Record<AffinityAxis, string> = {
-  analisar: "Organizar e analisar",
-  tech: "Tecnologia e games",
-  criar: "Criar e comunicar",
-  cuidar: "Cuidar e ensinar",
-  negocios: "Negócios e liderança",
-  esportes: "Esportes, corpo e natureza",
-};
-export const EIXOS_ORDEM: AffinityAxis[] = ["analisar", "tech", "criar", "cuidar", "negocios", "esportes"];
+export const EIXOS: { id: AffinityAxis; label: string }[] = [
+  { id: "analisar", label: "Organizar e analisar" },
+  { id: "tech", label: "Tecnologia e games" },
+  { id: "criar", label: "Criar e comunicar" },
+  { id: "cuidar", label: "Cuidar e ensinar" },
+  { id: "negocios", label: "Negócios e liderança" },
+  { id: "esportes", label: "Esportes, corpo e natureza" },
+];
+export const EIXO_LABEL = Object.fromEntries(EIXOS.map((e) => [e.id, e.label])) as Record<AffinityAxis, string>;
 
 export const NIVEL_HABILIDADE_LABEL: Record<SkillLevel, string> = {
   defasagem: "bora destravar",
@@ -104,6 +113,8 @@ export const DEMO = {
     { id: "s003", matricula: "2026003", label: "Carla · 3º EM" },
   ],
   turmaPadrao: "2A",
+  classId: "2A" as const,
+  heroes: { kaua: "s001", bruno: "s002", carla: "s003" },
   professorId: "prof-demo",
 } as const;
 

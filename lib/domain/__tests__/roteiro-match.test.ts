@@ -2,7 +2,7 @@
 import { describe, expect, it } from "vitest";
 import { reducer, pontosDoAluno, type StoreState } from "@/lib/store/AppStore";
 import { initialState } from "@/lib/store/local";
-import { buildStudentView } from "@/lib/store/selectors";
+import { studentView } from "@/lib/store/hooks";
 import { escolherMentor, simularSemestre } from "@/lib/domain/match";
 import { nivelPorPontos } from "@/lib/domain/niveis";
 import { getStudent, mentors } from "@/lib/store/seed";
@@ -17,7 +17,7 @@ function roteiro() {
   run({ type: "consent", studentId: "s001", at });
   run({ type: "finishGalera", studentId: "s001", at });                                       // +50
   run({ type: "swipe", studentId: "s001", careerId: "analista-dados-esportivos", kind: "want", at }); // +10
-  run({ type: "preferMentor", studentId: "s001", mentorId: "m01-renata" });
+  run({ type: "preferMentor", studentId: "s001", mentorId: "m01" });
   run({ type: "awardMiniChallenge", studentId: "s001", sessionId: "sessao-1", at });            // +20
   run({ type: "finishMission", studentId: "s001", skillCode: "EM13MAT316", acertos: 3, at });   // +110
   return { s, run };
@@ -46,10 +46,10 @@ describe("roteiro do Kauã até o Match Day", () => {
     let s = s0;
     s = run({ type: "simulateSemester", studentId: "s001", at });
     expect(pontosDoAluno(s.local, "s001")).toBe(1520);
-    const view = buildStudentView(s.local, "s001")!;
+    const view = studentView(s.local, "s001", at)!;
     expect(view.nivel).toBe(4);
-    expect(view.elegibilidade.eligible).toBe(true);
-    expect(escolherMentor(view.snapshot, mentors)?.mentor.id).toBe("m01-renata");
+    expect(view.elegivel.eligible).toBe(true);
+    expect(escolherMentor(view.snapshot, mentors)?.mentor.id).toBe("m01");
   });
 
   it("não deixa farmar: simular de novo, mini-desafio da mesma sessão e Quero conhecer repetido valem 0", () => {
@@ -64,7 +64,7 @@ describe("roteiro do Kauã até o Match Day", () => {
 
   it("Big Tech fica fora dos candidatos no nível 3 (vitrine bloqueada)", () => {
     const { s } = roteiro();
-    const view = buildStudentView(s.local, "s001")!;
+    const view = studentView(s.local, "s001", at)!;
     expect(view.nivel).toBe(3);
     expect(escolherMentor(view.snapshot, mentors)?.mentor.nivelMinimo).toBeLessThanOrEqual(3);
   });

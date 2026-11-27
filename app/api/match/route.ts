@@ -3,7 +3,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import type { ApiResponse, MatchResult, StudentSnapshot } from "@/lib/types";
-import { EIXOS } from "@/lib/config";
+import { EIXO_LABEL } from "@/lib/config";
 import { mentors, getCareer, getSkill } from "@/lib/store/seed";
 import { elegivel, escolherMentor } from "@/lib/domain/match";
 import { top } from "@/lib/domain/afinidades";
@@ -32,7 +32,7 @@ const FB = fallback as Record<string, Texts>;
 
 function textos(s: StudentSnapshot, mentorCareerIds: string[]): Texts {
   if (FB[s.studentId]) return FB[s.studentId];
-  const eixos = top(s.perfil, 2).map((t) => EIXOS[t.eixo].toLowerCase()).join(" e ");
+  const eixos = top(s.perfil, 2).map((t) => EIXO_LABEL[t.eixo].toLowerCase()).join(" e ");
   const quero = mentorCareerIds.find((id) => s.queroConhecer.includes(id) || s.salvas.includes(id));
   const carreiraFrase = quero ? `Você mostrou interesse em ${getCareer(quero)?.nome.toLowerCase()}.` : "A área dela conversa com os caminhos que combinam com você.";
   const evoluida = s.skills.find((k) => k.subiuEm) ?? s.skills.find((k) => k.level !== "dominada");

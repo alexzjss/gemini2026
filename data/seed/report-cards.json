@@ -1,26 +1,3752 @@
 [
-  { "studentId": "s001", "avaliacoes": [
-    { "id": "s001-a1", "componente": "Matemática", "titulo": "Prova 1 – Estatística", "bimestre": 1, "nota": 5.2, "skillCodes": ["EM13MAT316"] },
-    { "id": "s001-a2", "componente": "Matemática", "titulo": "Prova 2 – Estatística", "bimestre": 2, "nota": 6.4, "skillCodes": ["EM13MAT316"] },
-    { "id": "s001-a3", "componente": "Matemática", "titulo": "Trabalho – Contagem", "bimestre": 2, "nota": 4.6, "skillCodes": ["EM13MAT310"] },
-    { "id": "s001-a4", "componente": "Língua Portuguesa", "titulo": "Seminário – Debate", "bimestre": 1, "nota": 8.4, "skillCodes": ["EM13LGG303", "EM13LGG701"] },
-    { "id": "s001-a5", "componente": "História", "titulo": "Prova – Fontes", "bimestre": 2, "nota": 7.8, "skillCodes": ["EM13CHS101"] },
-    { "id": "s001-a6", "componente": "Física", "titulo": "Relatório – Experimento", "bimestre": 2, "nota": 6.1, "skillCodes": ["EM13CNT301"] }
-  ] },
-  { "studentId": "s002", "avaliacoes": [
-    { "id": "s002-a1", "componente": "Matemática", "titulo": "Prova 1 – Estatística", "bimestre": 1, "nota": 3.8, "skillCodes": ["EM13MAT316"] },
-    { "id": "s002-a2", "componente": "Matemática", "titulo": "Prova 2 – Estatística", "bimestre": 2, "nota": 4.6, "skillCodes": ["EM13MAT316", "EM13MAT310"] },
-    { "id": "s002-a3", "componente": "Língua Portuguesa", "titulo": "Seminário – Debate", "bimestre": 1, "nota": 5.5, "skillCodes": ["EM13LGG303", "EM13LGG701"] },
-    { "id": "s002-a4", "componente": "Língua Portuguesa", "titulo": "Produção de texto", "bimestre": 2, "nota": 5.2, "skillCodes": ["EM13LGG303"] },
-    { "id": "s002-a5", "componente": "História", "titulo": "Prova – Fontes", "bimestre": 2, "nota": 4.4, "skillCodes": ["EM13CHS101"] },
-    { "id": "s002-a6", "componente": "Física", "titulo": "Relatório – Experimento", "bimestre": 2, "nota": 3.5, "skillCodes": ["EM13CNT301"] }
-  ] },
-  { "studentId": "s003", "avaliacoes": [
-    { "id": "s003-a1", "componente": "Matemática", "titulo": "Prova 1 – Funções", "bimestre": 1, "nota": 9.2, "skillCodes": ["EM13MAT302", "EM13MAT316"] },
-    { "id": "s003-a2", "componente": "Matemática", "titulo": "Prova 2 – Contagem", "bimestre": 2, "nota": 9.6, "skillCodes": ["EM13MAT310"] },
-    { "id": "s003-a3", "componente": "Língua Portuguesa", "titulo": "Redação", "bimestre": 1, "nota": 8.8, "skillCodes": ["EM13LGG303", "EM13LP01"] },
-    { "id": "s003-a4", "componente": "Língua Portuguesa", "titulo": "Seminário", "bimestre": 2, "nota": 8.5, "skillCodes": ["EM13LGG701"] },
-    { "id": "s003-a5", "componente": "Sociologia", "titulo": "Prova – Trabalho", "bimestre": 2, "nota": 9.0, "skillCodes": ["EM13CHS401", "EM13CHS501"] },
-    { "id": "s003-a6", "componente": "Biologia", "titulo": "Prova – Ciência", "bimestre": 2, "nota": 8.9, "skillCodes": ["EM13CNT303", "EM13CNT301"] }
-  ] }
+  {
+    "studentId": "s001",
+    "avaliacoes": [
+      {
+        "id": "s001-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 5.2,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s001-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s001-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s001-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s001-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 8.2,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s001-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s001-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s001-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 8.4,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s001-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s001-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s001-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s001-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s002",
+    "avaliacoes": [
+      {
+        "id": "s002-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s002-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 4.6,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s002-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 3.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s002-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 4.2,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s002-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 5,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s002-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s002-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s002-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s002-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 5.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s002-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 5.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s002-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 3.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s002-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s003",
+    "avaliacoes": [
+      {
+        "id": "s003-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 9.2,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s003-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 9.4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s003-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s003-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 8.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s003-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 9.4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s003-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 9.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s003-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s003-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 9.2,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s003-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 8.5,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s003-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8.9,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s003-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 9.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s003-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 9.3,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s004",
+    "avaliacoes": [
+      {
+        "id": "s004-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s004-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 4.2,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s004-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 5.7,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s004-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s004-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 5.4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s004-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 5,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s004-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s004-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s004-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s004-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s004-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s004-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s005",
+    "avaliacoes": [
+      {
+        "id": "s005-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 3.8,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s005-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 3.8,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s005-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s005-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 5.2,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s005-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s005-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s005-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 7,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s005-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 7,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s005-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 6.9,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s005-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s005-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s005-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s006",
+    "avaliacoes": [
+      {
+        "id": "s006-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s006-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s006-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s006-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s006-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s006-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s006-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 8.2,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s006-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s006-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s006-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s006-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s006-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s007",
+    "avaliacoes": [
+      {
+        "id": "s007-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 3.5,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s007-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 3.7,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s007-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 8.9,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s007-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 8.7,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s007-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s007-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s007-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s007-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s007-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s007-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 7,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s007-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s007-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s008",
+    "avaliacoes": [
+      {
+        "id": "s008-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 3.3,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s008-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 3.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s008-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 4,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s008-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 3.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s008-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 3.8,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s008-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s008-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 5.3,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s008-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 4.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s008-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 5.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s008-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 5.4,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s008-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 5.2,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s008-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s009",
+    "avaliacoes": [
+      {
+        "id": "s009-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s009-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s009-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 4.7,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s009-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 5.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s009-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s009-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s009-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s009-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s009-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s009-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s009-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.3,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s009-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s010",
+    "avaliacoes": [
+      {
+        "id": "s010-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s010-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s010-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 9.5,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s010-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 9.9,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s010-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s010-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s010-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s010-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 8.4,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s010-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s010-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s010-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s010-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s011",
+    "avaliacoes": [
+      {
+        "id": "s011-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 5.5,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s011-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 5.5,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s011-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 7.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s011-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s011-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 6.9,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s011-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 5.3,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s011-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 7.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s011-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s011-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 8.4,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s011-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s011-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.4,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s011-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s012",
+    "avaliacoes": [
+      {
+        "id": "s012-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s012-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s012-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s012-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s012-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s012-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 8.1,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s012-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s012-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s012-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 8.1,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s012-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8.5,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s012-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s012-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s013",
+    "avaliacoes": [
+      {
+        "id": "s013-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s013-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s013-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 4,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s013-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s013-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 6.9,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s013-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s013-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 5.2,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s013-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s013-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 4.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s013-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s013-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s013-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s014",
+    "avaliacoes": [
+      {
+        "id": "s014-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 9.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s014-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 9.3,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s014-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 7.3,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s014-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.3,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s014-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s014-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s014-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 8.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s014-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 8.7,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s014-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 9,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s014-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 9.4,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s014-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s014-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s015",
+    "avaliacoes": [
+      {
+        "id": "s015-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 5.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s015-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 4.9,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s015-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s015-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 6.2,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s015-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 3.8,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s015-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 4.2,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s015-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s015-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s015-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 4.9,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s015-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 5.1,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s015-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 5.7,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s015-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 5.7,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s016",
+    "avaliacoes": [
+      {
+        "id": "s016-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s016-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 5.7,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s016-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s016-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 5.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s016-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s016-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s016-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s016-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s016-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.9,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s016-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s016-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s016-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s017",
+    "avaliacoes": [
+      {
+        "id": "s017-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 5.7,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s017-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 5.5,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s017-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s017-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s017-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s017-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s017-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s017-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 5.7,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s017-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 4.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s017-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s017-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s017-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s018",
+    "avaliacoes": [
+      {
+        "id": "s018-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.9,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s018-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s018-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 5.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s018-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 4.9,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s018-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s018-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 7.4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s018-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 4.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s018-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 5.1,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s018-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s018-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 5.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s018-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s018-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s019",
+    "avaliacoes": [
+      {
+        "id": "s019-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s019-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.2,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s019-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s019-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 8.2,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s019-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s019-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s019-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 7.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s019-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s019-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s019-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s019-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s019-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s020",
+    "avaliacoes": [
+      {
+        "id": "s020-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 9.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s020-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 9.5,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s020-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 7.3,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s020-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s020-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 8.8,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s020-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 9,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s020-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 7.9,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s020-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s020-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 8.3,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s020-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8.1,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s020-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s020-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s021",
+    "avaliacoes": [
+      {
+        "id": "s021-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s021-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s021-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 7.5,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s021-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s021-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7.3,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s021-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s021-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s021-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s021-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s021-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s021-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.4,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s021-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s022",
+    "avaliacoes": [
+      {
+        "id": "s022-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s022-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s022-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s022-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s022-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s022-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 5.5,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s022-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s022-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 5.2,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s022-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s022-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s022-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s022-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s023",
+    "avaliacoes": [
+      {
+        "id": "s023-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s023-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s023-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 5.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s023-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 6.2,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s023-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s023-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 7.4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s023-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 6.2,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s023-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s023-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 5.9,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s023-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 5.5,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s023-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s023-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s024",
+    "avaliacoes": [
+      {
+        "id": "s024-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s024-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 7.9,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s024-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 7.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s024-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s024-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s024-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 7.3,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s024-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 8.8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s024-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s024-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 8.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s024-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s024-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 8.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s024-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 8.5,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s025",
+    "avaliacoes": [
+      {
+        "id": "s025-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 7.8,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s025-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s025-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s025-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s025-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 8.2,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s025-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 8.2,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s025-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 7.4,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s025-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s025-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s025-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s025-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 9.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s025-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 8.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s026",
+    "avaliacoes": [
+      {
+        "id": "s026-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 8.8,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s026-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s026-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s026-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s026-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 7.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s026-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 7.8,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s026-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 9.6,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s026-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 9.4,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s026-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 9.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s026-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 9.6,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s026-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s026-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s027",
+    "avaliacoes": [
+      {
+        "id": "s027-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s027-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s027-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 4.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s027-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 4.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s027-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s027-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 5.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s027-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s027-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s027-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 4.2,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s027-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 4.4,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s027-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s027-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.9,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s028",
+    "avaliacoes": [
+      {
+        "id": "s028-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s028-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 5.8,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s028-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 6.5,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s028-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s028-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s028-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 6.7,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s028-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s028-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s028-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 6.1,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s028-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 5.7,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s028-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 7.5,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s028-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s029",
+    "avaliacoes": [
+      {
+        "id": "s029-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s029-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 6.3,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s029-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 6.9,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s029-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s029-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 8.1,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s029-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 8.1,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s029-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 6.2,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s029-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 6.4,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s029-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 7.5,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s029-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 7.7,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s029-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s029-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 6.2,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  },
+  {
+    "studentId": "s030",
+    "avaliacoes": [
+      {
+        "id": "s030-EM13MAT316-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 1,
+        "nota": 7.3,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s030-EM13MAT316-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Estatística: média, moda, mediana e desvio",
+        "bimestre": 2,
+        "nota": 7.1,
+        "skillCodes": [
+          "EM13MAT316"
+        ]
+      },
+      {
+        "id": "s030-EM13MAT310-b1",
+        "componente": "Matemática",
+        "titulo": "Avaliação 1 – Problemas de contagem e combinações",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s030-EM13MAT310-b2",
+        "componente": "Matemática",
+        "titulo": "Avaliação 2 – Problemas de contagem e combinações",
+        "bimestre": 2,
+        "nota": 6.6,
+        "skillCodes": [
+          "EM13MAT310"
+        ]
+      },
+      {
+        "id": "s030-EM13LGG701-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 1,
+        "nota": 8.4,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s030-EM13LGG701-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Usar tecnologia digital pra se expressar e produzir",
+        "bimestre": 2,
+        "nota": 8.6,
+        "skillCodes": [
+          "EM13LGG701"
+        ]
+      },
+      {
+        "id": "s030-EM13LGG303-b1",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 1 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 1,
+        "nota": 8.4,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s030-EM13LGG303-b2",
+        "componente": "Língua Portuguesa",
+        "titulo": "Avaliação 2 – Debater e defender um ponto de vista com argumento",
+        "bimestre": 2,
+        "nota": 8,
+        "skillCodes": [
+          "EM13LGG303"
+        ]
+      },
+      {
+        "id": "s030-EM13CHS101-b1",
+        "componente": "História",
+        "titulo": "Avaliação 1 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 1,
+        "nota": 9,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s030-EM13CHS101-b2",
+        "componente": "História",
+        "titulo": "Avaliação 2 – Comparar fontes e narrativas diferentes sobre um fato",
+        "bimestre": 2,
+        "nota": 8.8,
+        "skillCodes": [
+          "EM13CHS101"
+        ]
+      },
+      {
+        "id": "s030-EM13CNT301-b1",
+        "componente": "Biologia",
+        "titulo": "Avaliação 1 – Levantar hipóteses e testar com dados",
+        "bimestre": 1,
+        "nota": 6.8,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      },
+      {
+        "id": "s030-EM13CNT301-b2",
+        "componente": "Biologia",
+        "titulo": "Avaliação 2 – Levantar hipóteses e testar com dados",
+        "bimestre": 2,
+        "nota": 7.2,
+        "skillCodes": [
+          "EM13CNT301"
+        ]
+      }
+    ]
+  }
 ]

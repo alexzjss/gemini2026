@@ -16,7 +16,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { FullscreenFlow } from "@/components/shell";
 import { BnccChip, ErrorState, Overline } from "@/components/ui";
 import { useActions, useAppStore, useSessionStudentId } from "@/lib/store/AppStore";
-import { useStudentView } from "@/lib/store/selectors";
+import { useStudentView } from "@/lib/store/hooks";
 import { useApi } from "@/lib/store/api";
 import { getCareer, getSkill, mentors } from "@/lib/store/seed";
 import { LIMITES } from "@/lib/config";

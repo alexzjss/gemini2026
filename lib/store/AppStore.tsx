@@ -8,9 +8,9 @@ import type {
 import { LIMITES } from "@/lib/config";
 import { emptyStudentLocal, initialState, load, reset as resetStorage, save } from "./local";
 import { getReportCard, getStudent } from "./seed";
-import { podeGanhar, pontuar, totalPontos, type EventoPedido } from "@/lib/domain/pontos";
+import { podeGanhar, registrar, totalPontos, type EventoCandidato as EventoPedido } from "@/lib/domain/pontos";
 import { nivelPorPontos } from "@/lib/domain/niveis";
-import { proximoNivelHabilidade, skillStatuses } from "@/lib/domain/diagnostico";
+import { proximoNivel as proximoNivelHabilidade, skillStatuses } from "@/lib/domain/diagnostico";
 import { simularSemestre } from "@/lib/domain/match";
 import { STORAGE_KEY } from "@/lib/config";
 
@@ -83,8 +83,8 @@ function award(local: LocalState, studentId: string, pedidos: EventoPedido[]): {
   let historico = aluno(local, studentId).eventos;
   for (const p of pedidos) {
     const nivel = nivelPorPontos(pontosDoAluno({ ...local, porAluno: { ...local.porAluno, [studentId]: { ...aluno(local, studentId), eventos: historico } } }, studentId));
-    if (!podeGanhar(p, historico, { nivel })) continue;
-    const ev = pontuar(p);
+    const ev = registrar(p, historico, { nivel });
+    if (!ev) continue;
     ganhos.push(ev);
     historico = [...historico, ev];
   }
@@ -183,7 +183,7 @@ export function reducer(state: StoreState, action: Action): StoreState {
       if (aprovada) {
         pedidos.push({ type: "missao_aprovada", ref: skillCode, at });
         const novo = proximoNivelHabilidade(levelAntes);
-        const subidaRef = `${skillCode}:${levelAntes}->${novo}`;
+        const subidaRef = `${skillCode}:${levelAntes}>${novo}`;
         const histor = aluno(l, studentId).eventos;
         if (novo !== levelAntes && podeGanhar({ type: "habilidade_subiu", ref: subidaRef, at }, histor)) {
           pedidos.push({ type: "habilidade_subiu", ref: subidaRef, at });

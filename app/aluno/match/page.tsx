@@ -14,11 +14,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { FullscreenFlow } from "@/components/shell";
 import { Avatar, InkCard, Overline, PillButton, SurfaceCard } from "@/components/ui";
 import { useActions, useAppStore, useSessionStudentId } from "@/lib/store/AppStore";
-import { useStudentView, type StudentView } from "@/lib/store/selectors";
+import { useStudentView, type StudentView } from "@/lib/store/hooks";
 import { useApi } from "@/lib/store/api";
 import { getMentor, mentors } from "@/lib/store/seed";
 import { elegivel, escolherMentor, horarios } from "@/lib/domain/match";
-import { nivelDef, nivelPorPontos } from "@/lib/domain/niveis";
+import { infoNivel, nivelPorPontos } from "@/lib/domain/niveis";
 import { SEMESTRE } from "@/lib/config";
 import type { MatchResult } from "@/lib/types";
 import { border, fonts, hardShadow, tokens } from "@/lib/theme";
@@ -66,7 +66,7 @@ export default function MatchPage() {
   if (!view || precisaPresencas) return null;
   const chegou = matchDayChegou(state.semestreSimulado);
   if (!chegou) return <AntesDoMatchDay view={view} />;
-  if (!view.elegibilidade.eligible) return <QuaseLa view={view} />;
+  if (!view.elegivel.eligible) return <QuaseLa view={view} />;
   return <Revelacao view={view} />;
 }
 
@@ -89,7 +89,7 @@ function AntesDoMatchDay({ view }: { view: StudentView }) {
 /* ---------- Não elegível ---------- */
 function QuaseLa({ view }: { view: StudentView }) {
   const s = view.snapshot;
-  const faltamCenarios = Math.max(0, view.galera.total - view.galera.respondidos);
+  const faltamCenarios = view.galera.faltam;
   const itens = [
     !s.galeraConcluido && {
       txt: faltamCenarios > 0 ? `Termina o Da Galera — ${faltamCenarios === 1 ? "falta 1 cenário" : `faltam ${faltamCenarios} cenários`}.` : "Termina o Da Galera — é só ver seu resultado.",
@@ -133,7 +133,7 @@ function Revelacao({ view }: { view: StudentView }) {
   const subiu = useMemo(() => {
     const presencas = view.local.eventos.filter((e) => e.type === "presenca_semana").reduce((s, e) => s + e.pontos, 0);
     const antes = nivelPorPontos(view.pontos - presencas);
-    return view.nivel > antes ? nivelDef(view.nivel) : null;
+    return view.nivel > antes ? infoNivel(view.nivel) : null;
   }, [view.local.eventos, view.pontos, view.nivel]);
 
   useEffect(() => {

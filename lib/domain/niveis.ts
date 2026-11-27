@@ -1,35 +1,42 @@
-/* PROVISÓRIO (contrato 2 · dono: Agente 2). Regras de docs/07 §5. */
-import { NIVEIS, type NivelDef } from "@/lib/config";
-import type { NivelId } from "@/lib/types";
+// docs/07 §5 — níveis por pontos de esforço
+import type { NivelId } from "../types";
+import { NIVEIS } from "../config";
 
 export function nivelPorPontos(pontos: number): NivelId {
   let n: NivelId = 1;
-  for (const d of NIVEIS) if (pontos >= d.min) n = d.id;
+  for (const l of NIVEIS) if (pontos >= l.min) n = l.id;
   return n;
 }
 
-export function nivelDef(n: NivelId): NivelDef {
-  return NIVEIS[n - 1];
-}
+export const infoNivel = (n: NivelId) => NIVEIS.find((l) => l.id === n)!;
 
-export function proximoNivel(pontos: number): NivelDef | null {
-  const n = nivelPorPontos(pontos);
-  return n < 5 ? NIVEIS[n] : null;
-}
-
+/** Pontos até o próximo nível (0 no nível máximo). */
 export function faltam(pontos: number): number {
-  const p = proximoNivel(pontos);
-  return p ? Math.max(0, p.min - pontos) : 0;
+  const prox = NIVEIS.find((l) => l.min > pontos);
+  return prox ? prox.min - pontos : 0;
 }
 
-/** 0–1: (pontos − limiteAtual) / (proximoLimite − limiteAtual). */
-export function progressoNivel(pontos: number): number {
-  const atual = nivelDef(nivelPorPontos(pontos));
-  const prox = proximoNivel(pontos);
-  if (!prox) return 1;
-  return Math.min(1, Math.max(0, (pontos - atual.min) / (prox.min - atual.min)));
+/** Barra 0–1 dentro do nível atual + rótulo "1.240 / 1.500". */
+export function progressoNivel(pontos: number): { fracao: number; rotulo: string; proximoLimite?: number } {
+  const atual = infoNivel(nivelPorPontos(pontos));
+  const prox = NIVEIS.find((l) => l.min > pontos);
+  const fmt = (x: number) => x.toLocaleString("pt-BR");
+  if (!prox) return { fracao: 1, rotulo: fmt(pontos) };
+  return {
+    fracao: (pontos - atual.min) / (prox.min - atual.min),
+    rotulo: `${fmt(pontos)} / ${fmt(prox.min)}`,
+    proximoLimite: prox.min,
+  };
 }
 
 export function abreNoNivel(n: NivelId): string {
-  return nivelDef(n).abre;
+  return infoNivel(n).abre;
+}
+
+/** "Faltam 260 pontos pro nível 4, que abre os mentores de alta demanda." */
+export function textoFaltam(pontos: number): string | undefined {
+  const n = nivelPorPontos(pontos);
+  if (n === 5) return undefined;
+  const prox = (n + 1) as NivelId;
+  return `Faltam ${faltam(pontos).toLocaleString("pt-BR")} pontos pro nível ${prox}, que abre ${abreNoNivel(prox)}.`;
 }

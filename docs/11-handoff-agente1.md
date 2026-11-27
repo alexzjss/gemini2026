@@ -11,12 +11,12 @@
 - Pontos: só pelas ações (`finishGalera`, `swipe want`, `finishMission`, `awardMiniChallenge`, `simulateSemester`, `finishSemana`); o reducer valida limites e dispara o toast.
 - IA no cliente: `useApi()` de `lib/store/api.ts` (timeout, nunca lança, fallback local, acende "IA offline").
 
+## Integração com o Agente 2 (PR #1)
+Seed, `lib/domain/*` e `lib/store/selectors.ts` são os do Agente 2. Os hooks React ficam em `lib/store/hooks.ts`: `useStudentView(id)` (ou `null`), `useClassView(classId)` e `studentView(state, id)` para testes. `lib/config.ts` unifica as chaves dos dois (`EIXOS` é array; `EIXO_LABEL` é o mapa id → rótulo).
+
 ## Provisórios para os donos substituírem (mesma assinatura)
 | Arquivo | Dono | Observação |
 |---|---|---|
-| `data/seed/*.json` | Agente 2 | 3 heróis, 15 carreiras, 12 mentores, 16 habilidades, missões. `scenarios.json` e `frases.json` vazios → afinidade do Kauã fica 0 no match até existirem |
-| `lib/domain/{niveis,pontos,afinidades,diagnostico,match}.ts` | Agente 2 | Fórmulas de `07`, sem testes unitários próprios |
-| `lib/store/selectors.ts` | Agente 2 | Só os campos usados por shells e F7 |
 | `app/api/match`, `app/api/mentor-simulado`, `data/fallbacks/{match,mentor}.json` | Agente 3 | Só fallback. Mentor aceita `desafioResolvido?: boolean` extra; roteiro offline em `app/aluno/carreiras/[id]/mentor-simulado/_components/offline.ts` |
 
-Teste de aceite do F7: `lib/domain/__tests__/roteiro-match.test.ts` (1.240 → 1.430 → 1.520, nível 4, match com `m01-renata`).
+Teste de aceite do F7: `lib/domain/__tests__/roteiro-match.test.ts` (1.240 → 1.430 → 1.520, nível 4, match com `m01`).

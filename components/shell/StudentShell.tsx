@@ -4,7 +4,7 @@ import NextLink from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useAppStore, useSessionStudentId } from "@/lib/store/AppStore";
-import { useStudentView } from "@/lib/store/selectors";
+import { useStudentView } from "@/lib/store/hooks";
 import { Avatar, Logo, PointsPill, LoadingState, formatPontos } from "@/components/ui";
 import Sidebar, { SidebarUser } from "./Sidebar";
 import BottomNav from "./BottomNav";
@@ -40,7 +40,7 @@ export default function StudentShell({ children }: { children: React.ReactNode }
         footer={
           <SidebarUser
             avatar={<Avatar inicial={view.student.inicial} />}
-            nome={view.nome}
+            nome={view.student.nome}
             sub={`Nível ${view.nivel} · ${formatPontos(view.pontos)} pts`}
           />
         }
