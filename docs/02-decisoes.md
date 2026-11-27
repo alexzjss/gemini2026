@@ -73,3 +73,4 @@ Quando houver conflito, **as decisões desta rodada substituem as anteriores**. 
 | D60 | Heróis | **Kauã** (2º EM A, `2026001`, protagonista, 1.240 pts, nível 3) · **Bruno** (2º EM A, `2026002`, notas baixas e muito esforço, nível 4) · **Carla** (3º EM A, `2026003`, notas altas e pouco engajamento, nível 1). Turma da demo: **2º EM A** |
 | D61 | Telas sem design | Login, consentimento, quiz, Match Day, mentor simulado (texto) e todo o professor são desenhados por Claude seguindo `09-design-system.md` |
 | D62 | Nome | Placeholder `[nome do app]` dos designs = constante `APP_NAME` ("Gemini2026") |
+| D63 | Grafo educacional | **Grafo em memória** (JSON versionado + funções puras em `lib/grafo/`), não Neo4j: mantém D06/D07 (sem banco, demo offline). Competências com pré-requisitos, domínio por competência (`DOMINA`), trilha adaptativa e **GraphRAG** no mentor simulado. Neo4j fica no roadmap, com o mesmo modelo (`docs/11`) |

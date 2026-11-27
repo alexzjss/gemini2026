@@ -1,5 +1,6 @@
 import { Type } from "@google/genai";
 import { z } from "zod";
+import { estadoAlunoSchema } from "@/lib/grafo/tipos";
 
 /**
  * Para cada rota: zod da ENTRADA (400 se inválida), zod da SAÍDA da IA
@@ -187,6 +188,16 @@ export const mentorInput = z
   desafioAberto: miniDesafio.optional(),
   /** true se o mini-desafio desta sessão já foi resolvido (o servidor não abre outro). */
   desafioJaResolvido: z.boolean().optional(),
+  /**
+   * Estado do grafo educacional do aluno (localStorage), recortado: domínio + últimas 30 respostas.
+   * Ativa o GraphRAG no mentor. Sem nome nem id do aluno.
+   */
+  estadoGrafo: z
+    .object({
+      dominio: estadoAlunoSchema.shape.dominio,
+      respostas: estadoAlunoSchema.shape.respostas.max(30),
+    })
+    .optional(),
   })
   .refine((i) => i.historico[i.historico.length - 1]?.role === "aluno", {
     message: "a última mensagem do histórico deve ser do estudante",

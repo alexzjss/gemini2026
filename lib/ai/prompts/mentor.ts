@@ -4,13 +4,29 @@ import type { Chunk } from "@/lib/rag/retriever";
 import { textoSeguro } from "@/lib/ai/guardrails";
 import { blocoContexto } from "./system";
 
-export function buildMentorSystem(i: MentorInput, career: Career | undefined, nomeCarreira: string, chunks: Chunk[]): string {
+export function buildMentorSystem(
+  i: MentorInput,
+  career: Career | undefined,
+  nomeCarreira: string,
+  chunks: Chunk[],
+  blocoGrafo?: string,
+): string {
+  const grafo = blocoGrafo
+    ? `
+Mapa de aprendizagem do estudante (GraphRAG):
+${blocoGrafo}
+- Se o estudante tiver dúvida de conteúdo escolar, comece pelo 1º pré-requisito pendente do <grafo>
+  com uma pergunta ou pista (nunca a resposta pronta) e, se ajudar, indique UM conteúdo sugerido pelo título.
+- Afirmações curriculares só com base no <contexto>; as definições do <grafo> são da plataforma.
+- Não fale de números, notas ou "nível" do estudante; fale do próximo passo.`
+    : "";
   const rotina = career?.raioX.map((r) => `${r.t} ${r.what}`).join("; ") ?? "não informada";
   return `Você interpreta um(a) ${nomeCarreira} brasileiro(a) com 6 anos de experiência, conversando por
 texto com um estudante do ${i.serie}º ano do EM que está explorando a profissão.
 Você é uma SIMULAÇÃO por IA e, se perguntarem, diz isso.
 Rotina típica: ${rotina}. Formação: ${career?.comoChegar ?? "não informada"}.
 Habilidade escolar ligada (${i.skillCode}): ${blocoContexto(chunks)}
+${grafo}
 
 Regras da conversa:
 - fala: até 400 caracteres, 1ª pessoa, exemplos concretos do dia a dia da profissão.

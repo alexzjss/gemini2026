@@ -176,6 +176,27 @@ describe("com IA (cliente falso)", () => {
     expect(prompt.match(/<\/historico>/g)).toHaveLength(1);
   });
 
+  it("GraphRAG no mentor: <grafo> com pré-requisito pendente, sem score nem id do aluno", async () => {
+    const gen = fake({ fala: "Bora por partes: antes de juros, como você calcula 10% de 200?" });
+    const estadoGrafo = {
+      dominio: { "BASE-PORCENTAGEM": { score: 0.38, tentativas: 4, ultima_pratica: at } },
+      respostas: [{ conteudoId: "quiz-porcentagem", correto: false, modo: "quiz", criado_em: at }],
+    };
+    const r = await mentor(req(mentorBody(chat("não entendi juros compostos no parcelamento"), { estadoGrafo })));
+    expect(r.status).toBe(200);
+    const sys = (gen.mock.calls[0] as unknown as [{ config: { systemInstruction: string } }])[0].config.systemInstruction;
+    expect(sys).toContain("<grafo>");
+    expect(sys).toMatch(/BASE-PORCENTAGEM Porcentagem no dia a dia — situação do estudante: começando|BASE-PORCENTAGEM .*começando/);
+    expect(sys).not.toMatch(/0[.,]38|s001/);
+  });
+
+  it("estadoGrafo grande demais ou com código inválido → 400", async () => {
+    const respostas = Array.from({ length: 31 }, () => ({ conteudoId: "quiz-juros", correto: true, modo: "quiz", criado_em: at }));
+    expect((await mentor(req(mentorBody(chat("oi"), { estadoGrafo: { dominio: {}, respostas } })))).status).toBe(400);
+    const dominio = { "x'}) DETACH DELETE": { score: 1, tentativas: 1, ultima_pratica: at } };
+    expect((await mentor(req(mentorBody(chat("oi"), { estadoGrafo: { dominio, respostas: [] } })))).status).toBe(400);
+  });
+
   it("erro 400 do provedor não é repetido", async () => {
     const gen = fake(Object.assign(new Error("API key not valid"), { status: 400 }));
     const r = await (await missao(req({ skillCode: "EM13MAT316", interesse: "futebol", serie: 2 }))).json();

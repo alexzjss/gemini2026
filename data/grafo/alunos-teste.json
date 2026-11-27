@@ -1,0 +1,35 @@
+[
+  {
+    "alunoId": "s001",
+    "dominio": {
+      "BASE-PROPORCAO": { "score": 0.78, "tentativas": 3, "ultima_pratica": "2026-11-20T14:00:00.000Z" },
+      "BASE-PORCENTAGEM": { "score": 0.38, "tentativas": 4, "ultima_pratica": "2026-11-26T19:10:00.000Z" },
+      "BASE-MEDIA": { "score": 0.82, "tentativas": 2, "ultima_pratica": "2026-11-10T10:00:00.000Z" },
+      "EM13MAT316": { "score": 0.55, "tentativas": 1, "ultima_pratica": "2026-11-01T00:00:00.000Z" },
+      "EM13MAT310": { "score": 0.25, "tentativas": 1, "ultima_pratica": "2026-11-01T00:00:00.000Z" },
+      "EM13CNT301": { "score": 0.55, "tentativas": 1, "ultima_pratica": "2026-11-01T00:00:00.000Z" },
+      "EM13CHS101": { "score": 0.8, "tentativas": 1, "ultima_pratica": "2026-11-01T00:00:00.000Z" }
+    },
+    "respostas": [
+      { "conteudoId": "aula-porcentagem", "correto": null, "modo": "estudo", "criado_em": "2026-11-26T19:00:00.000Z" },
+      { "conteudoId": "quiz-porcentagem", "correto": false, "modo": "quiz", "criado_em": "2026-11-26T19:05:00.000Z" },
+      { "conteudoId": "quiz-porcentagem", "correto": false, "modo": "quiz", "criado_em": "2026-11-26T19:10:00.000Z" }
+    ]
+  },
+  {
+    "alunoId": "s002",
+    "dominio": {
+      "BASE-PROPORCAO": { "score": 0.85, "tentativas": 5, "ultima_pratica": "2026-11-18T15:00:00.000Z" },
+      "BASE-PORCENTAGEM": { "score": 0.82, "tentativas": 6, "ultima_pratica": "2026-11-22T15:00:00.000Z" },
+      "EM13MAT302": { "score": 0.3, "tentativas": 1, "ultima_pratica": "2026-11-01T00:00:00.000Z" },
+      "EM13MAT303": { "score": 0.42, "tentativas": 4, "ultima_pratica": "2026-11-26T20:15:00.000Z" },
+      "EM13MAT316": { "score": 0.25, "tentativas": 1, "ultima_pratica": "2026-11-01T00:00:00.000Z" },
+      "EM13MAT104": { "score": 0.74, "tentativas": 3, "ultima_pratica": "2026-11-24T16:00:00.000Z" }
+    },
+    "respostas": [
+      { "conteudoId": "flash-juros", "correto": true, "modo": "flashcard", "criado_em": "2026-11-26T20:00:00.000Z" },
+      { "conteudoId": "quiz-juros", "correto": false, "modo": "quiz", "criado_em": "2026-11-26T20:10:00.000Z" },
+      { "conteudoId": "quiz-juros", "correto": false, "modo": "quiz", "criado_em": "2026-11-26T20:15:00.000Z" }
+    ]
+  }
+]
