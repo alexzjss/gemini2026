@@ -1,0 +1,221 @@
+{
+  "EM13MAT316:futebol": {
+    "titulo": "Quem é o artilheiro de verdade?",
+    "questoes": [
+      {
+        "enunciado": "No interclasse, o Léo fez 2, 0, 1, 3 e 0 gols em 5 jogos. Quantos gols ele fez, em média, por jogo?",
+        "alternativas": ["1,2", "1", "2", "1,5"],
+        "correta": 0,
+        "explicacao": "Some os gols: 2 + 0 + 1 + 3 + 0 = 6. Divida pelo número de jogos: 6 ÷ 5 = 1,2. A média reparte o total igualmente entre os jogos."
+      },
+      {
+        "enunciado": "Os gols por jogo do time da 2ª A no campeonato foram 1, 3, 1, 0, 2 e 1. Qual é a moda?",
+        "alternativas": ["3", "2", "1", "0"],
+        "correta": 2,
+        "explicacao": "Moda é o valor que mais se repete. O 1 aparece três vezes, mais que qualquer outro. A moda mostra o resultado mais comum do time."
+      },
+      {
+        "enunciado": "Num treino de pênaltis, cinco jogadores acertaram 4, 9, 5, 3 e 8 cobranças. Qual é a mediana dos acertos?",
+        "alternativas": ["5,8", "5", "8", "4"],
+        "correta": 1,
+        "explicacao": "Coloque em ordem: 3, 4, 5, 8, 9. Com 5 valores, a mediana é o do meio: 5. Repare que a média (29 ÷ 5 = 5,8) é diferente da mediana."
+      },
+      {
+        "enunciado": "Ana fez 2, 2, 2 e 2 gols em 4 jogos. Bia fez 0, 4, 0 e 4. As duas têm média 2. Pra escalar quem é mais regular, quem você escolhe?",
+        "alternativas": [
+          "Bia, porque fez 4 gols em dois jogos",
+          "Tanto faz, a média é igual",
+          "Não dá pra saber sem a moda",
+          "Ana, porque os gols dela variam menos em torno da média"
+        ],
+        "correta": 3,
+        "explicacao": "Mesma média não quer dizer mesmo comportamento. Os gols da Ana ficam sempre em 2; os da Bia se afastam 2 pra cima ou pra baixo em todo jogo. Quanto menor esse afastamento (a dispersão, medida pelo desvio), mais regular."
+      }
+    ]
+  },
+  "EM13MAT316:games": {
+    "titulo": "Rank de estatística: quem joga melhor?",
+    "questoes": [
+      {
+        "enunciado": "Numa partida, você fez 4, 6, 2, 8 e 5 abates em 5 rodadas. Qual a média de abates por rodada?",
+        "alternativas": ["4", "6", "5", "25"],
+        "correta": 2,
+        "explicacao": "Some: 4 + 6 + 2 + 8 + 5 = 25. Divida pelas 5 rodadas: 25 ÷ 5 = 5. Esse é o seu desempenho típico por rodada."
+      },
+      {
+        "enunciado": "Seu tempo pra passar de fase, em minutos, foi 7, 5, 7, 9, 7 e 6. Qual é a moda?",
+        "alternativas": ["7", "6", "9", "5"],
+        "correta": 0,
+        "explicacao": "A moda é o valor que mais aparece. O 7 aparece três vezes. É o tempo mais comum, mesmo que a média seja outra."
+      },
+      {
+        "enunciado": "A pontuação da squad foi 120, 80, 300, 100 e 90. Qual é a mediana?",
+        "alternativas": ["138", "120", "300", "100"],
+        "correta": 3,
+        "explicacao": "Em ordem: 80, 90, 100, 120, 300. O valor do meio é 100. A média (690 ÷ 5 = 138) foi puxada pra cima pelo 300; a mediana não se deixa levar por um valor extremo."
+      },
+      {
+        "enunciado": "Leo e Rafa fazem 10 pontos por partida, em média. Leo fez 9, 10 e 11; Rafa fez 0, 10 e 20. Num campeonato em que errar custa caro, quem você escala?",
+        "alternativas": [
+          "Rafa, porque fez 20 numa partida",
+          "Leo, porque os pontos dele se afastam menos da média",
+          "Tanto faz, a média é igual",
+          "Rafa, porque a mediana dele é maior"
+        ],
+        "correta": 1,
+        "explicacao": "As médias e as medianas são iguais (10). A diferença está na dispersão: Leo varia 1 ponto, Rafa varia 10. Menos dispersão significa um jogador mais previsível."
+      }
+    ]
+  },
+  "EM13MAT310:futebol": {
+    "titulo": "Quantos uniformes dá pra montar?",
+    "questoes": [
+      {
+        "enunciado": "O time tem 3 camisas e 2 shorts diferentes. Quantos uniformes (camisa + short) dá pra montar?",
+        "alternativas": ["5", "6", "3", "9"],
+        "correta": 1,
+        "explicacao": "Pra cada uma das 3 camisas existem 2 shorts: 3 × 2 = 6. É o princípio multiplicativo: escolhas independentes se multiplicam."
+      },
+      {
+        "enunciado": "Agora são 3 camisas, 2 shorts e 2 pares de meião. Quantos uniformes completos diferentes?",
+        "alternativas": ["7", "10", "12", "8"],
+        "correta": 2,
+        "explicacao": "Multiplique as escolhas: 3 × 2 × 2 = 12. Somar (3 + 2 + 2 = 7) não funciona, porque cada camisa combina com todas as opções de short e de meião."
+      },
+      {
+        "enunciado": "No interclasse, 4 times jogam todos contra todos uma única vez. Quantos jogos acontecem?",
+        "alternativas": ["6", "8", "12", "4"],
+        "correta": 0,
+        "explicacao": "Cada time enfrenta 3 adversários: 4 × 3 = 12, mas assim cada jogo foi contado duas vezes (A×B e B×A). Então são 12 ÷ 2 = 6 jogos."
+      },
+      {
+        "enunciado": "O técnico vai escolher capitão e vice entre 5 jogadores. Quantas duplas (capitão, vice) são possíveis?",
+        "alternativas": ["10", "25", "15", "20"],
+        "correta": 3,
+        "explicacao": "São 5 opções pra capitão e sobram 4 pra vice: 5 × 4 = 20. Aqui a ordem importa; se fosse só escolher 2 jogadores sem cargo, seriam 20 ÷ 2 = 10."
+      }
+    ]
+  },
+  "EM13CNT301:futebol": {
+    "titulo": "Hipótese em campo: o que faz a bola ir mais longe?",
+    "questoes": [
+      {
+        "enunciado": "Um colega diz: \"bola mais cheia vai mais longe no chute\". Numa investigação científica, essa frase é…",
+        "alternativas": [
+          "Uma conclusão",
+          "Uma hipótese, que precisa ser testada",
+          "Um resultado",
+          "Uma opinião que não dá pra testar"
+        ],
+        "correta": 1,
+        "explicacao": "Hipótese é uma explicação possível que ainda precisa de teste. Ela vira conclusão só depois que os dados a apoiam."
+      },
+      {
+        "enunciado": "Pra testar, vocês vão chutar bolas com pressões diferentes. O que precisa ficar igual em todos os chutes?",
+        "alternativas": [
+          "A pressão da bola",
+          "Nada, quanto mais coisa variar, melhor",
+          "Quem chuta, a força e o lugar do chute",
+          "Só a cor da bola"
+        ],
+        "correta": 2,
+        "explicacao": "Num teste justo, só muda a variável investigada (a pressão). Todo o resto fica igual; senão, não dá pra saber o que causou a diferença."
+      },
+      {
+        "enunciado": "Cada bola foi chutada uma vez só. Por que é melhor repetir cada chute algumas vezes?",
+        "alternativas": [
+          "Pra diminuir o efeito do acaso e comparar médias",
+          "Pra cansar o goleiro",
+          "Porque um chute já prova tudo",
+          "Pra trocar a hipótese no meio do teste"
+        ],
+        "correta": 0,
+        "explicacao": "Um chute pode sair torto por acaso. Repetindo e tirando a média, os resultados ficam mais confiáveis pra comparar."
+      },
+      {
+        "enunciado": "Com os mesmos chutadores, a bola cheia foi a 30 m em média e a murcha a 22 m. O que dá pra concluir?",
+        "alternativas": [
+          "Que a hipótese está provada pra sempre",
+          "Que a pressão não importa",
+          "Que o chutador mais forte venceu",
+          "Que os dados apoiam a hipótese, nas condições testadas"
+        ],
+        "correta": 3,
+        "explicacao": "Os dados apoiam a hipótese, mas só nas condições do teste (aquelas bolas, aquele campo). Ciência é aberta a novos testes que podem refinar a conclusão."
+      }
+    ]
+  },
+  "EM13MAT316": {
+    "titulo": "Estatística na prática: média, moda e mediana",
+    "questoes": [
+      {
+        "enunciado": "Na gincana da escola, sua equipe fez 6, 8, 7, 9 e 5 pontos nas provas. Qual foi a média de pontos por prova?",
+        "alternativas": ["7", "8", "6", "35"],
+        "correta": 0,
+        "explicacao": "Some: 6 + 8 + 7 + 9 + 5 = 35. Divida pelas 5 provas: 35 ÷ 5 = 7."
+      },
+      {
+        "enunciado": "As idades de seis colegas são 16, 17, 16, 15, 16 e 17. Qual é a moda?",
+        "alternativas": ["17", "15", "16", "16,2"],
+        "correta": 2,
+        "explicacao": "A moda é o valor que mais se repete: 16 aparece três vezes."
+      },
+      {
+        "enunciado": "Cinco colegas levam 10, 40, 15, 20 e 12 minutos pra chegar à escola. Qual é a mediana?",
+        "alternativas": ["19,4", "15", "20", "12"],
+        "correta": 1,
+        "explicacao": "Em ordem: 10, 12, 15, 20, 40. O do meio é 15. A média (97 ÷ 5 = 19,4) é puxada pelo 40; a mediana descreve melhor o colega típico."
+      },
+      {
+        "enunciado": "Duas turmas tiveram média 6 num simulado. Na turma A, as notas ficaram entre 5 e 7; na B, entre 2 e 10. O que dá pra afirmar?",
+        "alternativas": [
+          "A turma B foi melhor",
+          "As turmas tiveram resultados idênticos",
+          "Falta a moda pra comparar",
+          "As notas da turma A estão mais concentradas perto da média"
+        ],
+        "correta": 3,
+        "explicacao": "Mesma média, dispersões diferentes. Na A, as notas se afastam no máximo 1 ponto da média; na B, até 4. Por isso a dispersão completa o que a média sozinha não mostra."
+      }
+    ]
+  },
+  "default": {
+    "titulo": "Missão relâmpago: pensa com os dados!",
+    "questoes": [
+      {
+        "enunciado": "Numa pesquisa com 20 colegas da sala, 5 disseram que vão a pé pra escola. Que porcentagem é essa?",
+        "alternativas": ["20%", "25%", "5%", "50%"],
+        "correta": 1,
+        "explicacao": "5 de 20 é a mesma coisa que 5 ÷ 20 = 0,25. Multiplicando por 100: 25%."
+      },
+      {
+        "enunciado": "Um post diz \"todo mundo da escola odeia a nova cantina\" e mostra 3 comentários. O que falta pra essa conclusão valer?",
+        "alternativas": [
+          "Mais curtidas no post",
+          "Um título mais chamativo",
+          "Ouvir um grupo maior e variado de estudantes",
+          "Nada, 3 comentários bastam"
+        ],
+        "correta": 2,
+        "explicacao": "3 opiniões não representam a escola inteira. Pra generalizar, é preciso uma amostra maior e variada."
+      },
+      {
+        "enunciado": "A biblioteca emprestou 40 livros em março e 60 em abril. De quanto foi o aumento, em porcentagem?",
+        "alternativas": ["50%", "20%", "60%", "33%"],
+        "correta": 0,
+        "explicacao": "O aumento foi de 20 livros. Compare com o valor inicial: 20 ÷ 40 = 0,5, ou seja, 50%."
+      },
+      {
+        "enunciado": "Duas fontes dão números diferentes pro mesmo fato. Qual atitude é mais segura?",
+        "alternativas": [
+          "Acreditar na que tem mais seguidores",
+          "Ficar com a primeira que você leu",
+          "Ignorar as duas",
+          "Comparar quem produziu, como mediu e quando"
+        ],
+        "correta": 3,
+        "explicacao": "Número diferente pode vir de método diferente. Ver quem produziu, como e quando mediu ajuda a decidir em qual confiar."
+      }
+    ]
+  }
+}

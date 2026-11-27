@@ -1,0 +1,34 @@
+{
+  "s001": {
+    "resumo": "Você já manda bem em debater, comparar fontes e usar tecnologia pra se expressar. Agora é hora de destravar estatística e contagem, que aparecem direto no futebol.",
+    "destaques": [
+      "Você defende um ponto de vista com argumento, sem atropelar ninguém.",
+      "Você compara fontes diferentes antes de acreditar num fato."
+    ],
+    "proximosPassos": [
+      "Estatística já está subindo: mais uma missão de média, moda e mediana e ela destrava.",
+      "Problemas de contagem aparecem em tabela de campeonato e escalação: vale a próxima missão."
+    ]
+  },
+  "s002": {
+    "resumo": "{abertura} Seu ritmo de missões mostra que esforço vira evolução, e é isso que destrava mentores.",
+    "destaques": [
+      "{destaque1}",
+      "Você não para: cada missão concluída já está contando no seu nível."
+    ],
+    "proximosPassos": ["{passo1}", "{passo2}"]
+  },
+  "s003": {
+    "resumo": "{abertura} Sua base é sólida: agora vale transformar isso em missões e explorar carreiras.",
+    "destaques": ["{destaque1}", "{destaque2}"],
+    "proximosPassos": [
+      "{passo1}",
+      "Termine o Da Galera e faça uma missão: é o esforço na plataforma que abre o Match Day."
+    ]
+  },
+  "default": {
+    "resumo": "{abertura} Agora é hora de destravar {dest1}, e cada missão conta.",
+    "destaques": ["{destaque1}", "{destaque2}"],
+    "proximosPassos": ["{passo1}", "{passo2}"]
+  }
+}

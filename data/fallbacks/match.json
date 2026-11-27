@@ -1,18 +1,34 @@
 {
   "s001": {
-    "explicacao": "Você e a Renata curtem a mesma coisa: transformar jogo em número. Você quis conhecer a carreira de analista de dados esportivos e pediu essa conversa. E o que mais pesou foi seu esforço: estatística subiu de nível com as missões e você manteve a frequência no semestre.",
+    "explicacao": "Esse match com {cargo} ({organizacao}) junta o que você mais curtiu: organizar números pra entender o jogo. Pesou muito o seu esforço: você evoluiu em {habilidade} com as missões e manteve a presença em dia. É alguém que usa exatamente isso no trabalho, aqui na região.",
     "perguntasSugeridas": [
-      "Que número você olha primeiro depois de um jogo?",
-      "Como média, moda e mediana aparecem no seu relatório pro técnico?",
-      "O que eu posso fazer no interclasse pra começar a treinar análise de dados?"
+      "Como você usa {habilidade} pra comparar dois jogadores?",
+      "Qual dado do jogo mais surpreende o técnico?",
+      "Por onde eu começo se quiser seguir como {carreira}?"
+    ]
+  },
+  "s002": {
+    "explicacao": "Seu match com {cargo} ({organizacao}) é resultado de esforço: foram muitas missões e várias habilidades que subiram de nível no semestre. A área combina com o que você escolheu no Da Galera e nas carreiras que quis conhecer. Quem evolui assim tem muito o que conversar com quem já está lá.",
+    "perguntasSugeridas": [
+      "Como {habilidade} aparece no seu dia a dia?",
+      "O que você gostaria de ter aprendido antes de começar?",
+      "Qual o primeiro passo pra entrar em {carreira}?"
+    ]
+  },
+  "s003": {
+    "explicacao": "Seu match com {cargo} ({organizacao}) combina com as afinidades que apareceram no Da Galera. Você chegou aqui pelas missões e pela presença no semestre, e esse ritmo é o que abre mentores de outros níveis. Aproveite pra ver como a escola aparece na rotina dessa área.",
+    "perguntasSugeridas": [
+      "Como é um dia comum no seu trabalho?",
+      "Onde {habilidade} entra no que você faz?",
+      "Que curso ou caminho você indicaria pra começar em {carreira}?"
     ]
   },
   "default": {
-    "explicacao": "Vocês combinam no que você mais curte: {eixos}. {carreiraFrase} E o que mais pesou foi seu esforço no semestre: {missoes} missões e {evolucoes} habilidades que subiram de nível.",
+    "explicacao": "Esse match com {cargo} ({organizacao}) combina com o que você mais curtiu no Da Galera e nas carreiras que explorou. Pesou o seu esforço no semestre: missões feitas, habilidades que evoluíram e presença em dia. É uma conversa pra ver de perto como a escola aparece nessa profissão.",
     "perguntasSugeridas": [
-      "Como é um dia normal no seu trabalho?",
-      "Onde {habilidade} aparece na sua rotina?",
-      "Por onde eu começo, ainda no Ensino Médio?"
+      "Como {habilidade} aparece no seu dia a dia?",
+      "O que você faz numa semana típica de trabalho?",
+      "Por onde eu começo se quiser seguir {carreira}?"
     ]
   }
 }
