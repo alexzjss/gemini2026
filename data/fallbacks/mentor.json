@@ -1,0 +1,41 @@
+{
+  "analista-dados-esportivos:1": {
+    "fala": "Boa! No clube eu passo a manhã puxando os números do jogo de ontem: passes certos, finalizações, quanto cada jogador correu. À tarde viro isso num relatório que o técnico entende em 2 minutos. O segredo não é ter muito número, é saber qual número conta a história certa. Quer ver como é na prática?"
+  },
+  "analista-dados-esportivos:2": {
+    "fala": "Então bora! Um desafio rápido, do jeito que aparece no meu trabalho toda semana:",
+    "miniDesafio": {
+      "skillCode": "EM13MAT316",
+      "enunciado": "Um atacante fez 2, 0, 1, 3 e 0 gols nos últimos 5 jogos. Qual é a média de gols por jogo? E a média conta a história toda?"
+    }
+  },
+  "analista-dados-esportivos:3": {
+    "fala": "Mandou bem! A média é 6 ÷ 5 = 1,2 gol por jogo, mas ela esconde que ele zerou em 2 dos 5 jogos. Por isso eu sempre olho também a mediana (1) e o quanto os números variam. É exatamente a estatística que você vê na escola, só que valendo vaga no time.",
+    "desafioResolvido": true
+  },
+  "analista-dados-esportivos:pista": {
+    "fala": "Quase! Primeiro soma os gols de todos os jogos e divide pelo número de jogos. Depois olha a lista de novo: em quantos jogos ele não marcou? A média mostra isso?",
+    "desafioResolvido": false
+  },
+  "default:1": {
+    "fala": "Boa pergunta! Como {careerNome}, meu dia mistura rotina e imprevisto: tem tarefa que se repete e tem problema novo pra resolver. Muito do que eu faço usa coisa que você vê na escola, só que aplicada. Quer que eu te mostre com um exemplo?"
+  },
+  "default:2": {
+    "fala": "Então bora num desafio rápido, do tipo que aparece no meu trabalho:",
+    "miniDesafio": {
+      "skillCode": "{skillCode}",
+      "enunciado": "Em 5 dias de trabalho, um tipo de caso apareceu 2, 0, 1, 3 e 0 vezes. Qual é a média por dia? E essa média conta a história toda?"
+    }
+  },
+  "default:3": {
+    "fala": "Boa! A média dá 6 ÷ 5 = 1,2 por dia, mas esconde que em 2 dias foi zero. Olhar só um número pode enganar: por isso vale comparar os dados com calma. Isso conta muito na minha área.",
+    "desafioResolvido": true
+  },
+  "default:pista": {
+    "fala": "Boa tentativa! Soma os valores dos 5 dias e divide por 5. Depois repara: teve dia com zero? Será que a média sozinha mostra isso?",
+    "desafioResolvido": false
+  },
+  "default": {
+    "fala": "Curti a conversa! Pra ir mais fundo, o melhor é falar com alguém de verdade: segue fazendo missões que o Match Day te conecta com um mentor real da área."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "s001": {
+    "porQueCombina": {
+      "analista-dados-esportivos": "Junta seus dois fortes: organizar números e viver o futebol."
+    },
+    "destravarTexto": "Pra chegar lá, destrava estatística: é com média e desvio que se compara jogador.",
+    "modelo": "Combina com {combina}: tem tudo a ver com as suas escolhas no Da Galera."
+  },
+  "s002": {
+    "porQueCombina": {},
+    "destravarTexto": "Pra chegar lá, destrava {termo}: aparece no dia a dia de {carreira1}.",
+    "modelo": "Combina com {combina}: tem tudo a ver com as suas escolhas no Da Galera."
+  },
+  "s003": {
+    "porQueCombina": {},
+    "destravarTexto": "Pra chegar lá, destrava {termo}: aparece no dia a dia de {carreira1}.",
+    "modelo": "Combina com {combina}: tem tudo a ver com as suas escolhas no Da Galera."
+  },
+  "default": {
+    "porQueCombina": {},
+    "destravarTexto": "Pra chegar lá, destrava {termo}: aparece no dia a dia de {carreira1}.",
+    "modelo": "Combina com {combina}: tem tudo a ver com as suas escolhas no Da Galera."
+  }
+}
