@@ -234,3 +234,52 @@ npm run dev
 ```bash
 npm run fallbacks
 ```
+
+## 11. Divisão entre cinco agentes
+
+Divisão por **posse de arquivos**, não por tela: cada agente é dono exclusivo de um conjunto de pastas. O que é compartilhado (tipos, tema, assinaturas) sai primeiro como contrato e só muda por pedido ao dono.
+
+### Donos
+
+| Agente | Frentes | Pastas exclusivas |
+|---|---|---|
+| **1. Fundação e integração** | F1, F5.1 (componentes base), F7 (Match Day e mentor simulado), F9.2–F9.5 | `lib/types.ts`, `lib/config.ts`, `lib/theme.ts`, `lib/store/` (exceto `selectors.ts`), `components/ui/`, `components/shell/`, `app/layout.tsx`, `app/aluno/match/`, `app/aluno/carreiras/[id]/mentor-simulado/` |
+| **2. Domínio e seed** | F2, F3, selectors | `lib/domain/`, `lib/store/selectors.ts`, `data/seed/`, `scripts/gerar-seed.ts` |
+| **3. IA e RAG** | F4, F4b, F9.1 | `lib/ai/`, `lib/rag/`, `lib/fallbacks.ts`, `app/api/`, `data/corpus/`, `data/fallbacks/`, `scripts/montar-corpus.ts`, `scripts/embed-corpus.ts`, `scripts/gerar-fallbacks.ts` |
+| **4. UI do aluno** | F5.2–F5.7, F6 | `components/aluno/`, `app/page.tsx`, `app/aluno/` (exceto as rotas do Agente 1) |
+| **5. UI do professor** | F8 | `components/professor/`, `app/professor/` |
+
+O F7 fica com o Agente 1 porque ele termina a fundação cedo e tem folga entre 0:45 e 1:30.
+
+### Contratos
+
+| Contrato | Dono | Prazo | Conteúdo |
+|---|---|---|---|
+| 1 | Agente 1 | 0:05 | `lib/types.ts` e `lib/config.ts` completos (de `05` e `07`) |
+| 2 | Agente 2 | 0:20 | `lib/domain/*` com as assinaturas finais e retornos fixos do Kauã |
+| 3 | Agente 3 | 0:25 | Rotas `app/api/*` com os contratos de `04`, devolvendo o fallback `default` |
+
+As telas (Agentes 4 e 5) são montadas sobre os stubs; a troca pela implementação real não muda a tela.
+
+### Sequência
+
+| Hora | Agente 1 | Agente 2 | Agente 3 | Agentes 4 e 5 |
+|---|---|---|---|---|
+| 0:00–0:05 | Projeto + contrato 1 | Lê `05`, `07` | Lê `04`, `06` | Leem `09`, `10`, `design/` |
+| 0:05–0:20 | Tema, store, shells, deploy | Contrato 2 | Cliente Gemini; contrato 3 até 0:25 | Telas com dados fixos |
+| 0:20–0:45 | `components/ui/` | Regras reais + testes, seed + validações | Prompts, schemas, retriever | Ligam as telas aos stubs |
+| 0:45–1:10 | Merges, depois Match Day | Selectors `useStudentView`/`useClassView` | Corpus + embeddings (quando o time entregar) | 4: Início, Perfil, Missões · 5: mapa e alertas |
+| 1:10–1:30 | Mentor simulado, agendamento | Ajustes de regra | Rotas reais, citações | 4: Da Galera, swipe, quiz · 5: editor e lista de planos |
+| 1:30–1:45 | Polimento, QA | Teste de integração do roteiro do Kauã | `npm run fallbacks` | Correções de QA |
+
+### Regras
+1. Cada agente trabalha numa worktree própria, no branch `feat/<frente>` da seção 2.
+2. Mudança em arquivo de outro dono: pedir ao dono, nunca editar.
+3. Tipos, config e tema mudam só por pedido ao Agente 1, em PR pequeno e isolado.
+4. PR só com `npm run build` e `npm test` verdes. P1 mergeia na ordem 1 → 2 e 3 → 4 e 5 → 1 (F7) → polimento.
+5. Todos recebem `CLAUDE.md` e os docs da sua frente; Agentes 4 e 5 recebem também `09`, `10` e `design/`.
+
+### Riscos da divisão
+- **Agente 2 é o caminho crítico:** se os selectors atrasarem, as telas ficam nos stubs. O contrato 2 sai até 0:20 mesmo incompleto.
+- **Agente 3 depende do time humano** para os textos oficiais; até lá, corpus mínimo das 6 habilidades da demo e busca por palavra-chave.
+- **Agente 4 tem a maior carga:** se apertar, o desafio da semana passa para o Agente 1 (corte 3).
