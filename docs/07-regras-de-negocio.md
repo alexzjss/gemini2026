@@ -1,91 +1,148 @@
 # 07 — Regras de Negócio
 
-Tudo aqui é **determinístico** e vive em `lib/domain/*`. Constantes em `lib/config.ts`.
+Tudo aqui é **determinístico**, vive em `lib/domain/*` e é coberto por Vitest. Constantes em `lib/config.ts`. A IA nunca decide nada desta lista — só redige textos.
 
-## 1. Diagnóstico (boletim → SkillStatus)
+## 1. Diagnóstico (boletim → SkillStatus) — `domain/diagnostico.ts`
 
-Para cada habilidade com ≥1 avaliação ligada:
+Para cada habilidade com ≥ 1 avaliação ligada:
 
-- `media` = média das notas das avaliações que contêm o código.
-- Nível base: `media ≥ 7` → `dominada`; `5 ≤ media < 7` → `em_desenvolvimento`; `media < 5` → `defasagem`.
-- `tendencia`: média do bimestre 2 − bimestre 1: `> +0,5` subindo, `< −0,5` caindo, senão estável.
-- Se existir `skillOverrides[code]` (evolução por missões), ele prevalece sobre o nível base.
+- `media` = média simples das notas das avaliações que contêm o código.
+- Nível base: `media ≥ 7,0` → `dominada`; `5,0 ≤ media < 7,0` → `em_desenvolvimento`; `media < 5,0` → `defasagem`.
+- `tendencia` = média do bimestre 2 − média do bimestre 1: `> +0,5` subindo · `< −0,5` caindo · senão estável. Só um bimestre → estável.
+- `skillOverrides[code]` (evolução por missões) **prevalece** sobre o nível base.
+- `progresso` (0–100, barra da ficha): `defasagem` = `media*10` limitado a 45; `em_desenvolvimento` = 50 + (media−5)*12; `dominada` = 100. Missões aprovadas somam +15 (máx. 95 antes de subir de nível).
+- Rótulo da barra na ficha: "começando" (< 30), "em desenvolvimento" (30–69), "subiu esta semana" (se houve evolução nos últimos 7 dias).
 
-**Uso proibido:** o nível nunca é usado para filtrar/ocultar carreiras ou mentores. Ele só alimenta "habilidades para destravar" e o mapa do professor.
+**Proibido:** usar o nível para esconder, filtrar ou reordenar carreiras ou mentores. Ele só alimenta "habilidades para destravar", sugestão de missões e o mapa do professor.
 
-## 2. Afinidades (teste vocacional)
+## 2. Afinidades — `domain/afinidades.ts`
 
-- Soma `pesos` de cada opção escolhida por eixo.
-- Normaliza: `eixo = round(100 * soma / maxPossivelDoEixo)`.
-- Ranking de carreiras: similaridade de cosseno entre `profile` e `career.affinity`. Top 3.
-- "Habilidades para destravar" = `career.skills` cujo status do aluno é `defasagem` ou `em_desenvolvimento` (máx. 3). Se todas dominadas → mensagem "Você já tem a base, bora aprofundar".
+Eixos (`AffinityAxis`):
 
-## 3. Pontos
-
-| Evento | Pontos |
+| id | Rótulo |
 |---|---|
-| `vocacional_concluido` | +20 |
-| `desafio_concluido` (novo cenário periódico) | +20 |
-| `missao_concluida` (qualquer resultado) | +30 |
-| `habilidade_evoluiu_defasagem` (defasagem → em desenvolvimento) | **+80** |
-| `habilidade_evoluiu_desenvolvimento` (em desenvolvimento → dominada) | +50 |
-| `frequencia_semanal` (semana com ≥ 75%) | +10 |
-| Nota alta absoluta | **+0** (de propósito) |
+| `analisar` | Organizar e analisar |
+| `tech` | Tecnologia e games |
+| `criar` | Criar e comunicar |
+| `cuidar` | Cuidar e ensinar |
+| `negocios` | Negócios e liderança |
+| `esportes` | Esportes, corpo e natureza |
 
-- Missão "passa" com acertos ≥ 70% → a habilidade sobe 1 nível (no máx. 1 nível por habilidade a cada missão).
-- Repetir missão da mesma habilidade no mesmo dia: só `missao_concluida` conta 1 vez/dia por habilidade (anti-farm).
-- `pontos = pontosSeed + Σ eventos locais`.
+- Cada opção de cenário tem `pesos` (0–3) em 1–3 eixos.
+- `bruto[eixo] = Σ pesos escolhidos` (10 cenários do Da Galera + cenários do desafio da semana).
+- `perfil[eixo] = round(100 * bruto / maxPossivel[eixo])`, onde `maxPossivel` = soma do maior peso desse eixo em cada cenário respondido.
+- Rótulo da barra: `≥ 65` forte · `35–64` médio · `< 35` leve. Resultado mostra os **4 maiores** eixos.
+- Parcial ("Até agora você curte", desktop): mesmo cálculo com os cenários respondidos, top 3, a partir do 3º cenário.
+- **Frase-título** (`fraseTitulo(perfil)`): tabela fixa pelo par dos 2 maiores eixos (15 pares) — ex.: `analisar+esportes` → "Você curte organizar o caos com números."; `tech+criar` → "Você transforma ideia em coisa que funciona na tela." Tabela completa em `data/seed/frases.json`. Determinística (não usa IA).
 
-## 4. Tiers
+## 3. Ranking de carreiras — `domain/carreiras.ts`
 
-| Tier | Pontos | Mentores acessíveis |
+- `similaridade = cosseno(perfil, career.affinity)`.
+- Bônus: `+0,15` se a carreira está salva, `+0,25` se "Quero conhecer". Penalidade: carreira "passada" vai para o fim da fila do swipe (nunca some — reaparece depois das outras).
+- **Caminhos que combinam** (resultado do Da Galera): top 4 por similaridade.
+- **Fila do swipe**: todas as 15, ordenadas por score; rótulo "N de M hoje" mostra 5 por dia (as demais continuam acessíveis com "Ver mais").
+- `combina:` (texto do card) = rótulos curtos dos 2 eixos com maior `perfil[eixo] * career.affinity[eixo]` (ex.: "futebol + números" vem do campo `career.combinaCom[eixo]`).
+- **Onde a escola aparece**: 1ª habilidade de `career.skills` que o aluno não domina (se todas dominadas, a 1ª da lista) + `career.escola[code]` (frase curta) + status do aluno nessa habilidade.
+- **Habilidade para destravar** (resultado): a mesma regra aplicada à carreira nº 1.
+
+## 4. Pontos — `domain/pontos.ts`
+
+| Evento (`PointEventType`) | Pontos | Limite |
 |---|---|---|
-| Bronze | 0–299 | Bronze (ex-alunos, profissionais locais, universitários) |
-| Prata | 300–699 | Bronze + Prata (profissionais de mercado) |
-| Ouro | 700+ | Todos, incluindo alta demanda (Big Tech, médicos especialistas, executivos) |
+| `galera_concluido` | +50 | 1x |
+| `desafio_semana` | +10 | 1x por semana |
+| `carreira_explorada` (Quero conhecer) | +10 | 1x por carreira |
+| `missao_concluida` | +30 | 1x por habilidade por dia |
+| `missao_aprovada` (≥ 3 de 4 acertos) — "evoluir" | +40 | 1x por habilidade por dia |
+| `habilidade_subiu` (mudou de nível) | +40 | 1x por transição |
+| `presenca_semana` (semana com frequência ≥ 75%) | +15 | 1x por semana |
+| `mini_desafio_mentor` | +20 | 1x por sessão de mentor simulado, máx. 3/dia |
+| Nota alta absoluta | **+0** | — |
 
-UI mostra sempre "faltam X pontos para Prata" e **como** ganhar (missões nas suas habilidades em defasagem rendem mais).
+- `pontos = pontosSeed + Σ eventos locais`.
+- Subida de nível de habilidade: a cada **missão aprovada**, a habilidade sobe 1 nível (`defasagem → em_desenvolvimento → dominada`). Máximo 1 subida por habilidade por dia.
+- Missão concluída com < 3 acertos: ganha só os +30 e mensagem "Bora de novo amanhã — cada tentativa conta".
 
-## 5. Match Day
+Na tela de Missões, a tabela exibida ao aluno é: **+40** evoluir no que você ainda não domina · **+30** completar uma missão BNCC · **+15** semana com presença em dia · **+10** explorar carreiras e o Da Galera. (O +50 do Da Galera e o +40 extra de subida aparecem nos toasts.)
+
+## 5. Níveis — `domain/niveis.ts`
+
+| Nível | Nome | Pontos | Abre |
+|---|---|---|---|
+| 1 | Começando | 0 | Mentores **profissionais da sua região** |
+| 2 | Na Pista | 300 | Mentores **universitários e técnicos** |
+| 3 | Embalado | 700 | Mini-desafios extras do mentor simulado (3/dia em vez de 1) |
+| 4 | Destravado | 1.500 | Mentores de **alta demanda** (Big Tech, medicina, executivos) |
+| 5 | Referência | 2.500 | Selo "Referência" + pode indicar um colega para o Match Day (roadmap; no MVP só o selo) |
+
+- `faltam = proximoLimite − pontos`; barra = `(pontos − limiteAtual) / (proximoLimite − limiteAtual)`; o rótulo "1.240 / 1.500" usa o **próximo limite** como denominador.
+- Texto do Início: "Faltam **{faltam} pontos** pro nível {n+1}, que abre {o que abre}."
+- Mentor `nivelMinimo` ∈ {1, 2, 4}.
+
+## 6. Match Day — `domain/match.ts`
+
+### "Simular fim do semestre" (modo demo)
+1. Marca `semestreSimulado = true`.
+2. Lança `presenca_semana` para as semanas restantes do semestre (semanas 9–16) em que a frequência projetada do aluno (`frequenciaProjetada`, campo do seed) é ≥ 75%.
+3. Recalcula pontos e nível → roda a elegibilidade e o score.
+
+> Kauã no roteiro: 1.240 (seed) + 50 (Da Galera) + 110 (missão aprovada que sobe nível) + 10 (Quero conhecer) + 20 (mini-desafio) = 1.430; + 6 semanas × 15 = **1.520 → nível 4 no próprio Match Day**. Momento de virada da demo.
 
 ### Elegibilidade (todos obrigatórios)
+1. Da Galera concluído.
+2. ≥ 1 missão concluída no semestre (`missoesConcluidas`, seed + local).
+3. Frequência média do semestre ≥ 60%.
 
-1. `vocacionalConcluido = true`
-2. `missoesConcluidas ≥ 1`
-3. `frequenciaMedia ≥ 60%`
-
-Se não elegível → `faltaPara[]` com mensagens encorajadoras. (No modo demo, o botão ainda roda para mostrar o estado.)
+Não elegível → `faltaPara[]` encorajador ("Termina o Da Galera — faltam 4 cenários"). No modo demo a tela mostra esse estado.
 
 ### Score aluno × mentor (0–100)
-
-Somente mentores com `tier ≤ tier do aluno` e `vagasSemestre > 0`.
+Candidatos: mentores com `nivelMinimo ≤ nível do aluno` e `vagasSemestre > 0`.
 
 ```
-score = 45 * afinidade      // cosseno(student.affinity, mentor.affinity)
-      + 25 * carreira       // 1 se mentor.careerIds ∩ topCareerIds ≠ ∅ (1º lugar = 1, 2º = 0.8, 3º = 0.6), senão 0
-      + 20 * evolucao       // min(1, nº habilidades que subiram de nível no semestre / 3)
-      + 10 * engajamento    // min(1, missoesConcluidas / 5) * 0.5 + min(1, frequenciaMedia/100) * 0.5
+score = 40 * afinidade      // cosseno(perfil, mentor.affinity)
+      + 25 * carreira       // melhor valor entre as carreiras do mentor:
+                            //   Quero conhecer = 1,0 · salva = 0,8 · top 4 do resultado = 0,6 · senão 0
+      + 10 * preferencia    // 1 se o aluno marcou "Quero no meu Match Day" nesse mentor
+      + 15 * evolucao       // min(1, habilidades que subiram de nível no semestre / 3)
+      + 10 * engajamento    // 0,5*min(1, missoes/5) + 0,5*min(1, frequenciaMedia/100)
 ```
 
-- Vence o maior score; empate → mentor de tier mais alto → mais vagas.
-- Resposta inclui `fatores` (cada parcela) para transparência; o Gemini usa esses números para escrever a justificativa e 3 perguntas sugeridas para a conversa.
-- `evolucao` e `engajamento` medem esforço, não nota — coerente com "meritocracia por esforço".
+- Vence o maior score; empate → maior `nivelMinimo` → mais vagas → ordem alfabética do id.
+- Resposta traz `fatores` (cada parcela, já multiplicada) para transparência e para o Gemini redigir o porquê.
+- `evolucao` e `engajamento` medem **esforço**, não nota.
 
-## 6. Sinais de atenção (evasão) — só professor
+### Agendar conversa
+3 horários fictícios gerados a partir de `mentor.disponibilidade` (ex.: "Ter 14h", "Qui 10h", "Sáb 9h"). Ao confirmar: `match.agendadoPara` no localStorage + tela "Combinado! Você recebe o link na escola." Sem chamada externa.
 
-Cada sinal gera um motivo legível. Status do aluno: `ok` (0 sinais), `atencao` (1), `prioridade` (≥ 2).
+## 7. Sinais de atenção (evasão) — `domain/evasao.ts` — só professor
 
-| Sinal | Regra |
-|---|---|
-| Frequência baixa | média das últimas 4 semanas < 75% |
-| Queda de frequência | últimas 2 semanas ≤ média das 6 anteriores − 15 p.p. |
-| Inatividade na plataforma | `ultimoAcessoDiasAtras ≥ 14` |
-| Notas em queda | ≥ 2 habilidades com `tendencia = "caindo"` |
+| Sinal | Regra | Texto exibido |
+|---|---|---|
+| Frequência baixa | média das últimas 4 semanas < 75% | "Frequência de {x}% nas últimas 4 semanas" |
+| Queda de frequência | média das 2 últimas ≤ média das 6 anteriores − 15 p.p. | "Frequência caiu {d} pontos nas últimas 2 semanas" |
+| Inatividade | `ultimoAcessoDiasAtras ≥ 14` (zera se o aluno entrou no navegador demo) | "Sem entrar na plataforma há {n} dias" |
+| Notas em queda | ≥ 2 habilidades com `tendencia = caindo` | "Queda em {n} habilidades do 1º para o 2º bimestre" |
 
-Regras de exibição: sem score numérico de "risco"; texto "Vale uma conversa" + motivos; nunca exibido ao aluno; não entra no prompt do Gemini; não afeta pontos nem match.
+Status: `ok` (0) · `atencao` (≥ 1). Se o professor registrou **"Conversei"** → `acompanhando` (mostra data e nota), até surgir um sinal **novo**.
 
-## 7. Agregados da turma
+Regras: sem número de "risco"; texto "Vale uma conversa"; nunca aparece para o aluno; não vai ao Gemini; não afeta pontos nem match.
 
-- **Defasagem por habilidade:** `% alunos com level = defasagem` (ordenado desc.).
-- **Top interesses:** contagem de `career.tags` das top 3 carreiras de cada aluno (alunos sem vocacional usam `vocacionalSeed`), top 5.
-- **Distribuição de tiers** e **% que completou vocacional**.
+## 8. Missões sugeridas — `domain/missoes.ts`
+
+**Missão do dia** (`missaoDoDia()`): 1ª habilidade **não dominada** da lista `skills` da carreira nº 1 do aluno (Quero conhecer > salva > top 1 do resultado). Antes de concluir o Da Galera, a carreira nº 1 vem do perfil parcial (ou da 1ª defasagem, se não houver perfil).
+
+Ordem das outras 2 sugestões (excluindo a missão do dia):
+1. Habilidades em `defasagem` que aparecem em `skills` das carreiras **Quero conhecer/salvas** (ou top 4, se nenhuma).
+2. Demais `defasagem`.
+3. `em_desenvolvimento` ligadas às carreiras.
+Desempate: menor `progresso`. Excluir habilidades já feitas hoje.
+
+Cada missão tem título fixo do seed (`data/seed/missoes.json`, ex.: EM13MAT316 → "Quem é o artilheiro de verdade? Média, moda e mediana no interclasse", 8 min) e o **quiz é gerado na hora** pela IA no interesse escolhido (padrão: tag principal da carreira nº 1).
+
+## 9. Agregados da turma — `domain/turma.ts`
+
+- **Heatmap:** linhas = habilidades (ordenadas por % defasagem desc.), colunas = alunos (ordem alfabética), célula = nível.
+- **% defasagem por habilidade.**
+- **Top interesses:** soma de `career.tags` das carreiras Quero conhecer (peso 3), salvas (2) e top 4 do resultado (1) de cada aluno; top 5.
+- **Cards-resumo:** maior defasagem (código + %), top 3 interesses, nº de alunos em `atencao`, % que concluiu o Da Galera.
+- **Matches:** lista aluno → área do mentor (quando houver).

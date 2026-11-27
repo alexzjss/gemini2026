@@ -48,7 +48,7 @@ Profissional voluntário (de ex-aluno local a engenheiro de Big Tech). No MVP ex
 
 ## Métricas de sucesso (para o pitch)
 
-- % de alunos que completam o teste vocacional e ≥1 missão.
+- % de alunos que completam o Da Galera e ≥ 1 missão.
 - Nº de habilidades que saem de "defasagem" no semestre.
 - % de alunos que chegam ao Match Day.
 - Nº de planos de aula aprovados pelo professor.
