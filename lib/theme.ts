@@ -34,6 +34,22 @@ export const border = `2px solid ${tokens.ink}`;
 export const borderDashed = `2px dashed ${tokens.ink}`;
 export const hardShadow = `4px 4px 0 ${tokens.ink}`;
 export const hardShadowSm = `2px 2px 0 ${tokens.ink}`;
+export const hardShadowLg = `6px 6px 0 ${tokens.ink}`;
+
+/** Movimento: rápido e discreto (docs/09). Tudo respeita prefers-reduced-motion. */
+export const motion = {
+  ease: "cubic-bezier(.2,.8,.2,1)",
+  fast: 140,
+  base: 220,
+} as const;
+const tr = (props: string[], ms: number = motion.fast) => props.map((p) => `${p} ${ms}ms ${motion.ease}`).join(", ");
+
+/** Larguras de layout compartilhadas pelos shells. */
+export const layout = {
+  sidebar: 248,
+  content: 1200,
+  contentTeacher: 1280,
+} as const;
 
 /** Cores das células/chips por nível de habilidade (09 §Níveis). */
 export const skillLevelColors: Record<SkillLevel | "sem_dado", { bg: string; fg: string; border?: string }> = {
@@ -127,8 +143,21 @@ export const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        html: { WebkitTextSizeAdjust: "100%" },
-        body: { backgroundColor: tokens.paper, color: tokens.ink },
+        html: { WebkitTextSizeAdjust: "100%", scrollBehavior: "smooth" },
+        body: { backgroundColor: tokens.paper, color: tokens.ink, WebkitFontSmoothing: "antialiased", MozOsxFontSmoothing: "grayscale", textRendering: "optimizeLegibility" },
+        "::selection": { backgroundColor: tokens.lime, color: tokens.ink },
+        "img, svg": { verticalAlign: "middle" },
+        "@keyframes g26-fade-up": { from: { opacity: 0, transform: "translateY(10px)" }, to: { opacity: 1, transform: "none" } },
+        "@keyframes g26-fade": { from: { opacity: 0 }, to: { opacity: 1 } },
+        "@keyframes g26-grow": { from: { transform: "scaleX(0)" }, to: { transform: "scaleX(1)" } },
+        "@keyframes g26-pop": { from: { opacity: 0, transform: "translateY(6px) scale(.97)" }, to: { opacity: 1, transform: "none" } },
+        /* Entrada de página: o wrapper aparece e os blocos de 1º/2º nível sobem em cascata curta. */
+        ".g26-page": { animation: `g26-fade ${motion.base}ms ${motion.ease}` },
+        ".g26-page > * > *": { animation: `g26-fade-up 320ms ${motion.ease} backwards` },
+        ...Object.fromEntries([1, 2, 3, 4, 5, 6, 7, 8].map((n) => [
+          `.g26-page > * > *:nth-of-type(${n})`, { animationDelay: `${(n - 1) * 35}ms` },
+        ])),
+        ".g26-page > * > *:nth-of-type(n+9)": { animationDelay: "280ms" },
         "a": { color: "inherit" },
         ":focus-visible": focusRing,
         "@media (prefers-reduced-motion: reduce)": {
@@ -146,8 +175,10 @@ export const theme = createTheme({
           paddingInline: 22,
           border,
           boxShadow: "none",
-          transition: "transform 120ms ease-out, box-shadow 120ms ease-out, background-color 120ms",
+          transition: tr(["transform", "box-shadow", "background-color", "color", "border-color"]),
           "&:focus-visible": focusRing,
+          "& .MuiButton-endIcon": { transition: tr(["transform"]) },
+          "&:hover .MuiButton-endIcon": { transform: "translateX(3px)" },
           "&.Mui-disabled": {
             border: borderDashed,
             background: "transparent",
@@ -159,8 +190,8 @@ export const theme = createTheme({
         sizeSmall: { minHeight: 36, fontSize: 14, paddingInline: 14 },
         contained: {
           boxShadow: hardShadow,
-          "&:hover": { boxShadow: hardShadow, transform: "translate(-1px,-1px)" },
-          "&:active": { boxShadow: hardShadowSm, transform: "translate(2px,2px)" },
+          "&:hover": { boxShadow: hardShadowLg, transform: "translate(-2px,-2px)" },
+          "&:active": { boxShadow: hardShadowSm, transform: "translate(2px,2px)", transitionDuration: "60ms" },
         },
         outlined: {
           backgroundColor: tokens.surface,
@@ -175,12 +206,29 @@ export const theme = createTheme({
     },
     MuiIconButton: {
       styleOverrides: {
-        root: { width: 44, height: 44, "&:focus-visible": focusRing },
+        root: {
+          width: 44, height: 44, transition: tr(["transform", "background-color", "color"]),
+          "&:hover": { transform: "scale(1.06)" },
+          "&:active": { transform: "scale(.94)" },
+          "&:focus-visible": focusRing,
+        },
       },
     },
     MuiPaper: {
       defaultProps: { elevation: 0 },
-      styleOverrides: { root: { backgroundImage: "none" }, rounded: { borderRadius: 20 } },
+      styleOverrides: {
+        root: {
+          backgroundImage: "none",
+          transition: tr(["transform", "box-shadow", "background-color", "border-color"], 180),
+          /* Card clicável (link/botão): levanta com sombra sólida, afunda no clique. */
+          "&:is(a, button)": {
+            cursor: "pointer",
+            "&:hover": { transform: "translate(-2px,-2px)", boxShadow: hardShadow },
+            "&:active": { transform: "translate(1px,1px)", boxShadow: hardShadowSm, transitionDuration: "60ms" },
+          },
+        },
+        rounded: { borderRadius: 20 },
+      },
       variants: [
         { props: { variant: "outlined" }, style: { border, backgroundColor: tokens.surface } },
         { props: { variant: "flat" }, style: { backgroundColor: tokens.surface } },
@@ -195,7 +243,8 @@ export const theme = createTheme({
     MuiCardContent: { styleOverrides: { root: { padding: 18, "&:last-child": { paddingBottom: 18 }, "@media (min-width:900px)": { padding: 24, "&:last-child": { paddingBottom: 24 } } } } },
     MuiChip: {
       styleOverrides: {
-        root: { borderRadius: 999, fontWeight: 600, fontSize: 14, height: 36 },
+        root: { borderRadius: 999, fontWeight: 600, fontSize: 14, height: 36, transition: tr(["background-color", "transform", "box-shadow"]) },
+        clickable: { "&:active": { transform: "scale(.96)" } },
         outlined: { border, backgroundColor: tokens.surface, color: tokens.ink },
         sizeSmall: { height: 26, fontSize: 12, fontWeight: 700 },
       },
@@ -203,7 +252,7 @@ export const theme = createTheme({
     MuiLinearProgress: {
       styleOverrides: {
         root: { height: 10, borderRadius: 999, backgroundColor: tokens.track },
-        bar: { borderRadius: 999 },
+        bar: { borderRadius: 999, transition: `transform 600ms ${motion.ease}` },
       },
     },
     MuiBottomNavigation: {
@@ -223,6 +272,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           border, borderRadius: 18, textTransform: "none", color: tokens.ink, backgroundColor: tokens.surface,
+          transition: tr(["transform", "box-shadow", "background-color"]),
           "&.Mui-selected, &.Mui-selected:hover": { backgroundColor: tokens.lime, color: tokens.ink, boxShadow: hardShadow, transform: "translate(-2px,-2px)" },
         },
       },
@@ -231,7 +281,8 @@ export const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          borderRadius: 16, backgroundColor: tokens.surface,
+          borderRadius: 16, backgroundColor: tokens.surface, transition: tr(["box-shadow"]),
+          "&.Mui-focused": { boxShadow: `0 0 0 4px ${alpha(tokens.blue, 0.14)}` },
           "& .MuiOutlinedInput-notchedOutline": { border },
           "&:hover .MuiOutlinedInput-notchedOutline": { borderColor: tokens.ink },
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": { borderColor: tokens.blue, borderWidth: 3 },
@@ -241,17 +292,24 @@ export const theme = createTheme({
     },
     MuiInputLabel: { styleOverrides: { root: { color: tokens.muted, "&.Mui-focused": { color: tokens.blue } } } },
     MuiDialog: {
-      styleOverrides: { paper: { border, borderRadius: 24, boxShadow: hardShadow, backgroundColor: tokens.surface } },
+      styleOverrides: {
+        paper: { border, borderRadius: 24, boxShadow: hardShadowLg, backgroundColor: tokens.surface, animation: `g26-pop ${motion.base}ms ${motion.ease}` },
+        container: { backdropFilter: "blur(2px)" },
+      },
     },
     MuiDialogTitle: { styleOverrides: { root: { fontFamily: fonts.display, fontWeight: 800, fontSize: 24 } } },
-    MuiTooltip: { styleOverrides: { tooltip: { backgroundColor: tokens.ink, color: tokens.paper, fontSize: 13, borderRadius: 8 } } },
+    MuiDialogContent: { styleOverrides: { root: { paddingInline: 24 } } },
+    MuiDialogActions: { styleOverrides: { root: { padding: "8px 24px 24px", gap: 8 } } },
+    MuiBackdrop: { styleOverrides: { root: { "&:not(.MuiBackdrop-invisible)": { backgroundColor: alpha(tokens.ink, 0.45) } } } },
+    MuiTooltip: { defaultProps: { arrow: true, enterDelay: 250 }, styleOverrides: { arrow: { color: tokens.ink }, tooltip: { backgroundColor: tokens.ink, color: tokens.paper, fontSize: 13, borderRadius: 8, padding: "6px 10px" } } },
     MuiSnackbarContent: { styleOverrides: { root: { backgroundColor: tokens.ink, color: tokens.paper, borderRadius: 14, fontWeight: 600 } } },
     MuiDrawer: { styleOverrides: { paper: { borderRight: border, backgroundColor: tokens.surface } } },
     MuiLink: { defaultProps: { underline: "always" }, styleOverrides: { root: { color: tokens.ink, fontWeight: 600, "&:focus-visible": focusRing } } },
     MuiRadio: { styleOverrides: { root: { color: tokens.ink, "&.Mui-checked": { color: tokens.blue } } } },
     MuiCheckbox: { styleOverrides: { root: { color: tokens.ink, "&.Mui-checked": { color: tokens.blue } } } },
-    MuiSkeleton: { styleOverrides: { root: { backgroundColor: tokens.track, borderRadius: 14 } } },
-    MuiMenu: { styleOverrides: { paper: { border, borderRadius: 16, boxShadow: hardShadow } } },
+    MuiSkeleton: { defaultProps: { animation: "wave" }, styleOverrides: { root: { backgroundColor: tokens.track, borderRadius: 14 } } },
+    MuiMenu: { styleOverrides: { paper: { border, borderRadius: 16, boxShadow: hardShadow, marginTop: 6 }, list: { padding: 6 } } },
+    MuiMenuItem: { styleOverrides: { root: { borderRadius: 10, minHeight: 40, fontWeight: 500, transition: tr(["background-color"]), "&.Mui-selected": { backgroundColor: alpha(tokens.lime, 0.6), fontWeight: 700 }, "&.Mui-selected:hover, &:hover": { backgroundColor: tokens.paper } } } },
     MuiPopover: { styleOverrides: { paper: { border, borderRadius: 16, boxShadow: hardShadow } } },
   },
 });

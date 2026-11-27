@@ -2,6 +2,7 @@
 /* Blocos compartilhados das telas do aluno (docs/10). */
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import type { SxProps, Theme } from "@mui/material/styles";
 import LockRoundedIcon from "@mui/icons-material/LockRounded";
 import LockOpenRoundedIcon from "@mui/icons-material/LockOpenRounded";
 import { InkCard, LevelBar, formatPontos } from "@/components/ui";
@@ -81,10 +82,10 @@ export function MentorTiers({ view }: { view: StudentView }) {
 }
 
 /** Topo colorido de carreira (`diaACor`). */
-export function CareerTop({ career, combina, children }: { career: Career; combina: string[]; children?: React.ReactNode }) {
+export function CareerTop({ career, combina, children, sx }: { career: Career; combina: string[]; children?: React.ReactNode; sx?: SxProps<Theme> }) {
   const c = diaACor[career.diaACor];
   return (
-    <Box sx={{ bgcolor: c.bg, color: c.fg, p: { xs: 2.5, md: 3 }, display: "flex", flexDirection: "column", gap: 1 }}>
+    <Box sx={[{ bgcolor: c.bg, color: c.fg, p: { xs: 2.5, md: 3 }, display: "flex", flexDirection: "column", gap: 1 }, ...(Array.isArray(sx) ? sx : [sx])]}>
       {children}
       {combina.length > 0 && <Typography sx={{ fontSize: 13, fontWeight: 700, color: c.sub }}>combina: {combina.join(" + ")}</Typography>}
       <Typography variant="h2" component="h2" sx={{ color: c.fg }}>{career.nome}</Typography>

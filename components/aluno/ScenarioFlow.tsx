@@ -52,7 +52,7 @@ export default function ScenarioFlow({
       <AnimatePresence mode="wait">
         <Box key={c.id} component={motion.section} aria-label={`Cenário ${i + 1} de ${cenarios.length}`}
           initial={reduce ? { opacity: 0 } : { opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} exit={reduce ? { opacity: 0 } : { opacity: 0, x: -24 }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.22, ease: [0.2, 0.8, 0.2, 1] }}
           sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2, px: 2.5, pt: 3 }}>
           <Box><Box component="span" sx={{ display: "inline-block", bgcolor: tokens.lime, color: tokens.ink, fontWeight: 700, fontSize: 13, borderRadius: 999, px: 1.5, py: 0.5 }}>{c.quando}</Box></Box>
           <Typography id={`enunciado-${c.id}`} variant="scenario" component="h1" sx={{ color: fg }}>{c.enunciado}</Typography>

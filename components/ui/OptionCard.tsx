@@ -32,8 +32,12 @@ export default function OptionCard({
         bgcolor: selected ? tokens.lime : correct ? tokens.blue : tokens.surface,
         boxShadow: selected || correct ? hardShadow : "none",
         transform: selected || correct ? "translate(-2px,-2px)" : "none",
-        transition: "transform 120ms ease-out, box-shadow 120ms ease-out, background-color 120ms",
+        transition: "transform 140ms cubic-bezier(.2,.8,.2,1), box-shadow 140ms cubic-bezier(.2,.8,.2,1), background-color 140ms",
         opacity: state === "disabled" ? 0.6 : 1,
+        ...(state === "idle" && {
+          "@media (hover: hover)": { "&:hover": { transform: "translate(-2px,-2px)", boxShadow: `2px 2px 0 ${tokens.ink}` } },
+          "&:active": { transform: "translate(1px,1px)", boxShadow: "none", transitionDuration: "60ms" },
+        }),
         "&:focus-visible": { outline: `3px solid ${tokens.lime}`, outlineOffset: 2 },
       }}
     >

@@ -167,7 +167,7 @@ export default function PlanEditor({ planId }: { planId: string }) {
     <Stack gap={3}>
       {/* Cabeçalho */}
       <Box>
-        <Button
+        <Button variant="text"
           component={Link}
           href={`/professor/turma/${rascunho.classId}`}
           startIcon={<ArrowBackRoundedIcon />}
@@ -211,7 +211,7 @@ export default function PlanEditor({ planId }: { planId: string }) {
           variant="outlined"
           sx={{ borderColor: cores.ink, borderWidth: 2, borderRadius: "14px", color: cores.ink, "& .MuiAlert-icon": { color: cores.blue } }}
           action={
-            <Button onClick={() => reabrirPlano(rascunho.id)} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
+            <Button variant="text" onClick={() => reabrirPlano(rascunho.id)} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
               Editar novamente
             </Button>
           }
@@ -327,7 +327,7 @@ export default function PlanEditor({ planId }: { planId: string }) {
               </Stack>
               {!aprovado && (
                 <Box>
-                  <Button
+                  <Button variant="text"
                     startIcon={<AddRoundedIcon />}
                     onClick={() =>
                       editar((p) => ({
@@ -402,7 +402,7 @@ export default function PlanEditor({ planId }: { planId: string }) {
               gap={1.5}
               sx={{ borderTop: `2px solid ${cores.ink}`, pt: 2.5 }}
             >
-              <Button
+              <Button variant="text"
                 startIcon={regenerando ? <CircularProgress size={16} sx={{ color: "inherit" }} /> : <RefreshRoundedIcon />}
                 onClick={() => setConfirmarRegen(true)}
                 disabled={regenerando}
@@ -456,7 +456,7 @@ export default function PlanEditor({ planId }: { planId: string }) {
           </DialogContentText>
         </DialogContent>
         <DialogActions sx={{ px: 3, pb: 2.5 }}>
-          <Button onClick={() => setConfirmarRegen(false)} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
+          <Button variant="text" onClick={() => setConfirmarRegen(false)} sx={{ color: cores.ink, fontWeight: 700, textTransform: "none" }}>
             Manter este
           </Button>
           <Button
@@ -481,7 +481,7 @@ export default function PlanEditor({ planId }: { planId: string }) {
           onClose={() => setAviso(false)}
           sx={{ bgcolor: cores.ink, color: cores.surface, borderRadius: "14px", "& .MuiAlert-icon": { color: cores.lime } }}
           action={
-            <Button onClick={() => router.push("/professor/planos")} sx={{ color: cores.lime, fontWeight: 700, textTransform: "none" }}>
+            <Button variant="text" onClick={() => router.push("/professor/planos")} sx={{ color: cores.lime, fontWeight: 700, textTransform: "none" }}>
               Ver planos
             </Button>
           }

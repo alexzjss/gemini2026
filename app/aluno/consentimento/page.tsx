@@ -33,10 +33,11 @@ export default function Consentimento() {
 
   return (
     <FullscreenFlow bg="paper">
-      <Box sx={{ px: 2.5, py: { xs: 3, md: 6 }, display: "flex", flexDirection: "column", gap: 2 }}>
-        <Typography variant="h1">Antes de começar, o combinado.</Typography>
+      <Box sx={{ px: 2.5, py: { xs: 3, md: 5 }, display: "flex", flexDirection: "column", gap: { xs: 2, md: 3 } }}>
+        <Typography variant="h1" sx={{ maxWidth: 620 }}>Antes de começar, o combinado.</Typography>
+        <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" }, gap: { xs: 1.5, md: 2.5 } }}>
         {ITENS.map(({ Icon, t, d }) => (
-          <SurfaceCard key={t} sx={{ flexDirection: "row", alignItems: "flex-start", gap: 1.75 }}>
+          <SurfaceCard key={t} sx={{ flexDirection: "row", alignItems: "flex-start", gap: 1.75, height: { md: "100%" } }}>
             <Box aria-hidden sx={{ width: 44, height: 44, flex: "none", borderRadius: "12px", bgcolor: tokens.lime, border, display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Icon fontSize="small" />
             </Box>
@@ -46,9 +47,10 @@ export default function Consentimento() {
             </Box>
           </SurfaceCard>
         ))}
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5, mt: 1 }}>
-          <PillButton size="large" arrow onClick={() => { if (studentId) { dispatch({ type: "consent", studentId, at: now() }); router.replace("/aluno"); } }}>Bora</PillButton>
-          <Link component="button" type="button" onClick={() => setAberto(true)} sx={{ alignSelf: "center", minHeight: 44 }}>Ler a versão completa</Link>
+        </Box>
+        <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: { md: "center" }, gap: { xs: 1.5, md: 3 }, mt: 1 }}>
+          <PillButton size="large" sx={{ minWidth: { md: 280 } }} arrow onClick={() => { if (studentId) { dispatch({ type: "consent", studentId, at: now() }); router.replace("/aluno"); } }}>Bora</PillButton>
+          <Link component="button" type="button" onClick={() => setAberto(true)} sx={{ alignSelf: "center", minHeight: 44, textUnderlineOffset: 3 }}>Ler a versão completa</Link>
         </Box>
       </Box>
       <Dialog open={aberto} onClose={() => setAberto(false)} aria-labelledby="lgpd-title" scroll="paper">
@@ -61,7 +63,7 @@ export default function Consentimento() {
           <Typography><strong>IA:</strong> o Gemini recebe um código no lugar do seu nome, sua série, habilidades e afinidades. Ele nunca recebe nome, frequência nem sinais de atenção.</Typography>
           <Typography><strong>Seus direitos:</strong> pedir para ver, corrigir ou apagar seus dados a qualquer momento, pela escola.</Typography>
         </DialogContent>
-        <DialogActions sx={{ p: 2 }}><PillButton color="ink" onClick={() => setAberto(false)}>Entendi</PillButton></DialogActions>
+        <DialogActions><PillButton color="ink" onClick={() => setAberto(false)}>Entendi</PillButton></DialogActions>
       </Dialog>
     </FullscreenFlow>
   );

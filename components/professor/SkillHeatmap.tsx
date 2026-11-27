@@ -56,7 +56,7 @@ export default function SkillHeatmap({ classId, alunos, linhas, onGerarPlano }: 
           borderSpacing: 0,
           width: "100%",
           fontSize: 13,
-          "& th, & td": { p: 0, verticalAlign: "middle" },
+          "& :where(th, td)": { p: 0, verticalAlign: "middle" },
         }}
       >
         <caption style={srOnly}>
@@ -246,7 +246,7 @@ export default function SkillHeatmap({ classId, alunos, linhas, onGerarPlano }: 
       </Box>
     </Box>
     {vazias > 0 && (
-      <Button
+      <Button variant="text"
         onClick={() => setMostrarVazias((v) => !v)}
         aria-expanded={mostrarVazias}
         sx={{ alignSelf: "flex-start", color: cores.ink, fontWeight: 700, textTransform: "none", px: 0 }}

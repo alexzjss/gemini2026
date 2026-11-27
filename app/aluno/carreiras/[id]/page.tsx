@@ -15,7 +15,7 @@ import { useStudentView } from "@/lib/store/hooks";
 import { getCareer, getSkill } from "@/lib/store/seed";
 import { combina as calcCombina } from "@/lib/domain/carreiras";
 import { NIVEIS, NIVEL_HABILIDADE_LABEL } from "@/lib/config";
-import { border, diaACor, fonts, skillLevelColors, tokens } from "@/lib/theme";
+import { border, diaACor, fonts, hardShadow, skillLevelColors, tokens } from "@/lib/theme";
 
 export default function CarreiraDetalhe() {
   const { id } = useParams<{ id: string }>();
@@ -35,13 +35,16 @@ export default function CarreiraDetalhe() {
   const cor = diaACor[career.diaACor];
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
-      <Box component={NextLink} href="/aluno/carreiras" sx={{ display: "inline-flex", alignItems: "center", gap: 1, fontWeight: 700, color: tokens.ink, minHeight: 44, alignSelf: "flex-start" }}>
+    <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 } }}>
+      <Box component={NextLink} href="/aluno/carreiras" sx={{
+        display: "inline-flex", alignItems: "center", gap: 1, fontWeight: 700, color: tokens.ink, minHeight: 44, alignSelf: "flex-start",
+        mt: { md: -1.5 }, mb: -1, textUnderlineOffset: 3, "& svg": { transition: "transform 140ms cubic-bezier(.2,.8,.2,1)" }, "&:hover svg": { transform: "translateX(-3px)" },
+      }}>
         <ArrowBackRoundedIcon fontSize="small" /> Carreiras
       </Box>
-      <Box sx={{ border, borderRadius: "24px", overflow: "hidden" }}>
-        <CareerTop career={career} combina={combina} />
-        <Box sx={{ bgcolor: cor.bg, px: { xs: 2.5, md: 3 }, pb: 2.5, display: "flex", gap: 1, flexWrap: "wrap" }}>
+      <Box sx={{ border, borderRadius: { xs: "20px", md: "24px" }, overflow: "hidden", boxShadow: hardShadow }}>
+        <CareerTop career={career} combina={combina} sx={{ pt: { md: 4 }, px: { md: 4 } }} />
+        <Box sx={{ bgcolor: cor.bg, px: { xs: 2.5, md: 4 }, pb: { xs: 2.5, md: 4 }, pt: { md: 1 }, display: "flex", gap: 1, flexWrap: "wrap" }}>
           <PillButton variant="outlined" size="small" startIcon={salva ? <BookmarkRoundedIcon /> : <BookmarkBorderRoundedIcon />}
             onClick={() => (salva ? dispatch({ type: "unsave", studentId, careerId: career.id }) : dispatch({ type: "swipe", studentId, careerId: career.id, kind: "save", at: now() }))}>
             {salva ? "Salva" : "Salvar"}
@@ -55,7 +58,7 @@ export default function CarreiraDetalhe() {
       </Box>
 
       <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(2, minmax(0, 1fr))" }, gap: { xs: 2, md: 3 }, alignItems: "start" }}>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2, md: 3 } }}>
           <SurfaceCard component="section" aria-labelledby="raiox">
             <Typography id="raiox" variant="h4" component="h2">Raio-x de um dia</Typography>
             {career.raioX.map((r) => (
@@ -94,13 +97,13 @@ export default function CarreiraDetalhe() {
           </SurfaceCard>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2, md: 3 } }}>
           <SurfaceCard component="section" aria-labelledby="mentores">
             <Typography id="mentores" variant="h4" component="h2">Mentores reais dessa área</Typography>
             {mentores.length === 0 && <Typography sx={{ color: tokens.muted }}>Ainda não temos mentores dessa área. O mentor simulado já pode tirar suas dúvidas.</Typography>}
             {mentores.map(({ mentor: m, aberto, preferido }) =>
               aberto ? (
-                <Box key={m.id} sx={{ display: "flex", alignItems: "center", gap: 1.5, p: 1.5, borderRadius: "16px", border, flexWrap: "wrap" }}>
+                <Box key={m.id} sx={{ display: "flex", alignItems: "center", gap: 1.5, p: 1.5, pl: 2, borderRadius: "16px", border, flexWrap: "wrap", rowGap: 1.25 }}>
                   <Avatar inicial={m.inicial} />
                   <Box sx={{ flex: 1, minWidth: 160 }}>
                     <Typography sx={{ fontWeight: 700, fontSize: 15 }}>{m.cargo} · {m.organizacao}</Typography>
@@ -118,7 +121,12 @@ export default function CarreiraDetalhe() {
             )}
           </SurfaceCard>
           <Box component={NextLink} href={`/aluno/carreiras/${career.id}/mentor-simulado`}
-            sx={{ display: "flex", alignItems: "center", gap: 1.5, p: 2.5, borderRadius: "20px", bgcolor: tokens.ink, color: tokens.paper, textDecoration: "none" }}>
+            sx={{
+              display: "flex", alignItems: "center", gap: 2, p: { xs: 2.5, md: 3 }, borderRadius: { xs: "20px", md: "24px" }, bgcolor: tokens.ink, color: tokens.paper,
+              textDecoration: "none", border, transition: "transform 140ms cubic-bezier(.2,.8,.2,1), box-shadow 140ms cubic-bezier(.2,.8,.2,1)",
+              "&:hover": { transform: "translate(-2px,-2px)", boxShadow: `4px 4px 0 ${tokens.lime}` },
+              "&:active": { transform: "translate(1px,1px)", boxShadow: "none" },
+            }}>
             <Box aria-hidden sx={{ width: 44, height: 44, flex: "none", borderRadius: "12px", bgcolor: tokens.lime, color: tokens.ink, display: "flex", alignItems: "center", justifyContent: "center" }}><ChatRoundedIcon /></Box>
             <Box>
               <Typography sx={{ fontWeight: 700 }}>Conversar com um mentor simulado</Typography>

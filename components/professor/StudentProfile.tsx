@@ -72,7 +72,7 @@ export default function StudentProfile({ classId, studentId }: { classId: string
   return (
     <Stack gap={3}>
       <Box>
-        <Button
+        <Button variant="text"
           component={Link}
           href={`/professor/turma/${classId}`}
           startIcon={<ArrowBackRoundedIcon />}

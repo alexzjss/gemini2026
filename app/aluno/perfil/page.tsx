@@ -41,8 +41,8 @@ export default function Perfil() {
   const abertas = new Set([view.missaoDoDia?.code, ...view.sugestoes.map((s) => s?.code)].filter(Boolean));
 
   return (
-    <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "minmax(0, 1.5fr) minmax(300px, 1fr)" }, gap: { xs: 2.5, md: 4 }, alignItems: "start" }}>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+    <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "minmax(0, 1.4fr) minmax(300px, 1fr)" }, gap: { xs: 2.5, md: 3 }, alignItems: "start" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 }, minWidth: 0 }}>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
           <Avatar inicial={view.student.inicial} size={56} />
           <Box sx={{ flex: 1 }}>
@@ -92,7 +92,7 @@ export default function Perfil() {
               <Typography sx={{ fontWeight: 600 }}>{s.skill?.descricaoJovem}</Typography>
               <Box role="progressbar" aria-label={`${s.code}: ${s.rotulo}`} aria-valuenow={s.progresso} aria-valuemin={0} aria-valuemax={100}
                 sx={{ height: 10, borderRadius: 999, bgcolor: tokens.track, overflow: "hidden" }}>
-                <Box sx={{ width: `${s.progresso}%`, height: "100%", bgcolor: tokens.blue, borderRadius: 999 }} />
+                <Box sx={{ width: `${s.progresso}%`, height: "100%", bgcolor: tokens.blue, borderRadius: 999, transformOrigin: "left center", animation: "g26-grow 700ms cubic-bezier(.2,.8,.2,1) 150ms backwards" }} />
               </Box>
               <Typography sx={{ fontSize: 13, color: tokens.muted }}>
                 {s.rotulo}{abertas.has(s.code) ? " · missão aberta" : ""}
@@ -102,7 +102,7 @@ export default function Perfil() {
         </Box>
         <Box><PillButton href="/aluno/missoes" arrow>Ver missões pra essas habilidades</PillButton></Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 } }}>
         <LevelCard view={view} />
         <PointsTable />
         <MentorTiers view={view} />
