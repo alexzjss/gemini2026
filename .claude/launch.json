@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "app-aluno", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "5391", "--directory", "app"], "port": 5391, "autoPort": false }
+  ]
+}
