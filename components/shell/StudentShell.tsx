@@ -56,7 +56,7 @@ export default function StudentShell({ children }: { children: React.ReactNode }
           </Box>
         </Box>
         <Box component="main" id="conteudo" sx={{
-          flex: 1, width: "100%", maxWidth: { md: 1120 + 96 }, px: { xs: 2.5, md: 6 }, pt: { xs: 1, md: 5 },
+          flex: 1, width: "100%", px: { xs: 2.5, md: 6 }, pt: { xs: 1, md: 5 },
           pb: { xs: "120px", md: 7 },
         }}>
           {children}
