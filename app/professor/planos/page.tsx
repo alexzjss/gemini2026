@@ -1,5 +1,5 @@
-import PlaceholderPage from "@/components/ui/PlaceholderPage";
+import PlanList from "@/components/professor/PlanList";
 
-export default function Page() {
-  return <PlaceholderPage titulo="Planos" frente="F8 · Agente 5" />;
+export default function PlanosPage() {
+  return <PlanList />;
 }

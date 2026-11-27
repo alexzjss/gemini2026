@@ -1,5 +1,6 @@
-import PlaceholderPage from "@/components/ui/PlaceholderPage";
+import PlanEditor from "@/components/professor/PlanEditor";
 
-export default function Page() {
-  return <PlaceholderPage titulo="Editor de plano" frente="F8 · Agente 5" />;
+export default async function PlanoPage({ params }: { params: Promise<{ planId: string }> }) {
+  const { planId } = await params;
+  return <PlanEditor planId={planId} />;
 }

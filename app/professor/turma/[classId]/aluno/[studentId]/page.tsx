@@ -1,5 +1,6 @@
-import PlaceholderPage from "@/components/ui/PlaceholderPage";
+import StudentProfile from "@/components/professor/StudentProfile";
 
-export default function Page() {
-  return <PlaceholderPage titulo="Ficha individual" frente="F8 · Agente 5" />;
+export default async function AlunoPage({ params }: { params: Promise<{ classId: string; studentId: string }> }) {
+  const { classId, studentId } = await params;
+  return <StudentProfile classId={classId} studentId={studentId} />;
 }
