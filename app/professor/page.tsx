@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
-import { DEMO } from "@/lib/config";
 
-export default function ProfessorIndex() {
-  redirect(`/professor/turma/${DEMO.turmaPadrao}`);
+/** D55: o professor demo abre direto no 2º EM A. */
+export default function ProfessorPage() {
+  redirect("/professor/turma/2A");
 }

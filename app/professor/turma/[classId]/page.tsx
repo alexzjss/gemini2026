@@ -1,5 +1,6 @@
-import PlaceholderPage from "@/components/ui/PlaceholderPage";
+import TurmaMapa from "@/components/professor/TurmaMapa";
 
-export default function Page() {
-  return <PlaceholderPage titulo="Mapa da turma" frente="F8 · Agente 5" />;
+export default async function TurmaPage({ params }: { params: Promise<{ classId: string }> }) {
+  const { classId } = await params;
+  return <TurmaMapa classId={classId} />;
 }

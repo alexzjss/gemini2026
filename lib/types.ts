@@ -213,7 +213,7 @@ export interface LocalState {
   sessao?: { role: "aluno"; studentId: string } | { role: "professor" };
   porAluno: Record<string, StudentLocal>;
   planos: LessonPlan[];
-  alertas: Record<string, { conversouEm: string; nota: string }>; // por studentId
+  alertas: Record<string, { conversouEm: string; nota: string; tipos?: string[] }>; // por studentId; tipos = sinais vistos no "Conversei"
   semestreSimulado: boolean;
 }
 

@@ -41,9 +41,10 @@ export type Action =
   | { type: "simulateSemester"; studentId: string; at: string }
   | { type: "setMatch"; studentId: string; match: MatchResult }
   | { type: "scheduleMatch"; studentId: string; quando: string }
-  | { type: "markConversation"; studentId: string; nota: string; at: string }
+  | { type: "markConversation"; studentId: string; nota: string; at: string; tipos?: string[] }
   | { type: "savePlan"; plan: LessonPlan }
   | { type: "approvePlan"; planId: string; at: string }
+  | { type: "reopenPlan"; planId: string }
   | { type: "cacheAI"; studentId: string; key: string; value: unknown }
   | { type: "markSource"; source: AiSource }
   | { type: "toast"; texto: string; pontos?: number }
@@ -215,7 +216,7 @@ export function reducer(state: StoreState, action: Action): StoreState {
       return next(withAluno(local, action.studentId, (a) => (a.match ? { ...a, match: { ...a.match, agendadoPara: action.quando } } : a)));
 
     case "markConversation":
-      return next({ ...local, alertas: { ...local.alertas, [action.studentId]: { conversouEm: action.at, nota: action.nota.slice(0, LIMITES.notaConversaMaxChars) } } });
+      return next({ ...local, alertas: { ...local.alertas, [action.studentId]: { conversouEm: action.at, nota: action.nota.slice(0, LIMITES.notaConversaMaxChars), tipos: action.tipos } } });
 
     case "savePlan": {
       const exists = local.planos.some((p) => p.id === action.plan.id);
@@ -224,6 +225,9 @@ export function reducer(state: StoreState, action: Action): StoreState {
     }
     case "approvePlan":
       return next({ ...local, planos: local.planos.map((p) => (p.id === action.planId ? { ...p, status: "aprovado", aprovadoEm: action.at } : p)) });
+
+    case "reopenPlan":
+      return next({ ...local, planos: local.planos.map((p) => (p.id === action.planId ? { ...p, status: "rascunho", aprovadoEm: undefined } : p)) });
 
     case "cacheAI":
       return next(withAluno(local, action.studentId, (a) => ({ ...a, iaCache: { ...a.iaCache, [action.key]: action.value } })));
